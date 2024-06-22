@@ -9,29 +9,29 @@ function popularDestination(){
         <h1>Popular Destinations</h1>
         
         <div className='Box'>
-            box1
+            <p>Manali</p>
         </div>
         <div className='Box'>
-            box2
+          <p>Shimla</p>
         </div>
         <div className='Box'>
-            box3
+            <p>Dharamshala</p>
         </div>
         <div className='Box'>
-            box4
+            <p>Jaipur</p>
         </div>
      
         <div className='Box'>
-            box1
+          <p>Ladakh</p>
         </div>
         <div className='Box'>
-            box2
+           <p>Srinagar</p>
         </div>
         <div className='Box'>
-            box3
+           <p> Kedarnath</p>
         </div>
         <div className='Box'>
-            box4
+          <p> Munnar, Kerala</p>
         </div>
      
 

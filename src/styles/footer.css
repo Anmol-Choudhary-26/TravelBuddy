@@ -1,25 +1,25 @@
 .foot{
-    height: 55vh;
+    height: 65vh;
     width:100vw;
     background-color: #061621;
     display: flex;
     justify-content: space-around;
 }
 
-.Box1{
+.Boxx{
 
-    height: 47h;
+    height: 50h;
     width: 18vw;
-    background-color:black;
-    margin: 2vw;
+   
    
 }
 
 .firstfoot{
-    margin-top: 2vh;
+    margin-top: 4vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .box1para{
@@ -31,7 +31,6 @@
 .box1img{
     height: 4vh;
     width: 3vw;
-    margin-top: 3.2vh;
     
 }
 
@@ -48,4 +47,42 @@
     background-color:#061621;
     color: white;
     border: none;
+    cursor: pointer;
+    /* appearance: none; */
+}
+
+.firstpara{
+    color: white;
+    font-size: 0.8vw;
+    margin-top: 35vh;
+
+}
+
+.firstpara p{
+  margin-left: 8vw;
+}
+
+.secondfoot{
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 0vw;
+    margin-top: 7vh;
+    margin-bottom: 3.5vh;
+    font-weight: 700;
+}
+
+.ulist a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    /* font-family: 'Akzidenz-Grotesk Std'; */
+    font-size: 1.1vw;
+}
+
+.ulist a:hover{
+    text-decoration: underline;
+}
+
+.ulist li{
+    margin-bottom: 4.2vh;
 }

@@ -1,15 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .first{
     height: 100vh;
     width: 100vw;
     background-color:gainsboro;
+    /* background-image: url("../images/b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
 }
 
 .top{
     height:8vh;
-    background-color: aliceblue;
+    background-color:#7b00c77a;
     width: 100vw;
     display: flex;
     justify-content: space-between;
+
 
 }
 
@@ -17,6 +27,7 @@
     margin-left: 0.8vw;
     font-size:1.5vw;
     font-family: "Times New Roman", serif;
+    color: white;
 
 }
 
@@ -67,12 +78,14 @@
     margin-left: 25vw;
     margin-top: 8vh;
     border-radius: 15px;
+    color: white;
 }
 
 .containers{
     height:43vh;
     width: 100vw;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 
@@ -80,28 +93,33 @@
 
 .box{
     height:35vh;
-    width:20vw;
+    width:22vw;
     margin-top: 0vh;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5vw;
 }
 
 .showAll{
-    margin-top: 1vh;
+    margin-top: 1.2vh;
     height:2vh;
-    margin-left: 78vw;
+    margin-left: 70vw;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 .showAll a{
-    color: black;
+    color:white;
     font-size: 2.2vh;
 }
 
 .description p{
         font-size: 1.2vw;
         margin:2vw;
+        font-family:serif;
+        font-weight: 500;
+        word-spacing:0.15vw;
+        line-height: 3.3vh;
 }

@@ -3,7 +3,16 @@ import './styles/App.css';
 import logo from "./images/temperature.png"; 
 import PopularDestination from './component/popularDestination';
 import Footer from './component/footer';
+import data from "./utils/data";
+import TripPost from "./component/card";
+
 function App(){
+
+  const renderedItems = data.map((item) =>{
+    return (
+      <TripPost trip = {item} />
+    )
+  })
 
       return(
         <React.Fragment>
@@ -30,16 +39,7 @@ function App(){
             </div>
 
             <div className='containers'>
-        
-              <div className='box'>
-                  box1
-              </div>
-              <div className='box'>
-                  box2
-              </div>
-              <div className='box'>
-                  box3
-              </div>
+              {renderedItems}
             </div>
 
 

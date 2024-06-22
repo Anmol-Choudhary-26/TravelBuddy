@@ -13,6 +13,7 @@
 .containerPD h1{
     margin-left: 35vw;
     margin-right: 35vw;
+    margin-top: 1vh;
 }
 
 .Box{
@@ -26,4 +27,7 @@
     margin: 2vw;
     border-radius: 30px;
 
+}
+.Box p{
+    font-size: 1.2vw;
 }

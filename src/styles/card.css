@@ -1,0 +1,111 @@
+.main{
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+    margin-bottom: 1vh;
+    height:35vh;
+      width:20vw;
+      margin-top: 0vh;
+      background-image: linear-gradient(to right,#ac42eedf, #641cffc3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    font-size: 2vh ;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+}
+
+.locDate{
+    display: flex ;
+    flex-direction: column;
+}
+.helper1{
+    display: flex;
+    align-items: center;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: left;
+}
+
+.authorImg{
+    width: 2vw;
+  height: 3.5vh;
+  margin-top: .8vh ;
+  border-radius: 90%;
+  margin-right: 10px;
+}
+
+.img {
+    width: 100%;
+     border-radius: 10%;
+    height: auto;
+}
+
+.body{
+    padding: 0 1vw;
+}
+
+.footer{
+    display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 1vw;
+  font-size: 1vw;
+  color: #0b0000;
+}
+
+.reply-box {
+     display: flex;
+     padding: .3vh;
+     padding-left: .2vw;
+     padding-right: .2vw;
+    background-color: thistle;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 100%; 
+    font-size: 2vw;
+    border-radius: 999px;
+   
+  }
+
+  
+.reply-box input[type='text'] {
+    flex-grow: 1;
+    padding: 0.5vw;
+    border-radius: 999px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+  }
+  
+  .reply-box button[type='submit'] {
+    margin-left: 0.3vw;
+    padding: 1.2vh 1.2vw;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reply-box button[type='submit']:hover {
+    background-color: #4c925f;
+  }
+  
+  .reply-box button[type='submit']:active {
+    background-color: #c2d218;
+    transform: scale(0.95);
+  }
+
+  .text{
+    font-family: Arial, Helvetica, sans-serif;
+  }
