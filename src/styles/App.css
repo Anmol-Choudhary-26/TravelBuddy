@@ -60,7 +60,7 @@
 .description{
     height: 40vh;
     width: 50vw;
-    background-color: red;
+    background-image: linear-gradient(to right,#AD42EE, #651CFF);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,4 +99,9 @@
 .showAll a{
     color: black;
     font-size: 2.2vh;
+}
+
+.description p{
+        font-size: 1.2vw;
+        margin:2vw;
 }

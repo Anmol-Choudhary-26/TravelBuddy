@@ -1,6 +1,29 @@
 .containerPD{
 
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
-    background-color: red;
+    background-color:beige;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    
+    
+}
+
+.containerPD h1{
+    margin-left: 35vw;
+    margin-right: 35vw;
+}
+
+.Box{
+
+    height: 6vh;
+    width: 20vw;
+    background-color:yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    border-radius: 30px;
+
 }

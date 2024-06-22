@@ -1,0 +1,51 @@
+.foot{
+    height: 55vh;
+    width:100vw;
+    background-color: #061621;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Box1{
+
+    height: 47h;
+    width: 18vw;
+    background-color:black;
+    margin: 2vw;
+   
+}
+
+.firstfoot{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.box1para{
+    font-size: 1.8vw;
+    color: white;
+    margin-left: 1vw;
+}
+
+.box1img{
+    height: 4vh;
+    width: 3vw;
+    margin-top: 3.2vh;
+    
+}
+
+.langbtn{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.langbtn select{
+    width: 9.7vw;
+    height: 5vh;
+    font-size: 1.2vw;
+    background-color:#061621;
+    color: white;
+    border: none;
+}
