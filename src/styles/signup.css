@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.signup{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sidesignup{
+    height: 100vh;
+    width: 28vw;
+    background-image: url("../images/sidesignup.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.signuppage{
+    height: 100vh;
+    width:72vw;
+    background-color:white;
+}
+
+.Firsthead{
+    height: 4vh;
+    width: 26vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.Image{
+    height: 5vh;
+    width: 4vw;
+}
+
+.Firsthead h2{
+    margin-left: 0.3vw;
+    font-weight: 800;
+    font-size: 1.8vw;
+}
+
+.Secondhead{
+
+    height: 4vh;
+    width: 25vw;
+    margin-top: 5vh;
+    
+}
+
+.Secondhead h2{
+    margin-left: 2.5vw;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.Thirdhead{
+
+    height: 4vh;
+    width: 27vw;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+.Thirdhead h2{
+    margin-left: 2.5vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.Thirdhead a{
+    font-size: 1.4vw;
+    text-decoration: none;
+    margin-left: 0.5vw;
+    font-weight: 800;
+    color: rgb(72, 72, 227);
+
+}
+
+.Buttons{
+    height: 6vh;
+    width: 27vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+.Btn1{
+    height: 6vh;
+    width: 22vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    font-weight: 700vw;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.Glogo{
+    height: 4vh;
+    width: 3vw;
+    margin-right: 0.1vw;
+}
+
+.Fourthhead{
+    
+    margin-top: 2.5vh;
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+}
+
+.Fourthhead p{
+   
+    font-size: 1vw;
+    font-weight: 100;
+    color: rgb(68, 72, 72);
+}
+
+.Email{
+    height: 8vh;
+    width: 27vw;
+    margin-bottom: 1.5vh;
+
+}
+
+.Email h4{
+    margin-left: 3vw;
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 1vw;
+}
+.Email input{
+    width: 20vw;
+    height: 4.4vh;
+    margin-left: 3vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+    margin-bottom: 1vh;
+}
+
+.Password{
+    height: 8vh;
+    width: 27vw;
+    margin-bottom: 1.5vh;
+}
+
+.Password h4{
+    margin-left: 3vw;
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.Password input{
+    width: 20vw;
+    height: 4.4vh;
+    margin-left: 3vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+}
+
+
+.btn2{
+    margin-top: 5vh;
+    margin-left: 3.3vw;
+    height: 4vh;
+    width: 7vw;
+    background-color: white;
+    border: 0.7px solid black;
+    border-radius: 8px;
+    font-size: 1.05vw;
+    font-weight: 520;
+
+}
