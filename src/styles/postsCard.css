@@ -1,40 +1,30 @@
-.main{
+.Main{
     background-color: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 15px;
     margin-bottom: 1vh;
-    height:35vh;
-      width:20vw;
+    color: white;
+    height: 50vh;
+      width:25vw;
+      margin-top: 1vh;
       background-image: linear-gradient(to right,rgba(0, 0, 0, 0.679),rgb(55, 43, 43));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: 5vh;
-      
 }
-
-.heading{
+.Heading{
     display: flex;
     align-items: center;
     padding: 1vw;
     font-size: 1.1vw ;
     font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.locDate{
+.LocDate{
     display: flex ;
     flex-direction: column;
-}
-.helper1{
-    display: flex;
-    align-items: center;
-    
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: left;
+    font-size: 1vw;
 }
 
-.authorImg{
+.AuthorImg{
     width: 2vw;
   height: 3.5vh;
   margin-top: .8vh ;
@@ -42,17 +32,17 @@
   margin-right: 10px;
 }
 
-.img {
+.Img {
     width: 100%;
      border-radius: 10%;
-    height: 18vh;
+    height: 30vh;
 }
 
-.body{
+.Body{
     padding: 0 1vw;
 }
 
-.footer{
+.Footer{
     display: flex;
   align-items: center;
   justify-content: right;
@@ -61,7 +51,7 @@
   color: #0b0000;
 }
 
-.reply-box {
+.Reply-box {
     display: flex;
     
      padding: .3vh;
@@ -69,7 +59,7 @@
      padding-right: .2vw;
     background-color: thistle;
     border: 1px solid black;
-    width: 18vw; 
+    width: 23vw; 
     height: 4vh;
     /* font-size: 1vw; */
     border-radius: 999px;
@@ -77,7 +67,7 @@
   }
 
   
-.reply-box input {
+.Reply-box input {
     flex-grow: 1;
     width: 12vw;
     height: 2vh;
@@ -88,7 +78,7 @@
     border: 1px solid #e6e6e6;
   }
   
-  .reply-box button{
+  .Reply-box button{
     width: 5vw;
     font-size: 0.9vw;
     margin-left: 0.3vw;
@@ -101,15 +91,15 @@
     transition: background-color 0.3s ease;
   }
   
-  .reply-box button:hover {
+  .Reply-box button:hover {
     background-color: #4c925f;
   }
   
-  .reply-box button:active {
+  .Reply-box button:active {
     background-color: #c2d218;
     transform: scale(0.95);
   }
 
-  .text{
+  .Text{
     font-family: Arial, Helvetica, sans-serif;
   }

@@ -108,6 +108,9 @@
     
 }
 
+.Btn1:hover{
+    cursor: pointer;
+}
 .Glogo{
     height: 4vh;
     width: 3vw;
@@ -206,7 +209,4 @@
     margin-bottom: 1vh;
     width: 25vh;
     height: 4.4vh;
-    
-  
-    
 }
