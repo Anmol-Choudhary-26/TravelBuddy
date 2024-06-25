@@ -184,3 +184,29 @@
     font-weight: 520;
 
 }
+
+
+
+.checkbox{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: row;
+    
+    color: rgb(68, 72, 72);
+}
+
+.checkbox input{
+    margin-right:1vh;
+    margin-bottom: 4vh;
+
+   
+}
+
+.policybox{
+    margin-bottom: 1vh;
+    width: 25vh;
+    height: 4.4vh;
+    
+  
+    
+}

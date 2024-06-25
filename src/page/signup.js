@@ -66,6 +66,14 @@ function Signup(){
 
 </div>
 
+<div className='checkbox' >
+                    <input id="checkbox-1" type="checkbox" name="tos" />
+                    <div className='policybox'>I accept the&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.mongodb.com/legal/privacy-policy">Privacy Policy</a>&nbsp;and the&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.mongodb.com/cloud-terms-and-conditions">Terms of Service</a>
+                    </div>
+
+                </div>
+
+
 <button className='btn2'>Sign up</button>
 
 
