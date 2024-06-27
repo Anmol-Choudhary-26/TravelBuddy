@@ -32,6 +32,7 @@
     border: 0.1px solid white;
     border-top: none;
     border-bottom: none;
+    color: white;
 
 }
 
@@ -94,3 +95,64 @@
     width: 33vw;
     background-color: rgba(0, 0, 0, 0.956);
 }
+
+.filter{
+    width: 33vw;
+    height: 4vh;
+    
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.filter select:hover{
+    cursor: pointer;
+}
+
+.filter select{
+    width: 5vw;
+    height: 4vh;
+    background-color: rgba(0, 0, 0, 0.956);
+    color: white;
+    font:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    border: none;
+}
+
+.theme{
+    width: 33vw;
+    height: 4vh;
+    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+}
+
+.themebtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 6vh;
+    width: 12vw;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.956);
+    color: white;
+    border-radius: 30px;
+    font-size: 0.8vw;
+    font-weight: 600;
+    font:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+.themebtn img{
+    height: 3vh;
+    width: 2vw;
+}
+
+.themebtn:hover{
+    cursor: pointer;
+    background-color: rgb(38, 37, 37)
+
+}
+

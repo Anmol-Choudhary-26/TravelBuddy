@@ -42,7 +42,7 @@
     margin-left: 2vw;
 }
 
-.image{
+.immage{
     height: 5vh;
     width: 4vw;
 }
@@ -183,7 +183,7 @@
     border: 0.7px solid black;
 }
 
-.btn2{
+.Btn2{
     margin-top: 7vh;
     margin-left: 3.3vw;
     height: 4vh;
@@ -196,8 +196,225 @@
 
 }
 
-.btn2:hover{
+.Btn2:hover{
     cursor: pointer;
     background-color: rgb(75, 134, 140);
     color: white;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+
+  
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .loginfullpage{
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+        width: 100vw;
+        
+    }
+    
+    .loginsidepage{
+        background-image: url("../images/pexels-miriamespacio-365633.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+    }
+    
+    .login{
+        height: 100vh;
+        width: 60vw;
+        background-color: rgb(239, 239, 239);
+        /* background-color: rgba(219, 234, 234, 0.697); */
+    }
+    
+    .loginsidepage{
+        height: 100vh;
+        width: 40vw;
+        
+    }
+    
+    .firsthead{
+        height: 4vh;
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+        margin-left: 10vw;
+    }
+    
+    .immage{
+        height:6vh;
+        width: 8vw;
+    }
+    
+    .firsthead h2{
+        margin-left: 0.5vw;
+        font-weight: 800;
+        font-size: 3vw;
+    }
+    
+    .secondhead{
+    
+        height: 4vh;
+        width: 60vw;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .secondhead h2{
+        /* margin-left: 2.5vw; */
+        font-size: 2.5vw;
+        font-weight: 500;
+    }
+    
+    .thirdhead{
+    
+        height: 4vh;
+        width: 60vw;
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+    
+    }
+    
+    .thirdhead h2{
+        /* margin-left: 2.5vw; */
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+    
+    .thirdhead a{
+        font-size: 2.5vw;
+        text-decoration: none;
+        margin-left: 0.5vw;
+        font-weight: 800;
+        color: rgb(72, 72, 227);
+    
+    }
+    
+    .buttons{
+        height: 4vh;
+        width: 60vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4vh;
+    }
+    .btn1{
+        height: 3.5vh;
+        width: 25vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5vw;
+        font-weight: 700vw;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    
+    .btn1:hover{
+        cursor: pointer;
+    }
+    
+    .glogo{
+        height: 4vh;
+        width: 5.5vw;
+        margin-right: 0.1vw;
+    }
+    
+    .fourthhead{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5vh;
+        margin-bottom: 4vh;
+    }
+    
+    .fourthhead p{
+       
+        font-size: 1.8vw;
+        font-weight: 100;
+        color: rgb(68, 72, 72);
+    }
+    
+    .email{
+        height: 8vh;
+        width: 60vw;
+        margin-bottom: 1.5vh;
+    
+    }
+    
+    .email h4{
+        margin-left: 18vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 1.7vw;
+    }
+    .email input{
+        width: 24vw;
+        height: 3vh;
+        margin-left: 18vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        margin-bottom: 1vh;
+    }
+    
+    .password{
+        height: 8vh;
+        width: 27vw;
+    }
+    
+    .password h4{
+        margin-left: 18vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 1.7vw;
+    }
+    
+    .password input{
+        width: 24vw;
+        height: 3vh;
+        margin-left: 18vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+    }
+    
+    .Btn2{
+        margin-top: 2vh;
+        margin-left: 18vw;
+        height: 3vh;
+        width: 8vw;
+        background-color: white;
+        border: 0.7px solid black;
+        border-radius: 8px;
+        font-size: 1.6vw;
+        font-weight: 520;
+    
+    }
+    
+    .Btn2:hover{
+        cursor: pointer;
+        background-color: rgb(75, 134, 140);
+        color: white;
+    }
+    
+
 }

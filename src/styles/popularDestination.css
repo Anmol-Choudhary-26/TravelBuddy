@@ -31,3 +31,47 @@
 .Box p{
     font-size: 1.2vw;
 }
+
+
+
+@media only screen and (max-width: 600px){
+
+
+.containerPD{
+
+    height: 25vh;
+    width: 100vw;
+    background-color:beige;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    
+    
+}
+
+.containerPD h1{
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 1vh;
+    font-size: 3vw;
+}
+
+.Box{
+
+    height: 5vh;
+    width: 18vw;
+    background-color:yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    border-radius: 30px;
+
+}
+.Box p{
+    font-size: 2vw;
+}
+
+
+
+}

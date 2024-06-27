@@ -18,7 +18,7 @@ function Home (){
 
         <div className="logoo">
         <img className="logoimg" src={logo} alt='Logo'/>
-        <p className='heading'>TravelBuddy :)</p>
+        <p className='headingg'>TravelBuddy :)</p>
         </div>
         <div className='btns'>
         <button className="Btn">Login</button>
@@ -51,12 +51,6 @@ function Home (){
         </div>   
 
      </div>
-
-
-
-        
-       
-
 
     <div>
       <PopularDestination />

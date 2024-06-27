@@ -10,7 +10,7 @@ function Login(){
     <div className='login'>
 
         <div className='firsthead'>
-        <img src={image}  className='image'/>
+        <img src={image}  className='immage'/>
         <h2>TravelBuddy</h2>
         </div>
 
@@ -32,6 +32,7 @@ function Login(){
         <p >---Or with email and password---</p>
         </div>
 
+        
         <div className='email'>
 
             <h4>Email Address</h4>
@@ -45,7 +46,7 @@ function Login(){
         
         </div>
 
-        <button className='btn2'>Next</button>
+        <button className='Btn2'>Next</button>
 
     </div>
 

@@ -56,6 +56,22 @@ const renderedItems = dataAll.map((items, index) => {
         
         <div className='mainright'>
 
+            <div className='theme'>
+                <button className='themebtn'>
+                    <img src={home} alt='home' className='image'/>
+                    <h3>Light mode</h3> 
+                </button>
+            </div>
+         <div className='filter'>
+
+                <select>
+                    <option value="">Filter</option>
+                    <option value="1">Popular</option>
+                    <option value="2">New</option>
+                    <option value="3">Top Rated</option>
+                    <option value="4">Recent</option>
+                </select>
+         </div>
 
         </div>
 
