@@ -19,7 +19,7 @@ function Login(){
 
         <div className='thirdhead'>
             <h2>Don't have an account?</h2>
-            <a href='abc'>Sign Up</a>
+            <a href='/signup'>Sign Up</a>
         </div>  
 
         <div className='buttons'>

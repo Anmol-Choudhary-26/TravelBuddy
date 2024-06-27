@@ -26,7 +26,7 @@ function Signup(){
 
         <div className='Thirdhead'>
             <h2>Have an account?</h2>
-            <a href='abc'>Log in now</a>
+            <a href='/login'>Log in now</a>
         </div>  
 
         <div className='Buttons'>
