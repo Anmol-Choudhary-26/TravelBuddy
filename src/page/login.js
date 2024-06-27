@@ -1,7 +1,6 @@
 import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
-import sideimage from '../images/bg.jpg';
 
 function Login(){
    return(
@@ -10,7 +9,7 @@ function Login(){
     <div className='login'>
 
         <div className='firsthead'>
-        <img src={image}  className='image'/>
+        <img src={image} alt="logo" className='image'/>
         <h2>TravelBuddy</h2>
         </div>
 
@@ -25,7 +24,7 @@ function Login(){
 
         <div className='buttons'>
        
-            <button className='btn1'><img src={googlelogo}  className='glogo'/>Google</button>
+            <button className='btn1'><img src={googlelogo} alt="logo" className='glogo'/>Google</button>
         </div>
 
         <div className='fourthhead'>

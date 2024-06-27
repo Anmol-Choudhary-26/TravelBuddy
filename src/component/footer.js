@@ -9,7 +9,7 @@ function footer(){
         <div className='Boxx'>
         
         <div className='firstfoot'>
-        <img src={Logo} className='box1img'/>  
+        <img src={Logo} alt="logo" className='box1img'/>  
         <p className='box1para'>TravelBuddy</p>
         </div>
 
