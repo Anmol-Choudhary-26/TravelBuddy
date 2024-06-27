@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    /* transition:  10s ease-in-out; */
 }
 
 .first{
@@ -132,7 +133,9 @@
 .seconddown{
     height: 50vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.473);
+    background-image: url("../images/pexels-belle-co-99483-1000445-3.jpg");
+    /* background-repeat: no-repeat; */
+
 
 }
 
