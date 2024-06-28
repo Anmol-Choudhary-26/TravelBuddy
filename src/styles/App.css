@@ -13,9 +13,7 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    
+    align-items: center; 
 }
 
 .top{
@@ -24,8 +22,6 @@
     width: 100vw;
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .heading{
@@ -111,7 +107,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-items: center; */
     background-color: rgba(0, 0, 0, 0.473);
    
 
@@ -120,7 +115,6 @@
 .box{
     height:35vh;
     width:22vw;
-    /* background-color: red; */
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -132,8 +126,7 @@
 .seconddown{
     height: 50vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.473);
-
+    background-image: url("../images/pexels-belle-co-99483-1000445.jpg");
 }
 
 .headings{
@@ -143,8 +136,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: rgba(0, 0, 0, 0.473);
-
-
 }
 
 .headings h2{
@@ -159,11 +150,125 @@ background-color: rgba(0, 0, 0, 0.473);
     text-decoration: none;
 } 
 
-/* .description p{
-        font-size: 1.2vw;
-        margin:2vw;
-        font-family:serif;
-        font-weight: 500;
-        word-spacing:0.15vw;
-        line-height: 3.3vh;
-} */
+/* Default styles */
+/* ... (same as the original CSS code) ... */
+
+/* Media queries for different screen sizes */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .headingg {
+      font-size: 2.5vw;
+    }
+
+    .logoimg {
+      height: 4vh;
+      width: 7vw;
+    }
+
+    .logoo {
+      margin-left: 3vw;
+    }
+
+    .Btn {
+      height: 3vh;
+      width: 12vw;
+      font-size: 1.7vw;
+      margin-right: 1vw;
+    }
+
+    .headingdesc {
+      font-size: 1.5vw;
+    }
+
+    .headingp {
+      font-size:2.5vw;
+      margin: 0 3vw 0 3vw;
+    }
+
+    .headings{
+        height: 2vh;
+        margin-bottom: 0;
+    }
+    .headings h2 {
+      font-size: 2vw;
+      margin-left: 2vw;
+    }
+
+    .headings a {
+      font-size: 2vw;
+    }
+
+    /* new change */
+
+    .first {
+        height: 42vh;
+        width: 100vw;
+
+        /* background-image: url("http://localhost:3000/static/media/pexels-belle-co-99483-1000445.9b84285….jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .containers{
+        height:37vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.473);
+        overflow-y: scroll;
+
+
+    }
+
+    .seconddown{
+        height: 40vh;
+        width: 100vw;
+        background-image: url("../images/pexels-belle-co-99483-1000445.jpg");
+        /* background-repeat: no-repeat; */
+
+
+    }
+
+
+.box{
+    height:25vh;
+    width:18vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+
+
+
+}
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    /* ... (same as the extra small devices media query) ... */
+  }

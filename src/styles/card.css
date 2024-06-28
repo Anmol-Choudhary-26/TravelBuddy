@@ -19,7 +19,7 @@
     padding: 1vw;
     font-size: 1.1vw ;
     font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .locDate{
@@ -112,4 +112,135 @@
 
   .text{
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .main {
+       height: 30vh;
+       width: 50vw;
+
+    }
+
+    footer{
+      /* display: flex;
+    align-items: center;
+    justify-content: right; */
+    /* padding: 1vw; */
+    font-size: 1vw;
+    color: #0b0000;
+  }
+
+  .reply-box {
+    display: flex;
+     /* padding: .3vh;
+     padding-left: .2vw;
+     padding-right: .2vw; */
+    background-color: thistle;
+    border: 1px solid black;
+    width: 29vw; 
+    height: 3vh;
+    /* font-size: 1vw; */
+    border-radius: 999px;
+
+  }
+  .reply-box input {
+    flex-grow: 1;
+    width: 12vw;
+    height: 2vh;
+    /* padding: 0.5vw; */
+    border-radius: 999px;
+   border: none;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+  }
+
+  .reply-box button{
+    width: 5vw;
+    font-size: 0.9vw;
+    margin-left: 0.3vw;
+    padding: 1.2vh 1.2vw;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .reply-box button:hover {
+    background-color: #4c925f;
+  }
+
+  .reply-box button:active {
+    background-color: #c2d218;
+    transform: scale(0.95);
+  }
+
+  .text{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .heading{
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    font-size: 1.5vw ;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    color: white;
+}
+
+.locDate{
+    display: flex ;
+    flex-direction: column;
+}
+.helper1{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: left;
+}
+
+.authorImg{
+    width: 4.5vw;
+  height: 3.5vh;
+  margin-top: .2vh ;
+  border-radius: 90%;
+  margin-right: 10px;
+}
+
+.img {
+    width: 100%;
+     border-radius: 10%;
+    height: 18vh;
+}
+
+.body{
+    padding: 0 1vw;
+}
+
+
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    /* ... (same as the extra small devices media query) ... */
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    /* ... (same as the extra small devices media query) ... */
   }

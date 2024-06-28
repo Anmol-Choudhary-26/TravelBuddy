@@ -6,8 +6,8 @@ import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { useNavigate } from 'react-router-dom'
 
 const supabase = createClient(
-    'https://your-project-url.supabase.co',
-    'your-anon-key'
+    "https://tpkszvmuasfiyaloquii.supabase.co",
+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
 )
 function Login() {
     const navigate = useNavigate()
@@ -25,7 +25,7 @@ function Login() {
             <div className='login'>
 
                 <div className='firsthead'>
-                    <img src={image} alt="logo" className='image' />
+                    <img src={image} alt="logo" className='immage' />
                     <h2>TravelBuddy</h2>
                 </div>
 
@@ -60,7 +60,7 @@ function Login() {
 
                 </div>
 
-                <button className='btn2'>Next</button>
+                <button className='Btn2'>Next</button>
 
             </div>
 

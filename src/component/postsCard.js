@@ -19,6 +19,10 @@ const TripPost = ({ trip }) => {
         <img className='Img' src={imageUrl} alt={location} />
       </div>
       <div className='Footer'>
+      <div className='likes'>
+            <img src='' alt ='like'/>
+            <img src='' alt='bookmark'/>
+        </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />
           <button type='submit'>Send</button>

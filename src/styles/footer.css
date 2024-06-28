@@ -87,3 +87,101 @@
 .ulist li{
     margin-bottom: 4.2vh;
 }
+
+
+@media only screen and (max-width: 600px){
+
+    foot{
+        height: 55vh;
+        width:100vw;
+        background-color: #061621;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Boxx{
+
+        height: 40h;
+        width: 18vw;
+
+
+    }
+
+    .firstfoot{
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+
+    .box1para{
+        font-size: 2vw;
+        color: white;
+        margin-left: 1vw;
+    }
+
+    .box1img{
+        height: 4vh;
+        width: 3vw;
+
+    }
+
+    .langbtn{
+      display: flex;
+      justify-content: flex-end;
+
+    }
+
+    .langbtn select{
+        width: 9.7vw;
+        height: 5vh;
+        font-size: 1.8vw;
+        background-color:#061621;
+        color: white;
+        border: none;
+        cursor: pointer;
+        /* appearance: none; */
+    }
+
+    .firstpara{
+        color: white;
+        font-size: 0.8vw;
+        margin-top: 35vh;
+
+    }
+
+    .firstpara p{
+      margin-left: 8vw;
+    }
+
+    .secondfoot{
+        color: white;
+        font-size: 2vw;
+        margin-left: 0vw;
+        margin-top: 6vh;
+        margin-bottom: 3.5vh;
+        font-weight: 700;
+    }
+
+    .ulist a{
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        /* font-family: 'Akzidenz-Grotesk Std'; */
+        font-size: 1.8vw;
+    }
+
+    .ulist a:hover{
+        text-decoration: underline;
+    }
+
+    .ulist li{
+        margin-bottom: 3vh;
+
+    }
+
+
+
+}
