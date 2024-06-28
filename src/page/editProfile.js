@@ -1,8 +1,14 @@
 import '../styles/editProfile.css';
 import profile from '../images/Pc.jpeg';
+
+
 function Edit() {
 
     return (
+
+
+            <div className='editfullpage'>
+
         <div className="edit">
 
            <div className='Headingg'>
@@ -56,10 +62,15 @@ function Edit() {
 
             <button type='submit' className='BTN'>Update</button>
 
+        </div>
 
-
+        <div className='otherside'>
 
         </div>
+
+        </div>
+
+        
 
     )
 

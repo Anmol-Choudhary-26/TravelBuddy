@@ -24,7 +24,7 @@ function Notifications(){
                     </div> 
 
                     <div className='notificationss'>
-                            <p>Met those who have become Ministers of State for the first time in the Council of Ministers. Heard their experiences and insights as they have just embarked on their ministerial journey</p>
+                            <p>Met those who have become Ministers of State for the first time in the Council of Ministers. Heard their experiences and insights as they have just embarked on their ministerial journey.</p>
                     </div>
 
                 </div>

@@ -22,6 +22,8 @@
     align-items: center;
     font-weight: 550;
     font-style:oblique;
+    letter-spacing: 0.8px;
+   
 
 }
 
@@ -47,8 +49,9 @@
     /* background-color:beige; */
     display: flex;
     flex-direction: row;
-    border-bottom: 0.5px solid white;
-    border-top: 0.5px solid white;
+    border-bottom: 0.1px solid white;
+    border-top: 0.1px solid white;
+
 }
 
 .content{
@@ -67,6 +70,8 @@
     align-items: center;
     margin-top: 1vh;
     font-size: 1.01vw;
+    text-decoration: underline;
+    letter-spacing: 0.3px;
 }
 
 .name h4{
@@ -78,9 +83,11 @@
     height: 7vh;
     width: 35vw;
     font-size: 1vw;
+  
 }
 
 .notificationss p{
     margin-top: 0.5vh;
     margin-left: 1vw;
+    word-spacing: 0.5px;
 }
