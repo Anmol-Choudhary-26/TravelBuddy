@@ -6,10 +6,10 @@ function footer(){
     return(
     <div className='foot'>
         
-        <div className='Boxx'>
+        <div className='Boxxx'>
         
         <div className='firstfoot'>
-        <img src={Logo} className='box1img'/>  
+        <img src={Logo} className='box1img' alt='box1img'/>  
         <p className='box1para'>TravelBuddy</p>
         </div>
 
@@ -27,7 +27,7 @@ function footer(){
         </div>
 
 
-        <div className='Boxx'>
+        <div className='Boxxx'>
 
             <p className='secondfoot'>About</p>
 
@@ -44,7 +44,7 @@ function footer(){
 
         </div>
 
-        <div className='Boxx'>
+        <div className='Boxxx'>
 
         <p className='secondfoot'>Support</p>
 
@@ -59,7 +59,7 @@ function footer(){
 
         </div>
 
-        <div className='Boxx'>
+        <div className='Boxxx'>
 
         <p className='secondfoot'>Deployment Options</p>
 

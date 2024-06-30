@@ -16,7 +16,7 @@ function Signup(){
 
 
             <div className='Firsthead'>
-        <img src={image}  className='Image'/>
+        <img src={image}  className='IImage' alt='logo'/>
         <h2>TravelBuddy</h2>
         </div>
 
@@ -31,7 +31,7 @@ function Signup(){
 
         <div className='Buttons'>
        
-            <button className='Btn1'><img src={googlelogo}  className='Glogo'/>Google</button>
+            <button className='Btn1'><img src={googlelogo}  className='Glogo' alt="google"/>Google</button>
         </div>
 
         <div className='Fourthhead'>

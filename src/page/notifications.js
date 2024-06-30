@@ -14,12 +14,12 @@ function Notifications(){
              <div className='mssg'>
 
                 <div className='imageprofile'>
-                    <img src={profileimage} />
+                    <img src={profileimage} alt='profilepic' />
                 </div>
 
                 <div className='content'>
 
-                   <div className='name'>
+                   <div className='Name'>
                         <h4>Akash Dhiman</h4>
                     </div> 
 
