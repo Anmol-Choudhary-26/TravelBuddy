@@ -203,9 +203,8 @@
 }
 
 
+
 @media only screen and (max-width: 600px){
-
-
 
     *{
         margin: 0px;
@@ -217,6 +216,7 @@
         height: 100vh;
         width: 100vw;
 
+        
     }
 
     .loginsidepage{
@@ -234,10 +234,11 @@
         /* background-color: rgba(219, 234, 234, 0.697); */
     }
 
+    
     .loginsidepage{
         height: 100vh;
         width: 40vw;
-
+        
     }
 
     .firsthead{
@@ -271,14 +272,13 @@
         justify-content: center;
         align-items: center;
 
-    }
-
     .secondhead h2{
         /* margin-left: 2.5vw; */
         font-size: 2.5vw;
         font-weight: 500;
     }
 
+    
     .thirdhead{
 
         height: 4vh;
@@ -288,8 +288,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
-
     }
 
     .thirdhead h2{
@@ -305,6 +303,7 @@
         font-weight: 800;
         color: rgb(72, 72, 227);
 
+    
     }
 
     .buttons{
@@ -327,11 +326,13 @@
         font-weight: 700vw;
         background-color: rgb(255, 255, 255);
 
+        
     }
-
+    
     .btn1:hover{
         cursor: pointer;
     }
+    
 
     .glogo{
         height: 4vh;
@@ -347,6 +348,7 @@
         margin-bottom: 4vh;
     }
 
+    
     .fourthhead p{
 
         font-size: 1.8vw;
@@ -359,8 +361,9 @@
         width: 60vw;
         margin-bottom: 1.5vh;
 
+    
     }
-
+    
     .email h4{
         margin-left: 18vw;
         margin-bottom: 1vh;
@@ -407,6 +410,7 @@
         font-size: 1.6vw;
         font-weight: 520;
 
+    
     }
 
     .Btn2:hover{
@@ -414,5 +418,6 @@
         background-color: rgb(75, 134, 140);
         color: white;
     }
+
 
 }

@@ -54,6 +54,7 @@ function Login() {
                     <p >---Or with email and password---</p>
                 </div>
 
+
                 <div className='email'>
 
                     <h4>Email Address</h4>
@@ -65,7 +66,9 @@ function Login() {
                     <h4>Password</h4>
                     <input type='password' className='password' />
 
+
                 </div>
+
 
                 <button className='Btn2'>Next</button>
 

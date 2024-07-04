@@ -1,0 +1,276 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.profileimage{
+    height: 13vh;
+    width: 27vw;
+    display: flex;
+    justify-content:center;
+
+
+
+}
+.profileimage img{
+    height: 13vh;
+    width: 8vw;
+    border-radius: 50%;
+}
+
+.editfullpage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.edit{
+    height: 100vh;
+    width: 30vw;
+    /* background-color: aliceblue; */
+
+}
+
+.otherside{
+    height: 100vh;
+    width: 70vw;
+    background-color: black;
+}
+
+.Headingg{
+    width: 27vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4vh;
+    margin-top: 0vh;
+    font-size: 1.2vw;
+    padding-top: 2vh;
+}
+
+
+.email{
+    margin-top: 5vh;
+    height: 8vh;
+    width: 27vw;
+    margin-bottom: 1.5vh;
+
+}
+
+.email h4{
+    margin-left: 3vw;
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 1vw;
+}
+.email input{
+    width: 19vw;
+    height: 4.4vh;
+    margin-left: 3vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+    margin-bottom: 1vh;
+    padding-left: 1vw;
+}
+
+.password{
+    height: 8vh;
+    width: 27vw;
+    margin-bottom: 1.5vh;
+
+}
+
+.password h4{
+    margin-left: 3vw;
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.password input{
+    width: 19vw;
+    height: 4.4vh;
+    margin-left: 3vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+    padding-left: 1vw;
+   
+}
+
+.textbox{
+    height: 11.5vh;
+    width: 27vw;
+    margin-bottom: 1.5vh;
+
+}
+
+
+.textbox h4{
+    margin-left: 3vw;
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+
+.textbox input{
+    width: 19vw;
+    height: 8vh;
+    margin-left: 3vw;
+    border-radius: 8px;
+    border: 0.7px solid black;
+    padding-left: 1vw;
+   
+}
+
+.BTN{
+    
+        margin-top: 2vh;
+        margin-left: 3vw;
+        height: 3vh;
+        width: 5vw;
+        background-color: white;
+        border: 0.7px solid black;
+        border-radius: 8px;
+        font-size: 1vw;
+        font-weight: 520;
+        border: 0.5px solid black;
+
+    
+}
+
+
+.BTN:hover{
+    cursor: pointer;
+    background-color: rgb(75, 134, 140);
+    color: white;
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+
+
+  
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .edit{
+        height: 100vh;
+        width: 60vw;
+    }
+
+    .textbox{
+        height: 8vh;
+        width: 60vw;
+        margin-bottom: 0vh;
+        margin-left: 15vw;
+        margin-top: 1vh;
+    
+    }
+    
+    
+    .textbox h4{
+        margin-left: 3vw;
+        margin-bottom: 0vh;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    
+    
+    .textbox input{
+        width: 24vw;
+        height: 5vh;
+        margin-left: 3vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+       font-size: 2vw;
+       padding-left: 1vw;
+    }
+
+    .textbox ::placeholder{
+        font-size: 1.5vw;
+    }
+    
+    
+    .Headingg{
+
+    width: 60vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+    padding-top: 2vh;
+    font-size: 1.5vw;
+
+    }
+    .email{
+        height: 8vh;
+        width: 60vw;
+        margin-bottom: 0vh;
+    
+    }
+    
+    .email h4{
+        margin-left: 18vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    .email input{
+        width: 23vw;
+        height: 3vh;
+        margin-left: 18vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        margin-bottom: 1vh;
+        padding-left: 1vw;
+    }
+    
+    .password{
+        height: 8vh;
+        width: 27vw;
+        margin-bottom: 0;
+    }
+    
+    .password h4{
+        margin-left: 18vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    
+    .password input{
+        width: 23vw;
+        height: 3vh;
+        margin-left: 18vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        padding-left: 1vw;
+    }
+    
+    .Btn2{
+        margin-top: 2vh;
+        margin-left: 18vw;
+        height: 3vh;
+        width: 8vw;
+        background-color: white;
+        border: 0.7px solid black;
+        border-radius: 8px;
+        font-size: 1.6vw;
+        font-weight: 520;
+    
+    }
+    
+    .Btn2:hover{
+        cursor: pointer;
+        background-color: rgb(75, 134, 140);
+        color: white;
+    }
+    
+
+}

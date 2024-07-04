@@ -35,19 +35,23 @@
 }
 
 .Img {
-  width: 36vw;
-  border-radius: 30px;
- height: 35vh;
- margin-top: 1vh;
- padding: 0 1vw;
+
+    width: 36vw;
+     border-radius: 30px;
+    height: 35vh;
+    margin-top: 1vh;
+    padding: 0 1vw;
 }
 
 .Body{
-  width: 37vw;
-  height: 36vh;
+    
+    width: 37vw;
+    height: 36vh;
+
 }
 
 .Footer{
+
   padding: 1vw;
   font-size: 1vw;
   color: #0b0000;
@@ -56,8 +60,8 @@
 }
 
 .Reply-box {
-    display: flex;
     
+    display: flex;
      padding: .3vh;
      padding-left: .2vw;
      padding-right: .2vw;
@@ -67,8 +71,10 @@
     height: 4vh;
     justify-content: center;
     align-items: center;
-    
-    border-radius: 999px;
+
+    /* font-size: 1vw; */
+     border-radius: 30px; 
+
    
   }
 

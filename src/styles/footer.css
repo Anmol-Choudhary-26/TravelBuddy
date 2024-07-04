@@ -6,7 +6,7 @@
     justify-content: space-around;
 }
 
-.Boxx{
+.Boxxx{
 
     height: 50h;
     width: 18vw;
@@ -89,6 +89,7 @@
 }
 
 
+
 @media only screen and (max-width: 600px){
 
     foot{
@@ -99,12 +100,13 @@
         justify-content: space-around;
     }
 
-    .Boxx{
-
+    
+    .Boxxx{
+    
         height: 40h;
         width: 18vw;
-
-
+       
+       
     }
 
     .firstfoot{
@@ -121,17 +123,17 @@
         color: white;
         margin-left: 1vw;
     }
-
+    
     .box1img{
         height: 4vh;
         width: 3vw;
-
+        
     }
-
+    
     .langbtn{
       display: flex;
       justify-content: flex-end;
-
+    
     }
 
     .langbtn select{
@@ -150,11 +152,13 @@
         font-size: 0.8vw;
         margin-top: 35vh;
 
+    
     }
-
+    
     .firstpara p{
       margin-left: 8vw;
     }
+    
 
     .secondfoot{
         color: white;
@@ -173,15 +177,14 @@
         font-size: 1.8vw;
     }
 
+    
     .ulist a:hover{
         text-decoration: underline;
     }
+    
 
     .ulist li{
         margin-bottom: 3vh;
 
     }
 
-
-
-}

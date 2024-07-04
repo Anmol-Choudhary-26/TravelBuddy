@@ -114,6 +114,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+
   @media only screen and (max-width: 600px) {
     .main {
        height: 30vh;
@@ -170,6 +171,7 @@
   .reply-box button:hover {
     background-color: #4c925f;
   }
+  
 
   .reply-box button:active {
     background-color: #c2d218;
@@ -222,9 +224,6 @@
     padding: 0 1vw;
 }
 
-
-  }
-
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     /* ... (same as the extra small devices media query) ... */
@@ -238,8 +237,7 @@
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     /* ... (same as the extra small devices media query) ... */
-  }
-
+    }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     /* ... (same as the extra small devices media query) ... */

@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.notifications{
+
+    height: 100vh;
+    width: 40vw;
+    background-color:black;
+    color: white;
+    
+
+}
+
+.notificationHead{
+
+    height: 10vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 550;
+    font-style:oblique;
+    letter-spacing: 0.8px;
+   
+
+}
+
+
+
+.imageprofile{
+    height: 13vh;
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageprofile img{
+    height: 7vh;
+    width: 4vw;
+    border-radius: 50%;
+}
+
+.mssg{
+    height: 13vh;
+    width: 40vw;
+    /* background-color:beige; */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.1px solid white;
+    border-top: 0.1px solid white;
+
+}
+
+.content{
+    height: 10vh;
+    width: 35vw;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Name{
+    height: 3vh;
+    width: 35vw;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+    font-size: 1.01vw;
+    text-decoration: underline;
+    letter-spacing: 0.3px;
+}
+
+.Name h4{
+    margin-left: 1vw;
+}
+
+.notificationss{
+
+    height: 7vh;
+    width: 35vw;
+    font-size: 1vw;
+  
+}
+
+.notificationss p{
+    margin-top: 0.5vh;
+    margin-left: 1vw;
+    word-spacing: 0.5px;
+}

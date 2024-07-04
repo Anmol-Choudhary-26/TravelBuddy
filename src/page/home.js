@@ -56,12 +56,6 @@ function Home (){
 
      </div>
 
-
-
-        
-       
-
-
     <div>
       <PopularDestination />
     </div>
