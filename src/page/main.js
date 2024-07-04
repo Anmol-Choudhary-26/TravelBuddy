@@ -2,16 +2,21 @@
 import TripPost from '../component/postsCard';
 import dataAll from '../utils/dataAll';
 import '../styles/main.css';
-import React from'react';
+import React from 'react';
 
 import home from '../images/homeicon.jpeg';
 import logo from '../images/temperature.png';
+import Modal from '../component/modal';
+
+
+
 function MainPost(){
 const renderedItems = dataAll.map((items, index) => {
     return (
         <TripPost trip={items} key={index} />
     )
 })
+
 
     return(
         <div className='Mainpage'>
@@ -73,9 +78,20 @@ const renderedItems = dataAll.map((items, index) => {
                 </select>
          </div>
 
-        </div>
+
+         <div className='mainrightbottom'>
+
+               
+                <Modal />
+
+                
+
+            </div>
+         </div>
 
         </div>
+
+   
         
 
     )
