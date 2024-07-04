@@ -1,9 +1,22 @@
 import '../styles/signup.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
+import { createClient } from '@supabase/supabase-js'
+import React, {useState, useEffect } from 'react';
+
+const supabase = createClient(
+    "https://tpkszvmuasfiyaloquii.supabase.co",
+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
+)
 
 function Signup(){
-
+ 
+        const handleSignup = async () =>{
+            supabase.auth.signInWithOAuth({
+                provider: 'google',
+              })
+              
+        }
     return(
         <div className='signup'>
 
@@ -16,7 +29,9 @@ function Signup(){
 
 
             <div className='Firsthead'>
+
         <img src={image}  className='IImage' alt='logo'/>
+
         <h2>TravelBuddy</h2>
         </div>
 
@@ -26,12 +41,14 @@ function Signup(){
 
         <div className='Thirdhead'>
             <h2>Have an account?</h2>
-            <a href='abc'>Log in now</a>
+            <a href='/login'>Log in now</a>
         </div>  
 
-        <div className='Buttons'>
+        <div onClick = {() => handleSignup()}className='Buttons'>
        
+
             <button className='Btn1'><img src={googlelogo}  className='Glogo' alt="google"/>Google</button>
+
         </div>
 
         <div className='Fourthhead'>
