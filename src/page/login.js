@@ -11,13 +11,20 @@ const supabase = createClient(
 )
 function Login() {
     const navigate = useNavigate()
+
+    const handleSignup = async () =>{
+        supabase.auth.signInWithOAuth({
+            provider: 'google',
+          })
+          
+    }
+
     supabase.auth.onAuthStateChange(async (event) => {
+        console.log(event)
         if (event !== "SIGNED_OUT") {
-
+            navigate("/main")
         }
-        else {
-
-        }
+        
     })
     return (
         <div className='loginfullpage'>
@@ -38,7 +45,7 @@ function Login() {
                     <a href='/signup'>Sign Up</a>
                 </div>
 
-                <div className='buttons'>
+                <div onClick = {() => handleSignup()} className='buttons'>
 
                     <button className='btn1'><img src={googlelogo} alt="logo" className='glogo' />Google</button>
                 </div>
