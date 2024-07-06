@@ -16,7 +16,7 @@ function Signup() {
         supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: 'https://travelbudddyy.netlify.app/main',
+                redirectTo: 'https://travelbudy.netlify.app/main',
             }
         })
 
@@ -45,7 +45,9 @@ function Signup() {
 
                 <div className='Thirdhead'>
                     <h2>Have an account?</h2>
-                    <a href='/login'>Log in now</a>
+                    <div  onClick={()=> navigate('/signup')} >
+                    Login Now
+                  </div>
                 </div>
 
                 <div className='Buttons'>

@@ -7,6 +7,7 @@ import supabase from '../component/supabase.js';
 
 
 
+
 function Login(){
 
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ function Login(){
         supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: 'http://localhost:3000/main',
+                redirectTo: 'https://travelbudy.netlify.app/main',
             }
           })
           
@@ -51,7 +52,10 @@ function Login(){
 
         <div className='thirdhead'>
             <h2>Don't have an account?</h2>
-            <a href='/signup'>Sign Up</a>
+           
+            <div  onClick={()=> navigate('/signup')} >
+              Sign Up
+             </div>
         </div>  
 
         <div onClick = {() => handleSignup()} className='buttons'>
