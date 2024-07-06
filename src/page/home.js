@@ -6,7 +6,7 @@ import PopularDestination from '../component/popularDestination';
 import Footer from '../component/footer';
 import data from '../utils/data';
 import { useNavigate } from 'react-router-dom';
-import {supabase} from '../component/supabase';
+import supabase from '../component/supabase';
 
 function Home (){
   const navigate = useNavigate()
