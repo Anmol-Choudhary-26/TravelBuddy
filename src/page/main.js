@@ -1,6 +1,6 @@
 
 import TripPost from '../component/postsCard';
-import dataAll from '../utils/dataAll';
+
 import '../styles/main.css';
 import React , {useState , useEffect} from 'react';
 import home from '../images/home.png';
@@ -13,18 +13,12 @@ import profile from '../images/user.png';
 import Modal from '../component/modal';
 import { getAllPost } from '../hooks/usePost';
 import { useNavigate } from 'react-router-dom';
-// import { createClient } from '@supabase/supabase-js';
-
-// const supabase = createClient(
-//     "https://tpkszvmuasfiyaloquii.supabase.co",
-//     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
-// )
 
 
 function MainPost(){
     const navigate = useNavigate();
 
-const [user, setUser] = useState({})
+
 const [post, setPost] = useState([])
 // const navigate = useNavigate()
 

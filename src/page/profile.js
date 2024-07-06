@@ -15,7 +15,7 @@ function Profile() {
    const navigate = useNavigate()
    async function signout() {
       console.log('Sign out')
-      const { error } = await supabase.auth.signOut()
+      await supabase.auth.signOut()
    }
    return (
 

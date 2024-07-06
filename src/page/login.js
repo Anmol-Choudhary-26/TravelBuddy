@@ -1,9 +1,8 @@
 import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
-import sideimage from '../images/bg.jpg';
 import { useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from'react';
+import React, { useEffect } from'react';
 import supabase from '../component/supabase.js';
 
 
@@ -58,7 +57,7 @@ function Login(){
         <div onClick = {() => handleSignup()} className='buttons'>
 
        
-            <button className='btn1'><img src={googlelogo}  className='glogo'/>Google</button>
+            <button className='btn1'><img src={googlelogo} alt="google logo"  className='glogo'/>Google</button>
         </div>
 
                 <div className='fourthhead'>

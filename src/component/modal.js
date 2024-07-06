@@ -6,7 +6,6 @@ import { createPost } from '../hooks/usePost';
 
 export default function Modal() {
 
-  const [user, setUser] = useState({})
   const [post, setPost] = useState({
     imageUrl: 'gfhgfhgfjgfj',
     authorName: 'Akash',

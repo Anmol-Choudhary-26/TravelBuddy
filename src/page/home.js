@@ -8,7 +8,6 @@ import data from '../utils/data';
 import { useNavigate } from 'react-router-dom';
 function Home (){
   const navigate = useNavigate()
-  const name = 'Home';
     const renderedItems = data.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
