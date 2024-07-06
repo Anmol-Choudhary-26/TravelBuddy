@@ -1,6 +1,6 @@
 import axios from "axios"
 export async function createUser(values) {
-    const data = await axios.post('https://travelbuddy-backend-tuhi.onrender.com/user', 
+    const data = await axios.post('https://https://travelbuddy-backend-gxl9.onrender.com/user', 
      {
         email: values.email,
         phoneNumber: values.phoneNumber,
@@ -14,7 +14,7 @@ export async function createUser(values) {
 }
 
 export async function updateUser(values) {
-    const data = await axios.put(`https://travelbuddy-backend-tuhi.onrender.com/user/${"6687b8052be27e93d9938d4e"}`, values)
+    const data = await axios.put(`https://https://travelbuddy-backend-gxl9.onrender.com/user/${"6687b8052be27e93d9938d4e"}`, values)
     console.log(data)
     return data
 }
