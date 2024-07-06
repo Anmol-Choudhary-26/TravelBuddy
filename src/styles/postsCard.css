@@ -35,6 +35,7 @@
 }
 
 .Img {
+
     width: 36vw;
      border-radius: 30px;
     height: 35vh;
@@ -50,7 +51,7 @@
 }
 
 .Footer{
- 
+
   padding: 1vw;
   font-size: 1vw;
   color: #0b0000;
@@ -70,8 +71,10 @@
     height: 4vh;
     justify-content: center;
     align-items: center;
+
     /* font-size: 1vw; */
      border-radius: 30px; 
+
    
   }
 

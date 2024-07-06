@@ -3,87 +3,89 @@ import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import supabase from '../component/supabase';
 import { useNavigate } from 'react-router-dom';
-function Signup(){
+function Signup() {
     const navigate = useNavigate()
     supabase.auth.onAuthStateChange(async (event) => {
         console.log(event)
         if (event === "SIGNED_IN") {
-            navigate("/main")   
+            navigate("/main")
         }
-       
+
     })
-    const handleSignup = async () =>{
+    const handleSignup = async () => {
         supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: 'http://localhost:3000/main',
+                redirectTo: 'https://travelbudddyy.netlify.app/main',
             }
-          })
-          
+        })
+
     }
-    return(
+    return (
         <div className='signup'>
 
             <div className='sidesignup'>
-                
+
 
             </div>
 
             <div className='signuppage'>
 
 
-            <div className='Firsthead'>
-        <img src={image}  className='IImage' alt='logo'/>
-        <h2>TravelBuddy</h2>
-        </div>
+                <div className='Firsthead'>
 
-        <div className='Secondhead'>
-            <h2>Create your account</h2>
-        </div>
+                    <img src={image} className='IImage' alt='logo' />
 
-        <div className='Thirdhead'>
-            <h2>Have an account?</h2>
-            <a href='/login'>Log in now</a>
-        </div>  
+                    <h2>TravelBuddy</h2>
+                </div>
 
-        <div className='Buttons'>
-       
-            <button onClick={handleSignup} className='Btn1'><img src={googlelogo}  className='Glogo' alt="google"/>Google</button>
-        </div>
+                <div className='Secondhead'>
+                    <h2>Create your account</h2>
+                </div>
 
-        <div className='Fourthhead'>
-        <p >---Or with email and password---</p>
-        </div>
+                <div className='Thirdhead'>
+                    <h2>Have an account?</h2>
+                    <a href='/login'>Log in now</a>
+                </div>
 
-        <div className='Email'>
+                <div className='Buttons'>
 
-            <h4>Email Address</h4>
-            <input type='email'className='Emailinput'/>
-        </div>
+                    <button onClick={handleSignup} className='Btn1'><img src={googlelogo} className='Glogo' alt="google" />Google</button>
+                </div>
 
-        <div className='Password'>
+                <div className='Fourthhead'>
+                    <p >---Or with email and password---</p>
+                </div>
 
-        <h4>Password</h4>  
-        <input type='password'/>
-        
-        </div>
+                <div className='Email'>
 
-        <div className='Password'>
+                    <h4>Email Address</h4>
+                    <input type='email' className='Emailinput' />
+                </div>
 
-        <h4>First Name</h4>  
-        <input type='text'/>
+                <div className='Password'>
 
-</div>
+                    <h4>Password</h4>
+                    <input type='password' />
+
+                </div>
+
+                <div className='Password'>
+
+                    <h4>First Name</h4>
+                    <input type='text' />
+
+                </div>
 
 
-<div className='Password'>
+                <div className='Password'>
 
-<h4>Last Name</h4>  
-<input type='text'/>
+                    <h4>Last Name</h4>
+                    <input type='text' />
 
-</div>
+                </div>
 
-<div className='checkbox' >
+                <div className='checkbox' >
                     <input id="checkbox-1" type="checkbox" name="tos" />
                     <div className='policybox'>I accept the&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.mongodb.com/legal/privacy-policy">Privacy Policy</a>&nbsp;and the&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.mongodb.com/cloud-terms-and-conditions">Terms of Service</a>
                     </div>
@@ -91,13 +93,13 @@ function Signup(){
                 </div>
 
 
-<button className='btn2'>Sign up</button>
+                <button className='btn2'>Sign up</button>
 
 
-</div>
+            </div>
 
-</div>
-           
+        </div>
+
     )
 
 

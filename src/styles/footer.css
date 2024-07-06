@@ -99,6 +99,7 @@
         display: flex;
         justify-content: space-around;
     }
+
     
     .Boxxx{
     
@@ -107,7 +108,7 @@
        
        
     }
-    
+
     .firstfoot{
         margin-top: 4vh;
         display: flex;
@@ -116,7 +117,7 @@
         align-items: center;
         margin-bottom: 2vh;
     }
-    
+
     .box1para{
         font-size: 2vw;
         color: white;
@@ -134,7 +135,7 @@
       justify-content: flex-end;
     
     }
-    
+
     .langbtn select{
         width: 9.7vw;
         height: 5vh;
@@ -145,11 +146,12 @@
         cursor: pointer;
         /* appearance: none; */
     }
-    
+
     .firstpara{
         color: white;
         font-size: 0.8vw;
         margin-top: 35vh;
+
     
     }
     
@@ -157,6 +159,7 @@
       margin-left: 8vw;
     }
     
+
     .secondfoot{
         color: white;
         font-size: 2vw;
@@ -165,7 +168,7 @@
         margin-bottom: 3.5vh;
         font-weight: 700;
     }
-    
+
     .ulist a{
         color: white;
         text-decoration: none;
@@ -173,17 +176,15 @@
         /* font-family: 'Akzidenz-Grotesk Std'; */
         font-size: 1.8vw;
     }
+
     
     .ulist a:hover{
         text-decoration: underline;
     }
     
+
     .ulist li{
         margin-bottom: 3vh;
 
     }
-    
 
-
-}
- 

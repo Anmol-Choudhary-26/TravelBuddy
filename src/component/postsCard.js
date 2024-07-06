@@ -26,6 +26,7 @@ const TripPost = ({ trip }) => {
         <img className='Img' src={imageUrl} alt={location} />
       </div>
       <div className='Footer'>
+
         <div className='likes'>
 
           <div className='likediv'>
