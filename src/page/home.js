@@ -6,8 +6,17 @@ import PopularDestination from '../component/popularDestination';
 import Footer from '../component/footer';
 import data from '../utils/data';
 import { useNavigate } from 'react-router-dom';
+import {supabase} from '../component/supabase';
+
 function Home (){
   const navigate = useNavigate()
+  supabase.auth.onAuthStateChange(async (event) => {
+    console.log(event)
+    if (event === "SIGNED_IN") {
+        navigate("/main")
+    }
+
+})
     const renderedItems = data.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
