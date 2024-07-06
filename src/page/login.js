@@ -15,7 +15,9 @@ function Login(){
     const handleSignup = async () =>{
         supabase.auth.signInWithOAuth({
             provider: 'google',
-            
+            options:{
+                redirectTo: 'https://travelbudy.netlify.app/main',
+            }
           })
           
     }
