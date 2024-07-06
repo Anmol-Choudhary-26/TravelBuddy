@@ -3,6 +3,7 @@ import profile from '../images/Pc.jpeg';
 import React , {useState,useEffect} from 'react';
 import {updateUser} from '../hooks/useUser';
 
+
 function Edit() {
         const [userData , setUserData] = useState({});
 
@@ -15,7 +16,6 @@ function Edit() {
             const data = await updateUser(userData);
             console.log(data);
             console.log('User created successfully');
-            alert("Profile Updated successfully")
         }
 
         useEffect(() => console.log(userData));
@@ -28,7 +28,7 @@ function Edit() {
         <div className="edit">
 
            <div className='Headingg'>
-           <h1>Edit Profile</h1>
+           <h1>Create User</h1>
            </div>
 
            <div className='profileimage'>
@@ -105,7 +105,7 @@ function Edit() {
             </div>
 
 
-            <button onclick={() => handleSubmit()} type='submit' className='BTN'>Update</button>
+            <button onclick={() => handleSubmit()} type='submit' className='BTN'>Create</button>
 
         </div>
 

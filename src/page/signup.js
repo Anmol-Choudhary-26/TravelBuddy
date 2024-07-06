@@ -1,9 +1,26 @@
 import '../styles/signup.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
-
+import supabase from '../component/supabase';
+import { useNavigate } from 'react-router-dom';
 function Signup(){
-
+    const navigate = useNavigate()
+    supabase.auth.onAuthStateChange(async (event) => {
+        console.log(event)
+        if (event === "SIGNED_IN") {
+            navigate("/main")   
+        }
+       
+    })
+    const handleSignup = async () =>{
+        supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                redirectTo: 'http://localhost:3000/main',
+            }
+          })
+          
+    }
     return(
         <div className='signup'>
 
@@ -26,12 +43,12 @@ function Signup(){
 
         <div className='Thirdhead'>
             <h2>Have an account?</h2>
-            <a href='abc'>Log in now</a>
+            <a href='/login'>Log in now</a>
         </div>  
 
         <div className='Buttons'>
        
-            <button className='Btn1'><img src={googlelogo}  className='Glogo' alt="google"/>Google</button>
+            <button onClick={handleSignup} className='Btn1'><img src={googlelogo}  className='Glogo' alt="google"/>Google</button>
         </div>
 
         <div className='Fourthhead'>

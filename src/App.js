@@ -8,6 +8,8 @@ import Edit from './page/editProfile';
 import Notifications from './page/notifications';
 import Profile from './page/profile';
 import Chat from './page/chat';
+import User from './page/createUser';
+import Search from './page/search';
 
 function App(){
 
@@ -22,6 +24,8 @@ function App(){
         <Route path='/notification' element={<Notifications />} />
         <Route path='/profile' element={<Profile />} /> 
         <Route path='/chat' element={<Chat />} />  
+        <Route path='/user' element={<User />} />
+        <Route path='/search' element={<Search />} />
         </Routes> 
        
       )

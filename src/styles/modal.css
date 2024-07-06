@@ -5,7 +5,7 @@ body.active-modal {
 .btn-modal {
     /* display: block; */
    margin-left: 11vw;
-    font-size: 1.1vw;
+    font-size: 1vw;
     margin-top: 5vh;
     height: 5vh;
     width: 8vw;
@@ -44,7 +44,7 @@ body.active-modal {
     height: 75vh;
     width: 30vw;
     line-height: 1.4;
-    background: #f1f1f1;
+    background:white;
     border-radius: 15px;
 }
 
@@ -136,35 +136,34 @@ body.active-modal {
 
 
 .textboxx3{
-    height: 20vh;
+    height: 22vh;
     width: 28vw;
-    margin-left: 1.5vw;
+    margin-left: 1vw;
     margin-top: 5vh;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     
 
 }
 
+
 .textboxx3 input{
-    height: 20vh;
-    width: 27vw;
-    border-radius: 40px;
-    background-color: rgb(251, 253, 255);
+   background-color: white;
+   border: none;
 
-}
-
-.textboxx3 a{
-    margin-left: 11vw;
-    font-size: 1.1vw;
-    color: black;
 }
 
 .uploadbtn{
     height: 5vh;
     width: 30vw;
-    margin-top: 9vh;
+    margin-top: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .uploadbtn button{

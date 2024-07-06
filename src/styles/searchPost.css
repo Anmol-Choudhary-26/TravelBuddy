@@ -1,72 +1,77 @@
-.Main{
+.MAIN{
     background-color: #fff;
-    border: none;
+    /* border: none; */
     border-radius: 15px;
     margin-bottom: 1vh;
     color: white;
-    height: 57vh;
-      width:38vw;
-      margin-top: 1vh;
+    height: 35.5vh;
+      width:25vw;
+      border: 1px solid black;
+      /* height: 20vh;
+      width: 20vw; */
+      /* margin-top: 1vh; */
       background-image: linear-gradient(to right,rgba(0, 0, 0, 0.679),rgb(55, 43, 43));
 }
-.Heading{
+.HEading{
     display: flex;
     align-items: center;
-    padding: 1vw;
-    font-size: 1.1vw ;
+    padding: 0.5vw;
+    font-size: 0.8vw ;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
     height: 6vh;
-    width: 35vw;
+    width: 23vw;
 }
 
-.LocDate{
+.LOcDate{
     display: flex ;
     flex-direction: column;
-    font-size: 1vw;
+    font-size: 0.8vw;
 }
 
 .AuthorImg{
     width: 2vw;
-  height: 3.5vh;
+  height: 3.2vh;
   margin-top: .8vh ;
   border-radius: 90%;
   margin-right: 10px;
 }
 
-.Img {
-    width: 36vw;
+.IMg {
+    width: 20vw;
      border-radius: 30px;
-    height: 35vh;
+    height: 10vh;
     margin-top: 1vh;
     padding: 0 1vw;
 }
 
-.Body{
+.BOdy{
     
-    width: 37vw;
-    height: 36vh;
+    width: 25vw;
+    height: 19vh;
 
 }
 
-.Footer{
+.FOoter{
  
-  padding: 1vw;
-  font-size: 1vw;
+  padding: 0.5vw;
+  font-size: 0.5vw;
   color: #0b0000;
-  height: 10vh;
-  width: 35.5vw;
+  height: 7vh;
+  width: 18vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.Reply-box {
+.REply-box {
     
     display: flex;
-     padding: .3vh;
-     padding-left: .2vw;
-     padding-right: .2vw;
+     /* padding: .2vh; */
+     padding-left: .1vw;
+     padding-right: .1vw;
     background-color: thistle;
     border: 1px solid black;
-    width: 100%; 
+    width: 23.5vw; 
     height: 4vh;
     justify-content: center;
     align-items: center;
@@ -76,22 +81,22 @@
   }
 
   
-.Reply-box input {
+.REply-box input {
     flex-grow: 1;
-    width: 12vw;
+    width: 8vw;
     height: 2vh;
-    padding: 0.5vw;
+    padding: 0.1vw;
     border-radius: 999px;
    border: none;
     background-color: #fff;
     border: 1px solid #e6e6e6;
+    font-size: 0.8vw;
   }
   
-  .Reply-box button{
-    width: 5vw;
-    font-size: 0.9vw;
-    margin-left: 0.3vw;
-    padding: 1.2vh 1.2vw;
+  .REply-box button{
+    width: 4vw;
+    height: 3vh;
+    font-size: 0.7vw;
     background-color: #000000;
     color: #fff;
     border: none;
@@ -100,51 +105,48 @@
     transition: background-color 0.3s ease;
   }
   
-  .Reply-box button:hover {
+  .REply-box button:hover {
     background-color: #4c925f;
   }
   
-  .Reply-box button:active {
+  .REply-box button:active {
     background-color: #c2d218;
     transform: scale(0.95);
   }
 
-  .Text{
+  .TEXT{
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .likes{
-    height: 3.2vh;
-    width: 33vw;
+  .LIKES{
+    height: 3vh;
+    width: 23vw;
     /* background-color: black; */
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    margin-bottom: 1vh;
-    /* padding: 0 2vw; */
-    
+     display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding-bottom: 0.2vw;
   }
 
-  .likediv{
-    height: 3.2vh;
+  .LIKES img{
+    height: 2vh;
+    width: 1.5vw;
+  }
+
+  .like{
+    height: 3vh;
     width: 10vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
- 
+    color: white;
   }
 
-  .likediv p{
-
-    font-size: 1.1vw;
-    margin-bottom: 0.7vh;
+  .like p{
+    font-size: 1vw;
     margin-right: 0.5vw;
+    margin-bottom: 0.5vh;
+    font-family:'Times New Roman', Times, serif;
   }
-  
 
-  .likediv img{
-    height: 3.2vh;
-    width: 3.2vh;
-   
-  }

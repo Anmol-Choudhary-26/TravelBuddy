@@ -2,8 +2,40 @@ import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import sideimage from '../images/bg.jpg';
+import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from'react';
+import supabase from '../component/supabase.js';
+
+
 
 function Login(){
+
+    const navigate = useNavigate()
+
+    const handleSignup = async () =>{
+        supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                redirectTo: 'http://localhost:3000/main',
+            }
+          })
+          
+    }
+
+    supabase.auth.onAuthStateChange(async (event) => {
+        console.log(event)
+        if (event === "SIGNED_IN") {
+            navigate("/main")
+        }
+        
+    })
+    useEffect(() => {
+        async function getUser() {
+            await supabase.auth.getUser().then((value) => { if (value.data?.user) console.log(value.data) })
+        }
+        getUser()
+    },[])
+
    return(
     <div className='loginfullpage'>
        
@@ -20,10 +52,11 @@ function Login(){
 
         <div className='thirdhead'>
             <h2>Don't have an account?</h2>
-            <a href='abc'>Sign Up</a>
+            <a href='/signup'>Sign Up</a>
         </div>  
 
-        <div className='buttons'>
+        <div onClick = {() => handleSignup()} className='buttons'>
+
        
             <button className='btn1'><img src={googlelogo}  className='glogo'/>Google</button>
         </div>

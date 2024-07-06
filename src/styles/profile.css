@@ -89,6 +89,30 @@ p{
 }
 
 
+.lgoutbtn button{
+height: 4vh;
+width: 7vw;
+margin-top: 4vh;
+border-radius: 15px;
+border: none;
+background-color: aliceblue;
+font-size: 1.05vw;
+}
+
+.lgoutbtn button:hover{
+    cursor: pointer;
+    background-color:rgb(63, 63, 63);
+    color: white;
+}
+
+.lgoutbtn{
+    height: 4vh;
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
+}
 
 
 
