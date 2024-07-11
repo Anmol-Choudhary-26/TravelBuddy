@@ -4,12 +4,13 @@ body.active-modal {
 
 .btn-modal {
     /* display: block; */
-   margin-left: 11vw;
+   margin-left: 13vw;
     font-size: 1vw;
-    margin-top: 5vh;
+    margin-top: 4vh;
     height: 5vh;
     width: 8vw;
     border-radius: 15px;
+  
 }
 
 .btn-modal:hover{
@@ -18,13 +19,16 @@ body.active-modal {
 }
 
 .modal {
-    width: 30vw;
+    width: 33vw;
     height: 60vh;
     top: 200;
     left: 1000;
-    right: 20;
+    right: 10;
     bottom: 30; 
-     position: fixed;
+     /* position: fixed; */
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 

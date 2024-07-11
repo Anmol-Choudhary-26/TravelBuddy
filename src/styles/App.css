@@ -112,7 +112,7 @@
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.473);
-   
+    
 
 }
 
@@ -153,6 +153,10 @@ background-color: rgba(0, 0, 0, 0.473);
     font-family:Arial, Helvetica, sans-serif;
     text-decoration: none;
 } 
+
+.pdestinations{
+  
+}
 
 
 /* Default styles */

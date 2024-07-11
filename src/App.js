@@ -21,7 +21,7 @@ function App(){
         <Route path='/signup' element={<Signup />} />
         <Route path='/main' element={<Main />} />
         <Route path='/edit' element={<Edit />} />
-        <Route path='/notification' element={<Notifications />} />
+        {/* <Route path='/notification' element={<Notifications />} /> */}
         <Route path='/profile' element={<Profile />} /> 
         <Route path='/chat' element={<Chat />} />  
         <Route path='/user' element={<User />} />

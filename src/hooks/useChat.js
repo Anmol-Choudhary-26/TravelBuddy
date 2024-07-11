@@ -9,7 +9,11 @@ export async function getAllChatRooms(values) {
 export async function createChat(values) {
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/chat', {
         users: ["6687b8052be27e93d9938d4e", values]
-    });
+    },{
+    headers: {
+        'Content-Type': 'application/json',
+      }
+});
     console.log(data)
     return data.data
 }

@@ -66,7 +66,7 @@ function Home (){
 
      </div>
 
-    <div>
+    <div >
       <PopularDestination />
     </div>
 
