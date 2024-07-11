@@ -1,0 +1,13 @@
+.countiner-style{
+    height: 100%;
+    position: relative;
+
+}
+
+.carousel-boult{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

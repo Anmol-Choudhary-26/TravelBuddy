@@ -8,6 +8,7 @@ import gender from '../images/Gender.png';
 import address from '../images/Home.svg';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../component/supabase.js';
+import BackgroundSlider from '../component/backgroundslider.js';
 
 
 
@@ -90,6 +91,10 @@ function Profile() {
          </div>
 
          {/* <button className="buton">Show All Information</button> */}
+
+         <div className='ProfileOther'>
+         <BackgroundSlider />
+         </div>
 
       </div>
 

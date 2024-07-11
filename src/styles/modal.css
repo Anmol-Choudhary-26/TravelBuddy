@@ -1,5 +1,6 @@
 body.active-modal {
     overflow-y: hidden;
+    
 }
 
 .btn-modal {
@@ -10,6 +11,7 @@ body.active-modal {
     height: 5vh;
     width: 8vw;
     border-radius: 15px;
+   
   
 }
 
@@ -37,6 +39,7 @@ body.active-modal {
     /* background: rgba(49,49,49,0.8); */
     /* width: 10vw; */
     height:5vh;
+    
     /* top: 200;
     left: 1000; */
     /* right: 20;
@@ -50,8 +53,8 @@ body.active-modal {
     line-height: 1.4;
     background:white;
     border-radius: 15px;
+   
 }
-
  .close-modal {
 
   height: 2vh;

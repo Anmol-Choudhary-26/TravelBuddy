@@ -1,7 +1,7 @@
-import '../styles/editProfile.css';
-import profile from '../images/Pc.jpeg';
+import '../styles/user.css';
 import React , {useState,useEffect} from 'react';
 import {updateUser} from '../hooks/useUser';
+import BackgroundSlider from '../component/backgroundslider';
 
 
 function Edit() {
@@ -32,7 +32,9 @@ function Edit() {
            </div>
 
            <div className='profileimage'>
-                <img src={profile} alt='profile'/>
+            <div className='pimage'>
+            <button>+</button>
+            </div>
             </div>
 
             <div className='email'>
@@ -110,7 +112,7 @@ function Edit() {
         </div>
 
         <div className='otherside'>
-
+                <BackgroundSlider />
         </div>
 
         </div>

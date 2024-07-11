@@ -9,33 +9,37 @@
     display: flex;
     justify-content:center;
 
-
-
+   
 }
 .profileimage img{
     height: 13vh;
     width: 8vw;
     border-radius: 50%;
+   
 }
+
 
 .editfullpage{
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
+    /* color: white; */
 }
 
 .edit{
     height: 100vh;
     width: 30vw;
-    /* background-color: aliceblue; */
+    /* background-color:rgb(6, 6, 6); */
+    background-color: whitesmoke;
 
 }
 
-.otherside{
+.Otherside{
     height: 100vh;
     width: 70vw;
-    background-color: black;
+  
+    /* background-color: aqua; */
 }
 
 .Headingg{

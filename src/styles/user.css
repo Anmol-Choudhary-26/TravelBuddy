@@ -79,7 +79,6 @@
     height: 8vh;
     width: 27vw;
     margin-bottom: 1.5vh;
-
 }
 
 .email h4{
@@ -96,6 +95,7 @@
     border: 0.7px solid black;
     margin-bottom: 1vh;
     padding-left: 1vw;
+    font-size: 1vw;
 }
 
 .password{
@@ -119,6 +119,7 @@
     border-radius: 8px;
     border: 0.7px solid black;
     padding-left: 1vw;
+    font-size: 1vw;
    
 }
 
@@ -145,6 +146,7 @@
     border-radius: 8px;
     border: 0.7px solid black;
     padding-left: 1vw;
+    font-size: 1vw;
    
 }
 
