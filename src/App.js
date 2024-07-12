@@ -10,6 +10,7 @@ import Chat from './page/chat';
 import User from './page/createUser';
 import Search from './page/search';
 import Bookmark from './page/bookmark';
+import Reset from './page/resetpassword';
 
 function App(){
 
@@ -26,6 +27,7 @@ function App(){
         <Route path='/chat' element={<Chat />} />  
         <Route path='/user' element={<User />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/reset' element={<Reset />} />
         </Routes> 
        
       )
