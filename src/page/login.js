@@ -22,7 +22,7 @@ function Login(){
      };
 
      async function signInWithEmail() {
-        const { data, error } = await supabase.auth.signInWithPassword({
+        const { data } = await supabase.auth.signInWithPassword({
             email: signup.email,
           password: signup.password,
         })

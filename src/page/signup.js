@@ -20,7 +20,7 @@ function Signup() {
     const navigate = useNavigate()
 
     async function signUpNewUser() {
-        const { data, error } = await supabase.auth.signUp({
+        const { data } = await supabase.auth.signUp({
           email: signup.email,
           password: signup.password,
           
