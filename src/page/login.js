@@ -2,13 +2,34 @@ import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect } from'react';
+import React, { useEffect, useState } from'react';
 import supabase from '../component/supabase.js';
 
 
 
 
 function Login(){
+
+    const [signup , setSignupData] = useState({
+        email: '',
+        password: '',
+     });
+ 
+     const handleChange = (e) => {
+         const {name , value} = e.target;
+         setSignupData({...signup , [name] : value});
+         console.log(signup);
+     };
+
+     async function signInWithEmail() {
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: signup.email,
+          password: signup.password,
+        })
+        if(data){
+            navigate('/main')
+        }
+      }
 
     const navigate = useNavigate()
 
@@ -69,19 +90,23 @@ function Login(){
                 <div className='email'>
 
                     <h4>Email Address</h4>
-                    <input type='email' className='emailinput' />
+                    <input type='email' name="email" placeholder="enter email address"
+                        value={signup.email}
+                        onChange={handleChange}   className='emailinput' />
                 </div>
 
                 <div className='password'>
 
                     <h4>Password</h4>
-                    <input type='password' className='password' />
+                    <input type='password' name="password" placeholder="enter password"
+                        value={signup.password}
+                        onChange={handleChange}  className='password' />
 
 
                 </div>
 
 
-                <button className='Btn2'>Next</button>
+                <button onClick={() => signInWithEmail} className='Btn2'>Next</button>
 
             </div>
 

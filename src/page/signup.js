@@ -3,8 +3,33 @@ import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import supabase from '../component/supabase';
 import { useNavigate } from 'react-router-dom';
+import React, {  useState } from'react';
 function Signup() {
+
+    const [signup , setSignupData] = useState({
+       email: '',
+       password: '',
+    });
+
+    const handleChange = (e) => {
+        const {name , value} = e.target;
+        setSignupData({...signup , [name] : value});
+        console.log(signup);
+    };
+
     const navigate = useNavigate()
+
+    async function signUpNewUser() {
+        const { data, error } = await supabase.auth.signUp({
+          email: signup.email,
+          password: signup.password,
+          
+        })
+        if(data){
+            navigate('/login')
+        }
+      }
+
     supabase.auth.onAuthStateChange(async (event) => {
         console.log(event)
         if (event === "SIGNED_IN") {
@@ -60,30 +85,21 @@ function Signup() {
                 <div className='Email'>
 
                     <h4>Email Address</h4>
-                    <input type='email' className='Emailinput' />
+                    <input type='email' name="email" placeholder="enter email address"
+                        value={signup.email}
+                        onChange={handleChange} className='Emailinput' />
                 </div>
 
                 <div className='Password'>
 
                     <h4>Password</h4>
-                    <input type='password' />
-
-                </div>
-
-                <div className='Password'>
-
-                    <h4>First Name</h4>
-                    <input type='text' />
+                    <input type='password' name="password" placeholder="enter password"
+                        value={signup.password}
+                        onChange={handleChange} />
 
                 </div>
 
 
-                <div className='Password'>
-
-                    <h4>Last Name</h4>
-                    <input type='text' />
-
-                </div>
 
                 <div className='checkbox' >
                     <input id="checkbox-1" type="checkbox" name="tos" />
@@ -93,7 +109,7 @@ function Signup() {
                 </div>
 
 
-                <button className='btn2'>Sign up</button>
+                <button onClick={() => signUpNewUser} className='btn2'>Sign up</button>
 
 
             </div>
