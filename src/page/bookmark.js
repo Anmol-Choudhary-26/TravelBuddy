@@ -31,10 +31,11 @@ function Bookmark(){
 
     return(
 
-        <div className='Containers'>
+        <div className='COntainers'>
         <h1>Bookmarks</h1>
+      <div className='gridbottom'>
       {renderedItems}
-     
+      </div>
     </div>
 
     )
