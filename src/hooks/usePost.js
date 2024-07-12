@@ -18,3 +18,18 @@ export async function createPost(values) {
     console.log(data)
     return data.data
 }
+
+export async function searchPosts(values) {
+console.log(values.caption, values.startDate, values.endDate)
+    const data = await axios.get(`http://localhost:8000/post/search?caption=${values.caption}&startDate=${values.startDate}&endDate=${values.endDate}`,
+        
+    )
+    console.log(data)
+    return data.data
+}
+
+export async function getbookmarks(userId){
+    const data = await axios.get(`http://localhost:8000/bookmarks/${userId}`)
+    console.log(data)
+    return data.data
+}

@@ -9,6 +9,7 @@ import Profile from './page/profile';
 import Chat from './page/chat';
 import User from './page/createUser';
 import Search from './page/search';
+import Bookmark from './page/bookmark';
 
 function App(){
 
@@ -20,7 +21,7 @@ function App(){
         <Route path='/signup' element={<Signup />} />
         <Route path='/main' element={<Main />} />
         <Route path='/edit' element={<Edit />} />
-      
+      <Route path='/bookmark' element={<Bookmark />} />
         <Route path='/profile' element={<Profile />} /> 
         <Route path='/chat' element={<Chat />} />  
         <Route path='/user' element={<User />} />
