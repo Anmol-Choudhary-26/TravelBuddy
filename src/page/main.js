@@ -13,7 +13,7 @@ import profile from '../images/user.png';
 import Modal from '../component/modal';
 import { getAllPost } from '../hooks/usePost';
 import { useNavigate } from 'react-router-dom';
-import {motion} from "framer-motion";
+
 
 
 
