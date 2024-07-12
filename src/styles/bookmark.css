@@ -18,11 +18,12 @@
 .COntainers h1{
     margin-top: 2vh;
     font-size: 1.5;
+    margin-bottom: 5vh;
 }
 
 .gridbottom{
     display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 2vw;
-  margin: 1vw;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 7vw;
+  /* margin: 1vw; */
 }

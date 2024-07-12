@@ -2,6 +2,7 @@ import TripPost from '../component/postsCard';
 import React , {useState , useEffect} from 'react';
 import '../styles/bookmark.css';
 import { getAllPost } from '../hooks/usePost';
+import data from '../utils/data';
 
 
 
@@ -22,7 +23,7 @@ function Bookmark(){
     }, [])
 
 
-    const renderedItems = post.map((items, index) => {
+    const renderedItems = data.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
         )
