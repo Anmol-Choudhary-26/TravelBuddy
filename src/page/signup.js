@@ -109,7 +109,7 @@ function Signup() {
                 </div>
 
 
-                <button onClick={() => signUpNewUser} className='btn2'>Sign up</button>
+                <button onClick={() => signUpNewUser()} className='btn2'>Sign up</button>
 
 
             </div>

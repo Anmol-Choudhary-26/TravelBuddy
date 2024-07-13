@@ -106,7 +106,7 @@ function Login(){
                 </div>
 
 
-                <button onClick={() => signInWithEmail} className='Btn2'>Next</button>
+                <button onClick={() => signInWithEmail()} className='Btn2'>Next</button>
 
             </div>
 
