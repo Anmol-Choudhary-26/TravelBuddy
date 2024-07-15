@@ -1,32 +1,48 @@
-
-// import ReactDom from 'react-dom';
 import '../styles/modal.css';
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { createPost } from '../hooks/usePost';
 
 export default function Modal() {
-
+  const [image, setImage] = useState("")
+  const [imageUrl, setData] = useState()
   const [post, setPost] = useState({
-    imageUrl: 'gfhgfhgfjgfj',
-    authorName: 'Akash',
-    authorId: "6687b8052be27e93d9938d4e"
   })
-  // const navigate = useNavigate()
 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost({ ...post, [name]: value });
   };
 
-  async function handleSubmit() {
-    const data = await createPost(post);
-    console.log(data);
-    console.log('User created successfully');
-    alert("User created successfully");
+  const submitPost = async (e)=>{
+    const data = new FormData()
+    data.append("file", image)
+    data.append("upload_preset", "travelbuddy")
+    data.append("cloud_name", "duxuhubym")
+ await fetch("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
+        method:"POST",
+        body:data
+}).then(res=>res.json()).then(async data=>{
+   setData(data)
+   
+}).catch(err=>{
+    console.log(err)
+    alert(err)
+})
+setTimeout(()=>{}, 3000)
+const postBody = {
+  imageUrl: imageUrl.secure_url,
+  authorName: "Akash",
+  authorId: "6687b8052be27e93d9938d4e",
+  caption: post.caption,
+  date : `${post.date}T00:00:00z`,
+  location: post.location,
+  
+}
+  await createPost(postBody);
+ alert("post created successfully!!")
   }
 
-
-  useEffect(() => console.log(post));
 
 
   const [modal, setModal] = useState(false);
@@ -97,12 +113,12 @@ export default function Modal() {
 
 
             <div className='textboxx3'>
-              <input type="file" name="imageUrl" onChange={handleChange} className='uploadimg' />
+              <input type="file" name="imageUrl" onChange={(e)=>setImage(e.target.files[0])} className='uploadimg' />
             </div>
 
 
             <div className='uploadbtn'>
-              <button onClick={handleSubmit} type='submit'>Upload</button>
+              <button onClick={() =>submitPost()} type='submit'>Upload</button>
             </div>
 
 

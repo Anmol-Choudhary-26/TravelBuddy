@@ -14,6 +14,7 @@ function Edit() {
         };
 
         async function handleSubmit(){
+            console.log('clicked')
             const data = await updateUser(userData);
             console.log(data);
             console.log('User created successfully');
@@ -109,7 +110,7 @@ function Edit() {
             </div>
 
 
-            <button onclick={() => handleSubmit()} type='submit' className='BTN'>Update</button>
+            <button onClick={() => handleSubmit()} type='submit' className='BTN'>Update</button>
 
         </div>
 

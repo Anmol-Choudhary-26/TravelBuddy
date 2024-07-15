@@ -10,26 +10,26 @@ import Chat from './page/chat';
 import User from './page/createUser';
 import Search from './page/search';
 import Bookmark from './page/bookmark';
-import Reset from './page/resetpassword';
+import Chatbot from './component/chatbot';
 
 function App(){
 
       return(
+        <>
        <Routes>
-
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/main' element={<Main />} />
         <Route path='/edit' element={<Edit />} />
-      <Route path='/bookmark' element={<Bookmark />} />
+        <Route path='/postbookmark' element={<Bookmark />} />
         <Route path='/profile' element={<Profile />} /> 
-        <Route path='/chat' element={<Chat />} />  
-        <Route path='/user' element={<User />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/reset' element={<Reset />} />
+        <Route path='/msg' element={<Chat />} />  
+        <Route path='/userprofile' element={<User />} />
+        <Route path='/searchpost' element={<Search />} />
         </Routes> 
-       
+       <Chatbot/>
+       </>
       )
 
 }

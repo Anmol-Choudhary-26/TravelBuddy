@@ -67,9 +67,9 @@ function Signup() {
                 </div>
 
                 <div className='Thirdhead'>
-                    <h2>Have an account?</h2>
-                    <div  onClick={()=> navigate('/signup')} >
-                    Login Now
+                    <h2>Have an account? </h2>
+                    <div  onClick={()=> navigate('/login')} className='logbtn' >
+                       Login Now
                   </div>
                 </div>
 

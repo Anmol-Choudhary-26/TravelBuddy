@@ -9,6 +9,10 @@
 
 }
 
+.logbtn:hover{
+    cursor: pointer;
+}
+
 .sidesignup{
     height: 100vh;
     width: 28vw;
@@ -151,6 +155,7 @@
     border-radius: 8px;
     border: 0.7px solid black;
     margin-bottom: 1vh;
+    padding-left: 1vw;
 }
 
 .Password{
@@ -172,6 +177,7 @@
     margin-left: 3vw;
     border-radius: 8px;
     border: 0.7px solid black;
+    padding-left: 1vw;
 }
 
 
