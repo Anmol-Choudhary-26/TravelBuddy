@@ -60,7 +60,7 @@ function Login(){
     <div className='login'>
 
                 <div className='firsthead'>
-                    <img src={image} alt="logo" className='immage' />
+                    <img src={image} alt="logo" className='Immage' />
                     <h2>TravelBuddy</h2>
                 </div>
 
@@ -87,18 +87,18 @@ function Login(){
                 </div>
 
 
-                <div className='email'>
+                <div className='EMail'>
 
                     <h4>Email Address</h4>
-                    <input type='email' name="email" placeholder="enter email address"
+                    <input type='email' name="email" placeholder="enter email address..."
                         value={signup.email}
                         onChange={handleChange}   className='emailinput' />
                 </div>
 
-                <div className='password'>
+                <div className='PAssword'>
 
                     <h4>Password</h4>
-                    <input type='password' name="password" placeholder="enter password"
+                    <input type='password' name="password" placeholder="enter password..."
                         value={signup.password}
                         onChange={handleChange}  className='password' />
 
@@ -106,7 +106,7 @@ function Login(){
                 </div>
 
 
-                <button onClick={() => signInWithEmail()} className='Btn2'>Next</button>
+                <button onClick={() => signInWithEmail()} className='BTn2'>Next</button>
 
             </div>
 

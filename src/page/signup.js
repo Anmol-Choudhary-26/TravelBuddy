@@ -85,7 +85,7 @@ function Signup() {
                 <div className='Email'>
 
                     <h4>Email Address</h4>
-                    <input type='email' name="email" placeholder="enter email address"
+                    <input type='email' name="email" placeholder="enter email address..."
                         value={signup.email}
                         onChange={handleChange} className='Emailinput' />
                 </div>
@@ -93,7 +93,7 @@ function Signup() {
                 <div className='Password'>
 
                     <h4>Password</h4>
-                    <input type='password' name="password" placeholder="enter password"
+                    <input type='password' name="password" placeholder="enter password..."
                         value={signup.password}
                         onChange={handleChange} />
 
@@ -109,7 +109,7 @@ function Signup() {
                 </div>
 
 
-                <button onClick={() => signUpNewUser()} className='btn2'>Sign up</button>
+                <button onClick={() => signUpNewUser()} className='bTn2'>Sign up</button>
 
 
             </div>
