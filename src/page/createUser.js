@@ -2,6 +2,7 @@ import '../styles/user.css';
 import React , {useState,useEffect} from 'react';
 import {updateUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
+import Sidebar from '../component/sidebar';
 
 
 function Edit() {
@@ -26,8 +27,8 @@ function Edit() {
             <div className='editfullpage'>
 
         <div className="edit">
-
-           <div className='Headingg'>
+            <Sidebar />
+           <div className='HeadingG'>
            <h1>Create User</h1>
            </div>
 

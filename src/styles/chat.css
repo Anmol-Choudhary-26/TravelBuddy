@@ -31,11 +31,16 @@
     font-size: 1.3vw;
     display: flex;
     justify-content: flex-start;
-    margin-left: 1.5vw;
+    margin-left: 1vw;
     margin-bottom: 2vh;
     margin-top: 2vh;
+   
 }
 
+.chatHead h3{
+    margin-left: 1vw;
+    margin-top: 0.4vh;
+}
 
 
 .imageprofile{

@@ -12,6 +12,8 @@ import Search from './page/search';
 import Bookmark from './page/bookmark';
 import Chatbot from './component/chatbot';
 
+
+
 function App(){
 
       return(
@@ -29,6 +31,8 @@ function App(){
         <Route path='/searchpost' element={<Search />} />
         </Routes> 
        <Chatbot/>
+   
+      
        </>
       )
 

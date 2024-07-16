@@ -9,7 +9,9 @@ import address from '../images/Home.svg';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../component/supabase.js';
 import BackgroundSlider from '../component/backgroundslider.js';
-import { getUser } from '../hooks/useUser.js'
+import { getUser } from '../hooks/useUser.js';
+
+import Sidebar from '../component/sidebar.js';
 
 
 function Profile() {
@@ -36,13 +38,17 @@ function Profile() {
       await supabase.auth.signOut()
    }
    return (
-
+   
       <div className="Profile">
 
          <div className="personalDetails">
-
+         <div className='sidebarr'>
+            <Sidebar />
+            </div>
             <div className='Image'>
+           
                <img src={profilepic} alt="profilepic"></img>
+
             </div>
 
             <div className="name">
@@ -89,11 +95,16 @@ function Profile() {
             </div>
             <div className='lgoutbtn'>
                <button onClick={() => navigate('/edit')}>Edit Profile</button>
+               <button onClick={() => navigate("/userprofile")}>Create User</button>
                <button onClick={() => {
                   signout()
                   navigate('/')
                }
                }>Log Out</button>
+
+              
+
+
             </div>
          </div>
          <div className='ProfileOther'>

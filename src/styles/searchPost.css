@@ -12,6 +12,12 @@
       /* margin-top: 1vh; */
       background-image: linear-gradient(to right,rgba(0, 0, 0, 0.679),rgb(55, 43, 43));
 }
+
+.Helper1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .HEading{
     display: flex;
     align-items: center;
@@ -27,6 +33,7 @@
     display: flex ;
     flex-direction: column;
     font-size: 0.8vw;
+    
 }
 
 .AuthorImg{
@@ -39,16 +46,19 @@
 
 .IMg {
     width: 20vw;
-     border-radius: 30px;
-    height: 10vh;
-    margin-top: 1vh;
-    padding: 0 1vw;
+     border-radius: 10px;
+    height: 20vh;
+    /* margin-bottom: 2vh; */
+    /* margin-top: 1vh; */
+    /* padding: 0 1vw; */
 }
 
 .BOdy{
     
     width: 25vw;
-    height: 19vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -130,7 +140,7 @@
 
   .LIKES img{
     height: 2vh;
-    width: 1.5vw;
+    width: 1.2vw;
   }
 
   .like{
@@ -144,7 +154,7 @@
   }
 
   .like p{
-    font-size: 1vw;
+    font-size: 0.8vw;
     margin-right: 0.5vw;
     margin-bottom: 0.5vh;
     font-family:'Times New Roman', Times, serif;

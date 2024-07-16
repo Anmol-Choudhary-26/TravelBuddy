@@ -12,7 +12,14 @@
     flex-direction: row;
 }
 
-
+.sidebarr{
+    height: 4vh;
+    width: 40vw;
+    margin: 0px;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: flex-start;
+}
 .personalDetails{
 
     height: 100vh;
@@ -28,11 +35,12 @@
 
 
 .Image{
-    height: 30vh;
+    height: 27vh;
     width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: aliceblue; */
 }
 
 .Image img{
@@ -109,7 +117,7 @@ font-size: 1.05vw;
 
 .lgoutbtn{
     height: 4vh;
-    width: 15vw;
+    width: 25vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

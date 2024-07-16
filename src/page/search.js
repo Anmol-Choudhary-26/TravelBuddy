@@ -2,6 +2,8 @@ import "../styles/search.css";
 import TripPost from '../component/searchPost';
 import { searchPosts } from '../hooks/usePost';
 import React , {useState , useEffect} from 'react';
+import Sidebar from "../component/sidebar";
+
 
 function Search(){
 const [post, setPost] = useState([])
@@ -33,12 +35,13 @@ useEffect(() => {
     return(
 
         <div className="fullsearch">
-           
-            <div className="topsearch">
-
+          
+            <div className="topsearch"> 
+            <div className="SideBAR">
+             <Sidebar />
+             </div>
                 <select >
                     <option value="">Filter</option>
-                    <option value="1">Popular</option>
                     <option value="2">New</option>
                     <option value="3">Top Rated</option>
                     <option value="4">Recent</option>
@@ -46,7 +49,7 @@ useEffect(() => {
                 
                 <div className="searchbox">
                     
-                <input type='text' name="caption" placeholder="enter place" 
+                <input type='text' name="caption" placeholder="enter place to search..." 
                 value={searchData.caption}
                 onChange={handleChange}/>
                   </div>  
@@ -61,11 +64,13 @@ useEffect(() => {
                         <input type="date"  name="endDate" placeholder="end Date" 
                 value={searchData.endDate}
                 onChange={handleChange} />
+
+
                   </div>
             
             </div>
 
-
+           
             <div >
 
             <div className="searchbottom">

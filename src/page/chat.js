@@ -1,14 +1,17 @@
 import '../styles/chat.css';
 import profile from '../images/Pc.jpeg';
 import React from'react';
+import Sidebar from '../component/sidebar';
 
 function Chat() {
     return (
 
         <div className='chatfull'>
         <div className='chats'>
-
+            
+           
             <div className='chatHead'>
+            <Sidebar />
                 <h3>
                     Chats
                 </h3>

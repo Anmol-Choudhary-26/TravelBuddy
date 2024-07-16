@@ -86,11 +86,21 @@
 
 .searchbottom{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 2vw;
-  margin: 1vw;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 4vw;
+  margin: 4vh 4vw 2vh 7vw;
+  overflow-y: scroll;
+  height: 80vh;
+  scroll-behavior: smooth;
+ 
   /* grid-auto-rows: 30vh;
   grid-template-columns: 20vw; */
 
+}
+
+.SideBAR{
+    height: 3vh;
+    width: 3vw;
+     color: white;
 }
 

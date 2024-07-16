@@ -4,6 +4,8 @@ import React , {useState,useEffect} from 'react';
 import {updateUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
 
+import Sidebar from '../component/sidebar.js';
+
 
 function Edit() {
         const [userData , setUserData] = useState({});
@@ -29,9 +31,11 @@ function Edit() {
             <div className='editfullpage'>
 
         <div className="edit">
-
-           <div className='Headingg'>
+            <Sidebar />
+           <div className='Headinggg'>
+       
            <h1>Edit Profile</h1>
+
            </div>
 
            <div className='profileimage'>

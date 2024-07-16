@@ -11,6 +11,13 @@ import Modal from '../component/modal';
 import { getAllPost, getRecentPosts } from '../hooks/usePost';
 import { useNavigate } from 'react-router-dom';
 
+
+
+
+
+
+
+
 function MainPost() {
     const navigate = useNavigate();
     const [filter, setFilter] = useState('');
@@ -52,11 +59,13 @@ function MainPost() {
 
     return (
         <div className='Mainpage'>
-
+               
             <div className='mainleft'>
 
+             
+              
                 <img src={logo} alt='logo' className='logo' />
-
+           
                 <div className='sidebtndiv'>
                     <button className='sidebtn' onClick={() => navigate('/')} ><img src={home} alt='home' className='image' /><h2>Home</h2> </button>
                 </div>
@@ -92,6 +101,8 @@ function MainPost() {
             </div>
 
             <div className='mainright'>
+
+                
 
                 <div className='theme'>
                     <button className='themebtn'>

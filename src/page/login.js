@@ -4,6 +4,8 @@ import googlelogo from '../images/googlelogo.webp';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from'react';
 import supabase from '../component/supabase.js';
+// import Sidebar from '../component/sidebar.js';
+
 
 
 
@@ -58,10 +60,13 @@ function Login(){
     <div className='loginfullpage'>
        
     <div className='login'>
-
+    
+       {/* <Sidebar /> */}
                 <div className='firsthead'>
                     <img src={image} alt="logo" className='Immage' />
                     <h2>TravelBuddy</h2>
+        
+       
                 </div>
 
                 <div className='secondhead'>

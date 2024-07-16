@@ -8,7 +8,6 @@
     width: 27vw;
     display: flex;
     justify-content:center;
-
    
 }
 .profileimage img{
@@ -42,15 +41,15 @@
     /* background-color: aqua; */
 }
 
-.Headingg{
+.Headinggg{
     width: 27vw;
-    height: 5vh;
+    height: 7vh;
     display: flex;
     justify-content: center;
-    margin-bottom: 4vh;
+    /* margin-bottom: 2vh; */
     margin-top: 0vh;
-    font-size: 1.2vw;
-    padding-top: 2vh;
+    font-size: 1vw;
+    /* padding-top: 1vh; */
 }
 
 
