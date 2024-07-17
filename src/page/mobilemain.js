@@ -2,21 +2,21 @@ import TripPost from '../component/mobilepostcard';
 import '../styles/mobileMain.css';
 import React, { useState, useEffect } from 'react';
 import home from '../images/home.png';
-import logo from '../images/temperature.png';
-import search from '../images/search (3).png';
-import chat from '../images/chat.png'
-import bookmark from '../images/bookmark.png';
-import profile from '../images/user.png';
+// import logo from '../images/temperature.png';
+// import search from '../images/search (3).png';
+// import chat from '../images/chat.png'
+// import bookmark from '../images/bookmark.png';
+// import profile from '../images/user.png';
 import MobileModal from '../component/mobilemodal';
 import { getAllPost, getRecentPosts } from '../hooks/usePost';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 import Sidebar from '../component/sidebar';
 
 
 
 function MainPost() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [filter, setFilter] = useState('');
 
     const [post, setPost] = useState([])
