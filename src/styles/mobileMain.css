@@ -72,7 +72,7 @@
     border-radius: 5px;
     /* margin-top: 4vh; */
 
-    font-size: 1.15vw;
+    font-size: 2vw;
    
 
 }
@@ -83,12 +83,12 @@
 }
 
 .filteR select{
-    width: 10vw;
+    width: 13vw;
     height: 4vh;
     background-color: rgba(0, 0, 0, 0.956);
     color: white;
     font:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.7vw;
+    font-size: 2vw;
     border: none;
    border-radius: 9px;  
     
@@ -117,8 +117,8 @@
 }
 
 .Themebtn img{
-    height: 3vh;
-    width: 1.9vw;
+    height: 2vh;
+    width: 2.4vw;
     margin-right: 0.5vw;
 
 }

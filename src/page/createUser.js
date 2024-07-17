@@ -26,19 +26,19 @@ function Edit() {
 
             <div className='editfullpage'>
 
-        <div className="edit">
+        <div className="eDit">
             <Sidebar />
-           <div className='HeadingG'>
+           <div className='HeAdingg'>
            <h1>Create User</h1>
            </div>
 
-           <div className='profileimage'>
+           <div className='profileImage'>
             <div className='pimage'>
             <button>+</button>
             </div>
             </div>
 
-            <div className='email'>
+            <div className='emAil'>
 
                 <h4>Email Address</h4>
                 <input type='email' name="email" placeholder="email address" 
@@ -47,7 +47,7 @@ function Edit() {
                 className='emailinput' />
             </div>
 
-            <div className='password'>
+            <div className='paSsword'>
 
                 <h4>Password</h4>
                 <input type='password' 
@@ -55,13 +55,13 @@ function Edit() {
                 placeholder='password'
                 value = {userData.password}
                 onChange={handleChange}
-                className='password' />
+                className='paSsword' />
 
             </div>
 
 
 
-            <div className='password'>
+            <div className='paSsword'>
 
                 <h4>Full Name</h4>
                 <input type='text'
@@ -73,7 +73,7 @@ function Edit() {
                
             </div>
 
-            <div className='password'>
+            <div className='paSsword'>
                 <h4>Phone Number</h4>
 
                 <input type='text' 
@@ -84,35 +84,35 @@ function Edit() {
     
             </div>
 
-            <div className='textbox'>
+            <div className='textBox'>
                 <h4>Full Address</h4>
                 <input type='text' 
                 name='Address'
                 placeholder='full address'
                 value={userData.Address}
                 onChange={handleChange}
-                className='textbox' />
+                className='textBox' />
             
             </div>
 
 
-            <div className='textbox'>
+            <div className='textBox'>
                 <h4>Bio</h4>
                 <input type='text' 
                 name="shortBio"
                 value={userData.shortBio}
                 onChange={handleChange}
-                className='textbox' 
+                className='textBox' 
                 placeholder='write something about yourself...' />
             
             </div>
 
 
-            <button onclick={() => handleSubmit()} type='submit' className='BTN'>Create</button>
+            <button onclick={() => handleSubmit()} type='submit' className='BTn'>Create</button>
 
         </div>
 
-        <div className='otherside'>
+        <div className='OthersidE'>
                 <BackgroundSlider />
         </div>
 

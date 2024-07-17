@@ -15,7 +15,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MessageIcon from '@mui/icons-material/Message';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ()=> {
@@ -88,6 +88,17 @@ const Sidebar = ()=> {
     <BookmarkBorderIcon />
     </ListItemIcon>
     <ListItemText primary={"Bookmark"} />
+</ListItemButton>
+
+</ ListItem>
+
+<ListItem disablePadding>
+
+<ListItemButton onClick={()=>navigate("/main")}>
+    <ListItemIcon>
+    <OtherHousesIcon />
+    </ListItemIcon>
+    <ListItemText primary={"Main Page"} />
 </ListItemButton>
 
 </ ListItem>

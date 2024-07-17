@@ -30,21 +30,21 @@ function Edit() {
 
             <div className='editfullpage'>
 
-        <div className="edit">
+        <div className="eDit">
             <Sidebar />
-           <div className='Headinggg'>
+           <div className='HeAdinggg'>
        
            <h1>Edit Profile</h1>
 
            </div>
 
-           <div className='profileimage'>
+           <div className='profileImage'>
 
 
                 <img src={profile} alt='profile'/>
             </div>
 
-            <div className='email'>
+            <div className='emAil'>
 
                 <h4>Email Address</h4>
                 <input type='email' name="email" placeholder="email address" 
@@ -53,7 +53,7 @@ function Edit() {
                 className='emailinput' />
             </div>
 
-            <div className='password'>
+            <div className='paSsword'>
 
                 <h4>Password</h4>
                 <input type='password' 
@@ -67,7 +67,7 @@ function Edit() {
 
 
 
-            <div className='password'>
+            <div className='paSsword'>
 
                 <h4>Full Name</h4>
                 <input type='text'
@@ -79,7 +79,7 @@ function Edit() {
                
             </div>
 
-            <div className='password'>
+            <div className='paSsword'>
                 <h4>Phone Number</h4>
 
                 <input type='text' 
@@ -90,7 +90,7 @@ function Edit() {
     
             </div>
 
-            <div className='textbox'>
+            <div className='textBox'>
                 <h4>Full Address</h4>
                 <input type='text' 
                 name='Address'
@@ -102,7 +102,7 @@ function Edit() {
             </div>
 
 
-            <div className='textbox'>
+            <div className='textBox'>
                 <h4>Bio</h4>
                 <input type='text' 
                 name="shortBio"
@@ -114,11 +114,11 @@ function Edit() {
             </div>
 
 
-            <button onClick={() => handleSubmit()} type='submit' className='BTN'>Update</button>
+            <button onClick={() => handleSubmit()} type='submit' className='BTn'>Update</button>
 
         </div>
 
-        <div className='Otherside'>
+        <div className='OthersidE'>
             <BackgroundSlider />
         </div>
 
