@@ -13,11 +13,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
-
-
-
-
 function MainPost() {
     const navigate = useNavigate();
     const [filter, setFilter] = useState('');
