@@ -1,12 +1,14 @@
 import '../styles/user.css';
-import React , {useState,useEffect} from 'react';
-import {updateUser} from '../hooks/useUser';
+import React , {useState} from 'react';
+import {createUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
 import Sidebar from '../component/sidebar';
+import { useNavigate } from 'react-router-dom';
 
 
 function Edit() {
         const [userData , setUserData] = useState({});
+        const navigate = useNavigate();
 
         const handleChange = (e) => {
             const {name , value} = e.target;
@@ -14,12 +16,13 @@ function Edit() {
         };
 
         async function handleSubmit(){
-            const data = await updateUser(userData);
+            const data = await createUser(userData);
             console.log(data);
             console.log('User created successfully');
+            if(data){
+                navigate('/main')
+            }
         }
-
-        useEffect(() => console.log(userData));
 
     return (
 
@@ -38,29 +41,6 @@ function Edit() {
             </div>
             </div>
 
-            <div className='emAil'>
-
-                <h4>Email Address</h4>
-                <input type='email' name="email" placeholder="email address" 
-                value={userData.email}
-                onChange={handleChange}
-                className='emailinput' />
-            </div>
-
-            <div className='paSsword'>
-
-                <h4>Password</h4>
-                <input type='password' 
-                name = "password"
-                placeholder='password'
-                value = {userData.password}
-                onChange={handleChange}
-                className='paSsword' />
-
-            </div>
-
-
-
             <div className='paSsword'>
 
                 <h4>Full Name</h4>
@@ -74,6 +54,18 @@ function Edit() {
             </div>
 
             <div className='paSsword'>
+
+                <h4>username</h4>
+                <input type='password' 
+                name = "password"
+                placeholder='password'
+                value = {userData.password}
+                onChange={handleChange}
+                className='paSsword' />
+
+            </div>
+
+            <div className='paSsword'>
                 <h4>Phone Number</h4>
 
                 <input type='text' 
@@ -83,6 +75,18 @@ function Edit() {
                 className='emailinput' />
     
             </div>
+
+            <div className='paSsword'>
+                <h4>emergency Contact</h4>
+
+                <input type='text' 
+                 name="emergencyContact"
+                 placeholder='phone number'
+                 onChange={handleChange}   
+                className='emailinput' />
+    
+            </div>
+
 
             <div className='textBox'>
                 <h4>Full Address</h4>

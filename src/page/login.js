@@ -4,6 +4,7 @@ import googlelogo from '../images/googlelogo.webp';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from'react';
 import supabase from '../component/supabase.js';
+import { findUserByEmail } from '../hooks/useUser.js';
 // import Sidebar from '../component/sidebar.js';
 
 
@@ -11,8 +12,8 @@ import supabase from '../component/supabase.js';
 
 
 function Login(){
-
-    const [signup , setSignupData] = useState({
+    
+     const [signup , setSignupData] = useState({
         email: '',
         password: '',
      });
@@ -28,8 +29,16 @@ function Login(){
             email: signup.email,
           password: signup.password,
         })
+    
         if(data){
+            const user = await findUserByEmail(signup.email)
+            localStorage.setItem('email', signup.email)
+            if(user){
             navigate('/main')
+            }
+            else {
+                navigate('/createuser')
+            }
         }
       }
 

@@ -39,3 +39,16 @@ export async function getUser(UserId){
     localStorage.setItem("userData", JSON.stringify(data.data))
     return data
 }
+
+export async function findUserByEmail(email){
+    const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/user/email`,
+       {
+        params: {email : email}
+       }
+    )
+    if(data){
+        localStorage.setItem("userData", JSON.stringify(data.data))
+        return true
+    }
+    return false
+}

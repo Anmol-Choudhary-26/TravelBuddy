@@ -11,7 +11,7 @@ import User from './page/createUser';
 import Search from './page/search';
 import Bookmark from './page/bookmark';
 import Chatbot from './component/chatbot';
-
+import CreateUser from './page/createUser';
 import MainNew from './page/Mainnew';
 
 
@@ -31,6 +31,7 @@ function App(){
         <Route path='/msg' element={<Chat />} />  
         <Route path='/userprofile' element={<User />} />
         <Route path='/searchpost' element={<Search />} />
+        <Route path='/createuser' element={<CreateUser />} />
         </Routes> 
        <Chatbot/>
    

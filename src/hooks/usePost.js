@@ -35,3 +35,17 @@ export async function getRecentPosts(){
     console.log(data)
     return data.data
 }
+
+export async function likePost(postId){
+
+    const user = localStorage.getItem('userId')
+    const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/post/like/`,
+        {
+            params: {
+                id: postId,
+                userId: user
+            }
+        }
+    )
+    return data
+}
