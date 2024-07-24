@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../styles/postsCard.css";
 import bookmark from "../images/background.png"
 import like from '../images/heart.png';
 import {createChat} from "../hooks/useChat.js";
 import { likePost } from '../hooks/usePost.js';
+import {createBookmark} from "../hooks/usePost.js";
 const TripPost = ({ trip }) => {
   const [likecount, setLikeCount] = useState(0)
   
@@ -13,6 +14,10 @@ const TripPost = ({ trip }) => {
  const handleLike = async () => {
   const data = await likePost(id)
   setLikeCount(data )
+ }
+ const handleBookmark = async () => {
+    
+    await createBookmark(id);
  }
 
  const handleSend = async () => {
@@ -39,12 +44,13 @@ const TripPost = ({ trip }) => {
         <div className='likes'>
 
           <div className='likediv'>
-            <p>Likes</p>
+          
           <img
           onClick={() => handleLike()} src={like} alt ='like'/>
+          <p>{likecount}</p>
           </div>
            
-            <img src={bookmark} alt='bookmark'/>
+            <img onClick={() => handleBookmark()} src={bookmark} alt='bookmark'/>
         </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />
