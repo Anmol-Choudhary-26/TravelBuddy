@@ -68,17 +68,6 @@ function Edit() {
 
             </div>
 
-            <div className='textBox'>
-                <h4>Password</h4>
-                <input type='password' 
-                name='Password'
-                placeholder='enter password'
-                value={userData.Password}
-                onChange={handleChange}
-                className='textBox' />
-            
-            </div>
-
             <div className='paSsword'>
                 <h4>Phone Number</h4>
 

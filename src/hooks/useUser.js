@@ -15,6 +15,7 @@ export async function createUser(values) {
       },} 
 )
     console.log(data)
+    localStorage.setItem("userId", JSON.stringify(data.data.id))
     return data
 }
 
