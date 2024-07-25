@@ -44,10 +44,9 @@ const TripPost = ({ trip }) => {
         <div className='likes'>
 
           <div className='likediv'>
-          
+          <p>{likecount}</p>
           <img
           onClick={() => handleLike()} src={like} alt ='like'/>
-          <p>{likecount}</p>
           </div>
            
             <img onClick={() => handleBookmark()} src={bookmark} alt='bookmark'/>
