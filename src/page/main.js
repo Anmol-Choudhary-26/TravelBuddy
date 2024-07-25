@@ -23,7 +23,7 @@ function MainPost() {
 
     supabase.auth.onAuthStateChange(async (event) => {
         console.log(event)
-        if (event === "INITIAL_SESSION") {
+        if (event === "SIGNED_OUT") {
             navigate("/login")
         }
     
