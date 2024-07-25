@@ -21,7 +21,7 @@ function Edit() {
         const handleSubmit = async () =>{
             const data = await createUser(userData);
             console.log(data);
-            console.log('User created successfully');
+            console.log('User created successfully!');
             if(data){
                 navigate('/main')
             }
