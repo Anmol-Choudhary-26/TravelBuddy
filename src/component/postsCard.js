@@ -12,11 +12,12 @@ const TripPost = ({ trip }) => {
  const formattedDate = date.slice(0,10);
 
  const handleLike = async () => {
+  console.log("like clicked")
   const data = await likePost(id)
   setLikeCount(data )
  }
  const handleBookmark = async () => {
-    
+    console.log("bookmarked clicked")
     await createBookmark(id);
  }
 
@@ -43,13 +44,14 @@ const TripPost = ({ trip }) => {
 
         <div className='likes'>
 
-          <div className='likediv'>
+          <div onClick={handleLike} className='likediv'>
           <p>{likecount}</p>
           <img
-          onClick={handleLike} src={like} alt ='like'/>
+           src={like} alt ='like'/>
           </div>
-           
-            <img onClick={handleBookmark} src={bookmark} alt='bookmark'/>
+          <div onClick={handleBookmark} className='likediv'>
+            <img src={bookmark} alt='bookmark'/>
+        </div>
         </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />
