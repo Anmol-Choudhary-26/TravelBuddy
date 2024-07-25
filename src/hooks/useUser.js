@@ -4,10 +4,11 @@ export async function createUser(values) {
      {
         email: values.email,
         phoneNumber: values.phoneNumber,
-        FullName: values.fullName,
-        UserName: values.userName,
+        FullName: values.FullName,
+        emergencycontact: values.emergencyContact,
+        UserName: values.username,
         shortBio: values.shortBio,
-        Address: values.address
+        Address: values.Address
     }, 
     {headers: {
         "X-Requested-With": "XMLHttpRequest"
