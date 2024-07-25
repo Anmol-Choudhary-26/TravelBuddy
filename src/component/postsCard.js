@@ -15,7 +15,7 @@ const TripPost = ({ trip }) => {
   console.log("like clicked")
   const data = await likePost(id)
   console.log(data)
-  // setLikeCount(data)
+  setLikeCount(data.likesCount)
  }
  const handleBookmark = async () => {
     console.log("bookmarked clicked")
