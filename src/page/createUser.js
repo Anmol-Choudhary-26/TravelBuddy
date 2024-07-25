@@ -15,7 +15,7 @@ function Edit() {
             setUserData({...userData , [name] : value});
         };
 
-        async function handleSubmit(){
+        const handleSubmit = async () =>{
             const data = await createUser(userData);
             console.log(data);
             console.log('User created successfully');
@@ -56,10 +56,10 @@ function Edit() {
             <div className='paSsword'>
 
                 <h4>username</h4>
-                <input type='password' 
-                name = "password"
-                placeholder='password'
-                value = {userData.password}
+                <input type='text' 
+                name = "username"
+                placeholder='username'
+                value = {userData.username}
                 onChange={handleChange}
                 className='paSsword' />
 
@@ -112,7 +112,7 @@ function Edit() {
             </div>
 
 
-            <button onclick={() => handleSubmit()} type='submit' className='BTn'>Create</button>
+            <button onClick={ handleSubmit} type='submit' className='BTn'>Create</button>
 
         </div>
 
