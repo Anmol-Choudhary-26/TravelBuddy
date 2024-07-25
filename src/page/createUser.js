@@ -7,7 +7,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Edit() {
-        const [userData , setUserData] = useState({});
+   const email = localStorage.getItem('email');
+        const [userData , setUserData] = useState({
+            email: email,
+        });
         const navigate = useNavigate();
 
         const handleChange = (e) => {
