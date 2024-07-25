@@ -10,6 +10,8 @@ import profile from '../images/user.png';
 import Modal from '../component/modal';
 import { getAllPost, getRecentPosts } from '../hooks/usePost';
 import { useNavigate } from 'react-router-dom';
+import supabase from '../component/supabase.js';
+import { findUserByEmail } from '../hooks/useUser.js';
 
 
 
@@ -19,8 +21,32 @@ function MainPost() {
 
     const [post, setPost] = useState([])
 
+    supabase.auth.onAuthStateChange(async (event) => {
+        console.log(event)
+        if (event === "INITIAL_SESSION") {
+            navigate("/login")
+        }
+    
+    })
+
     useEffect(() => {
-        
+        if(localStorage.getItem('email') === null || localStorage.getItem('') === undefined ) {
+        async function getUser() {
+            await supabase.auth.getUser().then(async (value) => {
+                const email = value.data.user.email;
+                localStorage.setItem("email", email);
+                const user = await findUserByEmail(email)
+                if(user){
+                navigate('/main')
+                }
+                else {
+                    navigate('/createuser')
+                }
+
+            })
+        }
+        getUser()
+    }
         if(filter ===''){
             async function getPost() {
                 const data = await getAllPost()
