@@ -12,6 +12,7 @@ import { findUserByEmail } from '../hooks/useUser.js';
 
 
 function Login(){
+
     
      const [signup , setSignupData] = useState({
         email: '',
@@ -45,9 +46,10 @@ function Login(){
     const navigate = useNavigate()
 
     const handleSignup = async () =>{
-        supabase.auth.signInWithOAuth({
+     supabase.auth.signInWithOAuth({
             provider: 'google',
           })
+         
           
     }
 
@@ -60,7 +62,9 @@ function Login(){
     })
     useEffect(() => {
         async function getUser() {
-            await supabase.auth.getUser().then((value) => { if (value.data?.user) console.log(value.data) })
+            await supabase.auth.getUser().then((value) => {
+                localStorage.setItem("userId", value.user.email);
+            })
         }
         getUser()
     },[])

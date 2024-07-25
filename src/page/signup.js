@@ -38,7 +38,7 @@ function Signup() {
 
     })
     const handleSignup = async () => {
-        supabase.auth.signInWithOAuth({
+       await supabase.auth.signInWithOAuth({
             provider: 'google',
             
         })

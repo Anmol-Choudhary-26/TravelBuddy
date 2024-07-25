@@ -52,6 +52,7 @@ export async function likePost(postId){
 
 export async function createBookmark(postId){
     const user = localStorage.getItem('userId')
+    console.log(user, postId)
     const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/bookmark/`,
         {
             params: {
