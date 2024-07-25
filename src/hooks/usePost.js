@@ -38,7 +38,7 @@ export async function getRecentPosts(){
 
 export async function likePost(postId){
 
-    const user = localStorage.getItem('userId')
+    const user = JSON.parse(localStorage.getItem('userId'))
     const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/post/like/`,
          {
                 postId,
@@ -50,14 +50,14 @@ export async function likePost(postId){
 }
 
 export async function createBookmark(postId){
-    const user = localStorage.getItem('userId')
+    const user = JSON.parse(localStorage.getItem('userId'))
     console.log(user, postId)
     const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/bookmark/`,
         {
-            params: {
+            
                  postId,
                 userId: user
-            }
+            
         }
     )
     return data
