@@ -63,7 +63,10 @@ function Login(){
     useEffect(() => {
         async function getUser() {
             await supabase.auth.getUser().then((value) => {
-                localStorage.setItem("userId", value.user.email);
+                console.log("1", value)
+                console.log("2", value.data)
+                console.log("3", value.user)
+                localStorage.setItem("userId", value.email);
             })
         }
         getUser()
