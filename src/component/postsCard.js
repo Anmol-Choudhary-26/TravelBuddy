@@ -46,14 +46,14 @@ const TripPost = ({ trip }) => {
           <div className='likediv'>
           <p>{likecount}</p>
           <img
-          onClick={() => handleLike()} src={like} alt ='like'/>
+          onClick={handleLike} src={like} alt ='like'/>
           </div>
            
-            <img onClick={() => handleBookmark()} src={bookmark} alt='bookmark'/>
+            <img onClick={handleBookmark} src={bookmark} alt='bookmark'/>
         </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />
-          <button onClick={() => handleSend()} type='submit'>Send</button>
+          <button onClick={handleSend} type='submit'>Send</button>
         </div>     
       </div>
     </div>

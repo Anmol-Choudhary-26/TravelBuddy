@@ -40,12 +40,11 @@ export async function likePost(postId){
 
     const user = localStorage.getItem('userId')
     const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/post/like/`,
-        {
-            params: {
-                id: postId,
+         {
+                postId,
                 userId: user
             }
-        }
+        
     )
     return data
 }
