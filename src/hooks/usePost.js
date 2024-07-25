@@ -46,7 +46,7 @@ export async function likePost(postId){
             }
         
     )
-    return data
+    return data.data
 }
 
 export async function createBookmark(postId){
@@ -60,5 +60,5 @@ export async function createBookmark(postId){
             
         }
     )
-    return data
+    return data.data
 }
