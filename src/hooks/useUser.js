@@ -47,7 +47,7 @@ export async function findUserByEmail(email){
        }
     )
     console.log(data.data)
-    if(data){
+    if(data.data){
         localStorage.setItem("userId", JSON.stringify(data.data.id))
         return true
     }
