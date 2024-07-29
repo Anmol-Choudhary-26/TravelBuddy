@@ -13,7 +13,7 @@ import Sidebar from '../component/sidebar.js';
 
 function Profile() {
    const navigate = useNavigate()
-   const user = localStorage.getItem('userData');
+   const user = JSON.parse(localStorage.getItem('userData'));
 
    console.log(user)
 
