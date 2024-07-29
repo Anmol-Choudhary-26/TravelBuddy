@@ -6,11 +6,11 @@ import Sidebar from "../component/sidebar";
 import { useNavigate } from "react-router-dom";
 
 function Edit() {
-  const [image, setImage] = useState("")
+  const [image, setImage] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const email = localStorage.getItem("email");
   const [userData, setUserData] = useState({
     email: email,
-   
   });
   const navigate = useNavigate();
 
@@ -31,14 +31,29 @@ function Edit() {
       .then((res) => res.json())
       .then(async (data) => {
         console.log(data, data.secure_url);
-        setUserData({...userData, profilePic: data.secure_url });
+        setImageUrl(data.secure_url);
       })
       .catch((err) => {
         console.log(err);
         alert(err);
       });
-setTimeout(() =>{console.log(JSON.stringify(userData))}, 2000)
-    const Data1 = await createUser(userData);
+
+    setTimeout(() => {
+      console.log(JSON.stringify(userData));
+    }, 2000);
+
+    const finalUserData = {
+      email: userData.email,
+      phoneNumber: userData.phoneNumber,
+      FullName: userData.FullName,
+      emergencyContact: userData.emergencyContact,
+      UserName: userData.username,
+      shortBio: userData.shortBio,
+      Address: userData.Address,
+      profilePic: imageUrl,
+    };
+    
+    const Data1 = await createUser(finalUserData);
     console.log(Data1);
     console.log("User created successfully!");
     if (Data1) {
@@ -56,24 +71,24 @@ setTimeout(() =>{console.log(JSON.stringify(userData))}, 2000)
 
         <div className="profileImage">
           <div className="pimage">
-          <input
-        type="file"
-        id="fileInput"
-        style={{
-            border: "none",
-            padding: "0",
-            width: "90px",
-            height: "50px",
-            background: "transparent",
-            position: "relative",
-            overflow: "hidden",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            cursor: "pointer",
-          }}
-        onChange={(e)=>setImage(e.target.files[0])}
-      />
+            <input
+              type="file"
+              id="fileInput"
+              style={{
+                border: "none",
+                padding: "0",
+                width: "90px",
+                height: "50px",
+                background: "transparent",
+                position: "relative",
+                overflow: "hidden",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              onChange={(e) => setImage(e.target.files[0])}
+            />
           </div>
         </div>
 
