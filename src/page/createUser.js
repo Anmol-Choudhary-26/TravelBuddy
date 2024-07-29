@@ -10,7 +10,7 @@ function Edit() {
   const email = localStorage.getItem("email");
   const [userData, setUserData] = useState({
     email: email,
-    profilePic: "",
+   
   });
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ function Edit() {
         console.log(err);
         alert(err);
       });
-      console.log(userData)
+setTimeout(() =>{console.log(JSON.stringify(userData))}, 2000)
     const Data1 = await createUser(userData);
     console.log(Data1);
     console.log("User created successfully!");
