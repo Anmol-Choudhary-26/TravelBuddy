@@ -6,7 +6,7 @@ export async function getAllChatRooms(values) {
 }
 
 export async function createChat(values) {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const user = JSON.parse(localStorage.getItem('userId'))
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/chat', {
         users: [user, values]
     },{

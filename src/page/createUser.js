@@ -30,13 +30,14 @@ function Edit() {
     })
       .then((res) => res.json())
       .then(async (data) => {
+        console.log(data, data.secure_url);
         setUserData({...userData, profilePic: data.secure_url });
-        console.log(data);
       })
       .catch((err) => {
         console.log(err);
         alert(err);
       });
+      console.log(data)
     const Data1 = await createUser(userData);
     console.log(Data1);
     console.log("User created successfully!");
