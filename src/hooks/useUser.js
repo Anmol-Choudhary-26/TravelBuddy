@@ -39,8 +39,7 @@ export async function getUser(UserId){
        }
     )
     console.log(data)
-    localStorage.setItem("userData", JSON.stringify(data.data))
-    return data
+    return data.data
 }
 
 export async function findUserByEmail(email){
