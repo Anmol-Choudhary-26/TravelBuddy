@@ -27,8 +27,9 @@ function Edit() {
       body: data,
     })
       .then((res) => res.json())
-      .then(async (data) => {
-        setImageUrl(data);
+      .then((securedata) => {
+        console.log(securedata);
+        setImageUrl(securedata);
       })
       .catch((err) => {
         console.log(err);
