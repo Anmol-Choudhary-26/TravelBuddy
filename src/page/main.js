@@ -34,6 +34,7 @@ function MainPost() {
         if( localStorage.getItem('email') === null || localStorage.getItem('') === undefined ) {
         async function getUser() {
             await supabase.auth.getUser().then(async (value) => {
+               console.log(value.data)
                 const email = value.data.user.email;
                 localStorage.setItem("email", email);
                 const user = await findUserByEmail(email)

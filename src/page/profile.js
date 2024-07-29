@@ -17,16 +17,14 @@ import Sidebar from '../component/sidebar.js';
 function Profile() {
    const navigate = useNavigate()
    const [user, setUser] = useState({})
-
-   console.log(localStorage.getItem("userData"))
    useEffect(() => {
       async function fetchData() {
-         if (localStorage.getItem("userData") === null) {
-            const data = await getUser("6687b8052be27e93d9938d4e");
+          const userId = JSON.parse(localStorage.getItem('userId'))
+          console.log(userId)
+            const data = await getUser(userId);
+            setUser(data);
             console.log(data);
-         }
-         else setUser(JSON.parse(localStorage.getItem("userData")))
-      };
+         };
       fetchData();
 
    }, [])
@@ -36,6 +34,9 @@ function Profile() {
    async function signout() {
       console.log('Sign out')
       await supabase.auth.signOut()
+      localStorage.removeItem("userId")
+      localStorage.removeItem("email")
+      localStorage.removeItem("userData")
    }
    return (
    
@@ -59,7 +60,7 @@ function Profile() {
                <img src={birth} className="immage" alt='birth'></img>
                <div>
                   <p>Date Of Birth</p>
-                  <p><b>13 May ,2002</b></p>
+                  <p><b>{user.dob}</b></p>
                </div>
             </div>
 
@@ -67,7 +68,7 @@ function Profile() {
                <img src={gender} className="immage" alt='gender'></img>
                <div>
                   <p>Gender</p>
-                  <p><b>Male</b></p>
+                  <p><b>{user.gender}</b></p>
                </div>
             </div>
 
@@ -82,7 +83,7 @@ function Profile() {
                <img src={contact} className="immage" alt='contact'></img>
                <div>
                   <p>Emergency Contacts</p>
-                  <p><b>8894946575</b></p>
+                  <p><b>{user.emergencyContact}</b></p>
                </div>
             </div>
 

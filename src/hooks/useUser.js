@@ -20,7 +20,8 @@ export async function createUser(values) {
 }
 
 export async function updateUser(values) {
-    const data = await axios.put(`https://travelbuddy-backend-gxl9.onrender.com/user/${"6687b8052be27e93d9938d4e"}`, values,
+    const user = JSON.parse(localStorage.getItem("userId"))
+    const data = await axios.put(`https://travelbuddy-backend-gxl9.onrender.com/user/${user}`, values,
         {headers: {
             "X-Requested-With": "XMLHttpRequest"
           }, }

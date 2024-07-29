@@ -23,8 +23,9 @@ console.log(values.caption, values.startDate, values.endDate)
 }
 
 export async function getbookmarks(userId){
+    const user = JSON.parse(localStorage.getItem('userId'))
     const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/bookmark/getbookmark`,{
-        params: {userId: "6687b8052be27e93d9938d4e"}
+        params: {userId: user}
     })
     console.log(data)
     return data.data

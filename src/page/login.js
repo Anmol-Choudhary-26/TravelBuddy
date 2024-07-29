@@ -2,18 +2,12 @@ import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useState } from'react';
+import React, { useState } from'react';
 import supabase from '../component/supabase.js';
 import { findUserByEmail } from '../hooks/useUser.js';
 // import Sidebar from '../component/sidebar.js';
 
-
-
-
-
 function Login(){
-
-    
      const [signup , setSignupData] = useState({
         email: '',
         password: '',
@@ -49,8 +43,6 @@ function Login(){
      supabase.auth.signInWithOAuth({
             provider: 'google',
           })
-         
-          
     }
 
     supabase.auth.onAuthStateChange(async (event) => {
@@ -58,25 +50,7 @@ function Login(){
         if (event === "SIGNED_IN") {
             navigate("/main")
         }
-        
     })
-    useEffect(() => {
-        async function getUser() {
-            await supabase.auth.getUser().then(async (value) => {
-                const email = value.data.user.email;
-                localStorage.setItem("email", email);
-                const user = await findUserByEmail(email)
-                if(user){
-                navigate('/main')
-                }
-                else {
-                    navigate('/createuser')
-                }
-
-            })
-        }
-        getUser()
-    },[])
 
    return(
     <div className='loginfullpage'>
