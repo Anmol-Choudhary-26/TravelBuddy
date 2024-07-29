@@ -8,7 +8,7 @@ export async function createUser(values) {
         userName: values.username,
         FullName: values.FullName,
         emergencyContact: values.emergencyContact,
-        UserName: values.username,
+        UserName: values.userName,
         shortBio: values.shortBio,
         Address: values.Address,
         profilePic: values.profilePic
