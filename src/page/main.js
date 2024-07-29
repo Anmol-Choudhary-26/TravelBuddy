@@ -30,17 +30,20 @@ function MainPost() {
     })
 
     useEffect(() => {
-        if(!localStorage.getItem('email') || localStorage.getItem('userData') === null || localStorage.getItem('userData') === undefined ) {
+        if(!localStorage.getItem('userData') || localStorage.getItem('userData') === null || localStorage.getItem('userData') === undefined ) {
         async function getUser() {
             await supabase.auth.getUser().then(async (value) => {
                console.log(value.data)
-                const email = value.data.user.email;
+               if(!value.data.user){
+                   navigate('/login')
+               }
+                const email = value?.data?.user?.email;
                 localStorage.setItem("email", email);
                 const user = await findUserByEmail(email)
-                if(!user){
-                    navigate('/createuser')
-                }
                })
+               if(!user){
+                navigate('/createuser')
+            }
         }
         getUser()
     }
