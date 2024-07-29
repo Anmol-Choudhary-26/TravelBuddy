@@ -9,9 +9,7 @@ function Edit() {
   const [image, setImage] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const email = localStorage.getItem("email");
-  const [userData, setUserData] = useState({
-    email: email,
-  });
+  const [userData, setUserData] = useState({ });
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -30,7 +28,6 @@ function Edit() {
     })
       .then((res) => res.json())
       .then(async (data) => {
-        console.log(data, data.secure_url);
         setImageUrl(data.secure_url);
       })
       .catch((err) => {
@@ -43,8 +40,9 @@ function Edit() {
     }, 2000);
 
     const finalUserData = {
-      email: userData.email,
+      email: email,
       phoneNumber: userData.phoneNumber,
+      userName: userData.userName,
       FullName: userData.FullName,
       emergencyContact: userData.emergencyContact,
       UserName: userData.username,
@@ -53,6 +51,8 @@ function Edit() {
       profilePic: imageUrl,
     };
     
+    console.log(finalUserData, imageUrl);
+
     const Data1 = await createUser(finalUserData);
     console.log(Data1);
     console.log("User created successfully!");

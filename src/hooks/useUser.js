@@ -1,9 +1,11 @@
 import axios from "axios"
 export async function createUser(values) {
+    console.log(values)
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/user', 
      {
         email: values.email,
         phoneNumber: values.phoneNumber,
+        userName: values.username,
         FullName: values.FullName,
         emergencyContact: values.emergencyContact,
         UserName: values.username,
