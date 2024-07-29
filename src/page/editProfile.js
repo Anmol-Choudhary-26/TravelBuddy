@@ -1,14 +1,13 @@
 import '../styles/editProfile.css';
 import profile from '../images/Pc.jpeg';
-import React , {useState,useEffect} from 'react';
+import React , {useState } from 'react';
 import {updateUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
-
 import Sidebar from '../component/sidebar.js';
-
-
 function Edit() {
-        const [userData , setUserData] = useState({});
+        const [userData , setUserData] = useState({
+            profilePic: ""
+        });
 
         const handleChange = (e) => {
             const {name , value} = e.target;
@@ -19,17 +18,11 @@ function Edit() {
             console.log('clicked')
             const data = await updateUser(userData);
             console.log(data);
-            console.log('User created successfully');
             alert("Profile Updated successfully")
         }
 
-        useEffect(() => console.log(userData));
-
     return (
-
-
-            <div className='editfullpage'>
-
+        <div className='editfullpage'>
         <div className="eDit">
             <Sidebar />
            <div className='HeAdinggg'>

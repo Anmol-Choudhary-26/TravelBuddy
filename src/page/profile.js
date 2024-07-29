@@ -1,7 +1,6 @@
 import '../styles/profile.css'
 import "../styles/profile.css";
-import React, { useEffect, useState } from 'react';
-import profilepic from '../images/Pc.jpeg';
+import React from 'react';
 import contact from '../images/Phone.png';
 import birth from '../images/Birth.png';
 import gender from '../images/Gender.png';
@@ -9,25 +8,12 @@ import address from '../images/Home.svg';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../component/supabase.js';
 import BackgroundSlider from '../component/backgroundslider.js';
-import { getUser } from '../hooks/useUser.js';
-
 import Sidebar from '../component/sidebar.js';
 
 
 function Profile() {
    const navigate = useNavigate()
-   const [user, setUser] = useState({})
-   useEffect(() => {
-      async function fetchData() {
-          const userId = JSON.parse(localStorage.getItem('userId'))
-          console.log(userId)
-            const data = await getUser(userId);
-            setUser(data);
-            console.log(data);
-         };
-      fetchData();
-
-   }, [])
+   const user = localStorage.getItem('userData');
 
    console.log(user)
 

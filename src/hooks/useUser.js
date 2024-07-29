@@ -8,7 +8,8 @@ export async function createUser(values) {
         emergencyContact: values.emergencyContact,
         UserName: values.username,
         shortBio: values.shortBio,
-        Address: values.Address
+        Address: values.Address,
+        profilePic: values.profilePic
     }, 
     {headers: {
         "X-Requested-With": "XMLHttpRequest"
@@ -16,6 +17,7 @@ export async function createUser(values) {
 )
     console.log(data)
     localStorage.setItem("userId", JSON.stringify(data.data.id))
+    localStorage.setItem("userData", JSON.stringify(data.data))
     return data
 }
 
@@ -39,6 +41,7 @@ export async function getUser(UserId){
        }
     )
     console.log(data)
+    localStorage.setItem("userData", JSON.stringify(data.data))
     return data.data
 }
 
@@ -51,6 +54,7 @@ export async function findUserByEmail(email){
     console.log(data.data)
     if(data.data){
         localStorage.setItem("userId", JSON.stringify(data.data.id))
+        localStorage.setItem("userData", JSON.stringify(data.data))
         return true
     }
     return false

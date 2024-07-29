@@ -6,7 +6,7 @@ import Sidebar from "../component/sidebar";
 import { useNavigate } from "react-router-dom";
 
 function Edit() {
-    const [image, setImage] = useState("")
+  const [image, setImage] = useState("")
   const email = localStorage.getItem("email");
   const [userData, setUserData] = useState({
     email: email,
