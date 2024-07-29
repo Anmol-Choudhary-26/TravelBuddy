@@ -40,10 +40,10 @@ function MainPost() {
                 const email = value?.data?.user?.email;
                 localStorage.setItem("email", email);
                 const user = await findUserByEmail(email)
+                if(!user){
+                 navigate('/createuser')
+               }
                })
-               if(!user){
-                navigate('/createuser')
-            }
         }
         getUser()
     }
