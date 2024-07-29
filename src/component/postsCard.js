@@ -1,19 +1,19 @@
 import React from 'react';
 import "../styles/postsCard.css";
 const TripPost = ({ trip }) => {
-  const { author, location, date, imageUrl } = trip;
-
+  const { authorName, location, date, imageUrl } = trip;
+  const formattedDate = date.slice(0, 10);
   return (
     <div className='Main'>
         
       <div className='Heading'>
-     <div className='Helper1'> <div> <img className= "AuthorImg" src='/favicon.ico' alt = {author}/></div>
+     <div className='Helper1'> <div> <img className= "AuthorImg" src='/favicon.ico' alt = {authorName}/></div>
        <div className='LocDate'>
         <div>{location} </div>
-       <div>{date}</div>
+       <div>{formattedDate}</div>
        </div>
       </div>
-      <div> <span>{author}</span></div>
+      <div> <span>{authorName}</span></div>
       </div>
       <div className='Body'>
         <img className='Img' src={imageUrl} alt={location} />

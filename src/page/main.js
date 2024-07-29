@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import home from '../images/homeicon.jpeg';
 import logo from '../images/temperature.png';
-
+import { getAllPost } from '../hooks/usePost';
 import { createClient } from '@supabase/supabase-js'
 
 const supabase = createClient(
@@ -15,6 +15,7 @@ const supabase = createClient(
 )
 function MainPost() {
     const [user, setUser] = useState({})
+    const [post, setPost] = useState([])
     // const navigate = useNavigate()
 
     useEffect(() => {
@@ -22,9 +23,14 @@ function MainPost() {
             await supabase.auth.getUser().then((value) => { if (value.data?.user) setUser(value.data.user) })
         }
         getUser()
+        async function getPost(){
+            const data =await getAllPost()
+            setPost(data)
+        }
+        getPost()
     }, [])
 
-    const renderedItems = dataAll.map((items, index) => {
+    const renderedItems = post.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
         )

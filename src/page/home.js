@@ -6,14 +6,28 @@ import PopularDestination from '../component/popularDestination';
 import Footer from '../component/footer';
 import data from '../utils/data';
 import { Link } from "react-router-dom";
+import { createClient } from '@supabase/supabase-js'
+import { useNavigate } from 'react-router-dom'
+const supabase = createClient(
+    "https://tpkszvmuasfiyaloquii.supabase.co",
+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
+)
 function Home (){
+  const navigate = useNavigate()
     const renderedItems = data.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
         )
-
-        
     })
+
+    supabase.auth.onAuthStateChange(async (event) => {
+      console.log(event)
+      if (event !== "SIGNED_OUT") {
+          navigate("/main")
+      }
+      
+  })
+
     return(
     <React.Fragment>
     <div className="first">
