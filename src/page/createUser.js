@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function Edit() {
   const [image, setImage] = useState("");
-  const [imageUrl, setImageUrl] = useState({});
+ let imageUrl = ""
   const email = localStorage.getItem("email");
   const [userData, setUserData] = useState({ });
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ function Edit() {
       .then((res) => res.json())
       .then((securedata) => {
         console.log(securedata);
-        setImageUrl(securedata);
+        imageUrl = securedata.secure_url;
       })
       .catch((err) => {
         console.log(err);
@@ -49,7 +49,7 @@ function Edit() {
       userName: userData.username,
       shortBio: userData.shortBio,
       Address: userData.Address,
-      profilePic: imageUrl.secure_url,
+      profilePic: imageUrl,
     };
 
     console.log(finalUserData, imageUrl);
