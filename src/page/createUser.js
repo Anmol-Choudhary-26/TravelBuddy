@@ -37,7 +37,7 @@ function Edit() {
         console.log(err);
         alert(err);
       });
-      console.log(data)
+      console.log(userData)
     const Data1 = await createUser(userData);
     console.log(Data1);
     console.log("User created successfully!");
