@@ -9,11 +9,9 @@ export async function createChat(values) {
     const user = JSON.parse(localStorage.getItem('userId'))
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/chat', {
         users: [user, values]
-    },{
-    headers: {
-        'Content-Type': 'application/json',
-      }
-});
+    },{headers: {
+        "X-Requested-With": "XMLHttpRequest"
+      }, });
     console.log(data)
     return data.data
 }
