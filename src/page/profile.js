@@ -48,7 +48,7 @@ function Profile() {
             </div>
             <div className='Image'>
            
-               <img src={profilepic} alt="profilepic"></img>
+               <img src={user.profilePic} alt="profilepic"></img>
 
             </div>
 
