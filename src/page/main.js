@@ -31,7 +31,7 @@ function MainPost() {
 
     useEffect(() => {
         console.log(localStorage.getItem('email'))
-        if( localStorage.getItem('email') === null || localStorage.getItem('') === undefined ) {
+        if( localStorage.getItem('userData') === null || localStorage.getItem('userData') === undefined ) {
         async function getUser() {
             await supabase.auth.getUser().then(async (value) => {
                console.log(value.data)
