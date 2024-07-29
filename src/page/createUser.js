@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function Edit() {
   const [image, setImage] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState({});
   const email = localStorage.getItem("email");
   const [userData, setUserData] = useState({ });
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ function Edit() {
     })
       .then((res) => res.json())
       .then(async (data) => {
-        setImageUrl(data.secure_url);
+        setImageUrl(data);
       })
       .catch((err) => {
         console.log(err);
@@ -45,12 +45,12 @@ function Edit() {
       userName: userData.userName,
       FullName: userData.FullName,
       emergencyContact: userData.emergencyContact,
-      UserName: userData.username,
+      userName: userData.username,
       shortBio: userData.shortBio,
       Address: userData.Address,
-      profilePic: imageUrl,
+      profilePic: imageUrl.secure_url,
     };
-    
+
     console.log(finalUserData, imageUrl);
 
     const Data1 = await createUser(finalUserData);
