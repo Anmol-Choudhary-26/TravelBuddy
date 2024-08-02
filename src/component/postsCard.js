@@ -3,9 +3,23 @@ import "../styles/postsCard.css";
 import bookmark from "../images/background.png"
 import like from '../images/heart.png';
 import {createChat} from "../hooks/useChat.js";
+import { likePost } from '../hooks/usePost.js';
+import {createBookmark} from "../hooks/usePost.js";
+
 const TripPost = ({ trip }) => {
-  const { authorName, id, location, date, imageUrl } = trip;
+  const { authorName, likesCount, id, location, date, imageUrl } = trip;
  const formattedDate = date.slice(0,10);
+
+ const handleLike = async () => {
+  console.log("like clicked")
+  const data = await likePost(id)
+  console.log(data)
+ }
+ const handleBookmark = async () => {
+    console.log("bookmarked clicked")
+    await createBookmark(id);
+ }
+
  const handleSend = async () => {
   const data = await createChat(id)
   console.log(data)
@@ -29,12 +43,15 @@ const TripPost = ({ trip }) => {
 
         <div className='likes'>
 
-          <div className='likediv'>
-            <p>Likes</p>
+          <div onClick={handleLike}  className='likediv'>
+            <p>{likesCount}</p>
           <img src={like} alt ='like'/>
           </div>
            
+          <div onClick={handleBookmark} className='likediv'>
             <img src={bookmark} alt='bookmark'/>
+        </div>
+
         </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />

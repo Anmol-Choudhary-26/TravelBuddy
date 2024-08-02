@@ -7,9 +7,11 @@ const TripPost = ({ trip }) => {
  const formattedDate = date.slice(0,10);
   return (
     <div className='MAIN'>
+
+
         
       <div className='HEading'>
-     <div className='Helper1'> <div> <img className= "AuthorImg" src='/favicon.ico' alt = {authorName}/></div>
+     <div className='Helper1'> <div> <img className= "AUthorImG" src='/favicon.ico' alt = {authorName}/></div>
        <div className='LOcDate'>
         <div>{location} </div>
        <div>{formattedDate}</div>

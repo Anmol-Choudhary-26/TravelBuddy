@@ -40,6 +40,10 @@ useEffect(() => {
             <div className="SideBAR">
              <Sidebar />
              </div>
+
+             
+                
+             <div className="sEarchbox">
                 <select >
                     <option value="">Filter</option>
                     <option value="2">New</option>
@@ -47,12 +51,14 @@ useEffect(() => {
                     <option value="4">Recent</option>
                 </select>
                 
-                <div className="searchbox">
+               
                     
                 <input type='text' name="caption" placeholder="enter place to search..." 
                 value={searchData.caption}
                 onChange={handleChange}/>
                   </div>  
+
+                 
 
                   <div className="datestop">
                         <h4>Start Date</h4>

@@ -43,18 +43,22 @@
 
 .HeAdinggg{
     width: 27vw;
-    height: 7vh;
+    height: 6.2vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     /* margin-bottom: 2vh; */
     margin-top: 0vh;
     font-size: 1vw;
     /* padding-top: 1vh; */
 }
 
+.HeAdinggg h1{
+    margin-left: 7vw;
+}
+
 
 .emAil{
-    margin-top: 5vh;
+    margin-top: 1vh;
     height: 8vh;
     width: 27vw;
     margin-bottom: 1.5vh;
@@ -104,7 +108,7 @@
 .textBox{
     height: 11.5vh;
     width: 27vw;
-    margin-bottom: 1.5vh;
+    /* margin-bottom: 1vh; */
 
 }
 
@@ -129,7 +133,7 @@
 
 .BTn{
     
-        margin-top: 2vh;
+        /* margin-top: 1vh; */
         margin-left: 3vw;
         height: 3vh;
         width: 5vw;
@@ -144,7 +148,7 @@
 }
 
 
-.BTN:hover{
+.BTn:hover{
     cursor: pointer;
     background-color: rgb(75, 134, 140);
     color: white;
@@ -164,7 +168,7 @@
     
     .profileImage{
         height: 15vh;
-        width: 70vw;
+        width: 100vw;
         display: flex;
         justify-content:center;
        
@@ -188,36 +192,46 @@
     
     .eDit{
         height: 100vh;
-        width: 70vw;
+        width: 100vw;
         /* background-color:rgb(6, 6, 6); */
         background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     
     }
     
     .OthersidE{
-        height: 100vh;
-        width: 30vw;
+        height: 0vh;
+        width: 0vw;
       
         /* background-color: aqua; */
     }
     
     .HeAdinggg{
-        width: 70vw;
-        height: 5vh;
+        width: 100vw;
+        height: 4vh;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         /* margin-bottom: 2vh; */
         margin-top: 0vh;
-        font-size: 2vw;
+        /* font-size: 2vw; */
         /* padding-top: 1vh; */
+    }
+
+    .HeAdinggg h1{
+        margin-left: 35vw;
+        font-size: 4.5vw;
     }
     
     
     .emAil{
         /* margin-top: 8vh; */
         height: 8vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left: 5vw;
         
     
     }
@@ -226,7 +240,7 @@
         margin-left: 16vw;
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     .emAil input{
         width: 35vw;
@@ -241,18 +255,20 @@
     
     .paSsword{
         height: 8vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left: 5vw;
+        
        
     
     }
     
     .paSsword h4{
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
-        margin-left: 16vw;
+        font-size: 2.5vw;
+        /* margin-left: 16vw; */
     }
     
     .paSsword input{
@@ -269,8 +285,9 @@
     
     .textBox{
         height: 11.5vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left: 19vw;
     
     }
     
@@ -279,12 +296,12 @@
         margin-left: 16vw;
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     
     
     .textBox input{
-        width: 35vw;
+        width: 45vw;
         height: 8vh;
         margin-left: 16vw;
         border-radius: 8px;
@@ -296,7 +313,7 @@
     
     .BTn{
         
-            margin-top: 2vh;
+            margin-top: 1vh;
             margin-left: 16vw;
             height: 3vh;
             width: 12vw;

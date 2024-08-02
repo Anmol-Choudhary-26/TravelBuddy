@@ -35,7 +35,7 @@
 
 
 .Image{
-    height: 27vh;
+    height: 22vh;
     width: 40vw;
     display: flex;
     justify-content: center;
@@ -45,18 +45,18 @@
 
 .Image img{
    
-    width: 14vw;
-    height: 25vh;
+    width: 11.5vw;
+    height: 20vh;
     border-radius: 50%;
 }
 
 .name{
-    height: 4vh;
+    height: 3vh;
     width: 40vw;
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    margin-top: 4vh;
+    margin-top: 2.5vh;
     text-decoration: none;
 }
 
@@ -66,7 +66,7 @@
 
 .Boxx{
 
-    height: 8vh;
+    height: 7.5vh;
     width: 15vw;
     border: 1px solid none;
     display: flex;
@@ -117,7 +117,7 @@ font-size: 1.05vw;
 
 .lgoutbtn{
     height: 4vh;
-    width: 25vw;
+    width: 18vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,7 +150,7 @@ font-size: 1.05vw;
     
     .sidebarr{
         height: 4vh;
-        width: 69vw;
+        width: 100vw;
         margin: 0px;
         /* background-color: aliceblue; */
         display: flex;
@@ -160,7 +160,7 @@ font-size: 1.05vw;
     .personalDetails{
     
         height: 100vh;
-        width: 70vw;
+        width: 100vw;
         background-color: rgba(0, 0, 0, 0.956);
         display: flex;
         align-items: center;
@@ -172,7 +172,7 @@ font-size: 1.05vw;
     
     
     .Image{
-        height: 27vh;
+        height: 19vh;
         width: 70vw;
         display: flex;
         justify-content: center;
@@ -182,13 +182,13 @@ font-size: 1.05vw;
     
     .Image img{
        
-        width: 35vw;
-        height: 25vh;
+        width: 27vw;
+        height: 18vh;
         border-radius: 50%;
     }
     
     .name{
-        height: 4vh;
+        height: 2vh;
         width: 70vw;
         display: flex;
         /* align-items: center; */
@@ -204,7 +204,7 @@ font-size: 1.05vw;
     .Boxx{
     
         height: 8vh;
-        width: 68vw;
+        width: 90vw;
         border: 1px solid none;
         display: flex;
         align-items: center;
@@ -217,14 +217,14 @@ font-size: 1.05vw;
 
     .Boxx div{
         height: 8vh;
-        width: 18vw;
+        width: 15vw;
 
     }
     
      p{
         font-size: 2.4vw;
         padding:0;
-        margin-top: 0.7vh;
+        margin-top: 1.4vh;
         /* font-size: 1vw; */
         font-weight: 50;
         display: flex;
@@ -235,9 +235,9 @@ font-size: 1.05vw;
     
     .immage{
         /* margin: 0.5rem; */
-        height: 4.5vh;
-        width: 6vw;
-        margin-right: 1vw;
+        height: 5vh;
+        width: 7vw;
+        margin-right: 2vw;
         margin-left: 2vw
         
     }
@@ -261,7 +261,7 @@ font-size: 1.05vw;
     
     .lgoutbtn{
         height: 4vh;
-        width: 60vw;
+        width: 35vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -270,7 +270,7 @@ font-size: 1.05vw;
     
     .ProfileOther{
         height: 100vh;
-        width: 30vw;
+        width: 0vw;
     }
     
     

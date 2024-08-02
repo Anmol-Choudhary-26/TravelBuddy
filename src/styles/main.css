@@ -28,15 +28,35 @@
     align-items: center;
     background-color: aliceblue;
     overflow-y: scroll;
+    scroll-padding: 0;
+  
+   
+    
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.956);
     border: 0.1px solid white;
     border-top: none;
     border-bottom: none;
     color: white;
+    
 
 
 }
+
+
+
+@supports (scrollbar-color: red blue){
+
+    *{
+        scrollbar-color: rgba(255, 255, 255, 0.916) black;
+        scrollbar-width:thin;       
+     
+    }
+
+  
+
+}
+
 
 .Containers h1{
     margin-top: 2vh;

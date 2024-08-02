@@ -1,24 +1,31 @@
 import axios from "axios"
 export async function createUser(values) {
-    const data = await axios.post('/user', 
+    console.log(values)
+    const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/user', 
      {
         email: values.email,
         phoneNumber: values.phoneNumber,
-        FullName: values.fullName,
+        userName: values.username,
+        FullName: values.FullName,
+        emergencyContact: values.emergencyContact,
         UserName: values.userName,
         shortBio: values.shortBio,
-        Address: values.address
+        Address: values.Address,
+        profilePic: values.profilePic
     }, 
     {headers: {
         "X-Requested-With": "XMLHttpRequest"
       },} 
 )
     console.log(data)
+    localStorage.setItem("userId", JSON.stringify(data.data.id))
+    localStorage.setItem("userData", JSON.stringify(data.data))
     return data
 }
 
 export async function updateUser(values) {
-    const data = await axios.put(`/user/${"6687b8052be27e93d9938d4e"}`, values,
+    const user = JSON.parse(localStorage.getItem("userId"))
+    const data = await axios.put(`https://travelbuddy-backend-gxl9.onrender.com/user/${user}`, values,
         {headers: {
             "X-Requested-With": "XMLHttpRequest"
           }, }
@@ -37,5 +44,20 @@ export async function getUser(UserId){
     )
     console.log(data)
     localStorage.setItem("userData", JSON.stringify(data.data))
-    return data
+    return data.data
+}
+
+export async function findUserByEmail(email){
+    const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/user/email`,
+       {
+        params: {email : email}
+       }
+    )
+    console.log(data.data)
+    if(data.data){
+        localStorage.setItem("userId", JSON.stringify(data.data.id))
+        localStorage.setItem("userData", JSON.stringify(data.data))
+        return true
+    }
+    return false
 }

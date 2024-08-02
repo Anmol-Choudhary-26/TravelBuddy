@@ -7,10 +7,11 @@ import Signup from './page/signup';
 import Edit from './page/editProfile';
 import Profile from './page/profile';
 import Chat from './page/chat';
-import User from './page/createUser';
+// import User from './page/createUser';
 import Search from './page/search';
 import Bookmark from './page/bookmark';
 import Chatbot from './component/chatbot';
+import CreateUser from './page/createUser';
 
 import MainNew from './page/Mainnew';
 
@@ -29,8 +30,10 @@ function App(){
         <Route path='/postbookmark' element={<Bookmark />} />
         <Route path='/profile' element={<Profile />} /> 
         <Route path='/msg' element={<Chat />} />  
-        <Route path='/userprofile' element={<User />} />
+        {/* <Route path='/userprofile' element={<User />} /> */}
         <Route path='/searchpost' element={<Search />} />
+        <Route path='/createuser' element={<CreateUser />} />
+
         </Routes> 
        <Chatbot/>
    

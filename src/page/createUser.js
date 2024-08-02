@@ -1,25 +1,70 @@
 import '../styles/user.css';
 import React , {useState,useEffect} from 'react';
-import {updateUser} from '../hooks/useUser';
+import { createUser } from "../hooks/useUser";
 import BackgroundSlider from '../component/backgroundslider';
 import Sidebar from '../component/sidebar';
+import { useNavigate } from "react-router-dom";
 
 
 function Edit() {
+    const [image, setImage] = useState("");
+    let imageUrl = ""
+     const email = localStorage.getItem("email");
+
         const [userData , setUserData] = useState({});
+
+        const navigate = useNavigate();
 
         const handleChange = (e) => {
             const {name , value} = e.target;
             setUserData({...userData , [name] : value});
         };
 
-        async function handleSubmit(){
-            const data = await updateUser(userData);
-            console.log(data);
-            console.log('User created successfully');
-        }
+        const handleSubmit = async () => {
+    const data = new FormData();
+    data.append("file", image);
+    data.append("upload_preset", "travelbuddy");
+    data.append("cloud_name", "duxuhubym");
+    await fetch("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
+      method: "POST",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((securedata) => {
+        console.log(securedata);
+        imageUrl = securedata.secure_url;
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
 
-        useEffect(() => console.log(userData));
+    setTimeout(() => {
+      console.log(JSON.stringify(userData));
+    }, 2000);
+
+    const finalUserData = {
+      email: email,
+      phoneNumber: userData.phoneNumber,
+      userName: userData.userName,
+      FullName: userData.FullName,
+      emergencyContact: userData.emergencyContact,
+      userName: userData.username,
+      shortBio: userData.shortBio,
+      Address: userData.Address,
+      profilePic: imageUrl,
+    };
+
+    console.log(finalUserData, imageUrl);
+
+    const Data1 = await createUser(finalUserData);
+    console.log(Data1);
+    console.log("User created successfully!");
+    if (Data1) {
+      navigate("/main");
+    }
+  };
+
 
     return (
 
@@ -27,37 +72,45 @@ function Edit() {
             <div className='editfullpage'>
 
         <div className="eDit">
-            <Sidebar />
+            
            <div className='HeAdingg'>
+           <Sidebar />
            <h1>Create User</h1>
            </div>
 
            <div className='profileImage'>
             <div className='pimage'>
-            <button>+</button>
+            <input
+              type="file"
+              id="fileInput"
+              style={{
+                border: "none",
+                padding: "0",
+                width: "90px",
+                height: "50px",
+                background: "transparent",
+                position: "relative",
+                overflow: "hidden",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              onChange={(e) => setImage(e.target.files[0])}
+            />
             </div>
             </div>
 
             <div className='emAil'>
 
-                <h4>Email Address</h4>
-                <input type='email' name="email" placeholder="email address" 
-                value={userData.email}
+                <h4>Username</h4>
+                <input type='text' name="username" placeholder="enter username" 
+                 value={userData.username}
                 onChange={handleChange}
                 className='emailinput' />
             </div>
 
-            <div className='paSsword'>
-
-                <h4>Password</h4>
-                <input type='password' 
-                name = "password"
-                placeholder='password'
-                value = {userData.password}
-                onChange={handleChange}
-                className='paSsword' />
-
-            </div>
+           
 
 
 
@@ -71,6 +124,31 @@ function Edit() {
                 onChange={handleChange}
                 className='emailinput' />
                
+            </div>
+
+
+            <div className='paSsword'>
+
+                <h4>Gender</h4>
+                <input type='text' 
+                name = "gender"
+                placeholder='gender'
+                value = {userData.password}
+                onChange={handleChange}
+                className='paSsword' />
+
+                </div>
+
+            <div className='paSsword'>
+
+            <h4>Date of Birth</h4>
+            <input type='date'
+            name='date'
+            placeholder='DOB'
+            value={userData.FullName}
+            onChange={handleChange}
+            className='emailinput' />
+
             </div>
 
             <div className='paSsword'>

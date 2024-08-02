@@ -1,6 +1,6 @@
 import '../styles/editProfile.css';
 import profile from '../images/Pc.jpeg';
-import React , {useState,useEffect} from 'react';
+import React , {useState} from 'react';
 import {updateUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
 
@@ -8,7 +8,9 @@ import Sidebar from '../component/sidebar.js';
 
 
 function Edit() {
-        const [userData , setUserData] = useState({});
+        const [userData , setUserData] = useState({
+            profilePic: ""
+        });
 
         const handleChange = (e) => {
             const {name , value} = e.target;
@@ -23,7 +25,7 @@ function Edit() {
             alert("Profile Updated successfully")
         }
 
-        useEffect(() => console.log(userData));
+       
 
     return (
 
@@ -31,9 +33,9 @@ function Edit() {
             <div className='editfullpage'>
 
         <div className="eDit">
-            <Sidebar />
+         
            <div className='HeAdinggg'>
-       
+           <Sidebar />
            <h1>Edit Profile</h1>
 
            </div>
@@ -46,24 +48,14 @@ function Edit() {
 
             <div className='emAil'>
 
-                <h4>Email Address</h4>
-                <input type='email' name="email" placeholder="email address" 
+                <h4>Username</h4>
+                <input type='text' name="username" placeholder="enter username" 
                 value={userData.email}
                 onChange={handleChange}
                 className='emailinput' />
             </div>
 
-            <div className='paSsword'>
-
-                <h4>Password</h4>
-                <input type='password' 
-                name = "password"
-                placeholder='password'
-                value = {userData.password}
-                onChange={handleChange}
-                className='password' />
-
-            </div>
+            
 
 
 
@@ -78,6 +70,31 @@ function Edit() {
                 className='emailinput' />
                
             </div>
+
+            <div className='paSsword'>
+
+                <h4>Gender</h4>
+                <input type='text' 
+                name = "gender"
+                placeholder='gender'
+                value = {userData.password}
+                onChange={handleChange}
+                className='password' />
+
+            </div>
+
+            <div className='paSsword'>
+
+                <h4>Date of Birth</h4>
+                <input type='date' 
+                name = "DOB"
+               
+                value = {userData.password}
+                onChange={handleChange}
+                className='password' />
+
+                </div>
+
 
             <div className='paSsword'>
                 <h4>Phone Number</h4>

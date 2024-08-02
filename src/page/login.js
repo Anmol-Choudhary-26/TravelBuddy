@@ -2,15 +2,16 @@ import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useState } from'react';
+import React, { useState } from'react';
 import supabase from '../component/supabase.js';
+import { findUserByEmail } from '../hooks/useUser.js';
 // import Sidebar from '../component/sidebar.js';
 
 
 
 
 
-function Login(){
+export default function Login(){
 
     const [signup , setSignupData] = useState({
         email: '',
@@ -29,7 +30,13 @@ function Login(){
           password: signup.password,
         })
         if(data){
+            const user = await findUserByEmail(signup.email)
+            localStorage.setItem('email', signup.email)
+            if(user){
             navigate('/main')
+        }
+        else {
+            navigate('/createuser')
         }
       }
 
@@ -49,12 +56,7 @@ function Login(){
         }
         
     })
-    useEffect(() => {
-        async function getUser() {
-            await supabase.auth.getUser().then((value) => { if (value.data?.user) console.log(value.data) })
-        }
-        getUser()
-    },[])
+    
 
    return(
     <div className='loginfullpage'>
@@ -128,5 +130,4 @@ function Login(){
 
 
 }
-
-export default Login;
+}

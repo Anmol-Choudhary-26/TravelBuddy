@@ -74,18 +74,22 @@
 
 .HeAdingg{
     width: 27vw;
-    height: 7vh;
+    height: 6vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     /* margin-bottom: 2vh; */
     margin-top: 0vh;
     font-size: 1vw;
     /* padding-top: 1vh; */
 }
 
+.HeAdingg h1{
+  margin-left: 7vw;
+  margin-top: 0.7vh;
+}
 
 .emAil{
-    margin-top: 5vh;
+    margin-top: 3vh;
     height: 8vh;
     width: 27vw;
     margin-bottom: 1.5vh;
@@ -106,6 +110,7 @@
     border: 0.7px solid black;
     margin-bottom: 1vh;
     padding-left: 1vw;
+    font-size: 1vw;
 }
 
 .paSsword{
@@ -129,7 +134,7 @@
     border-radius: 8px;
     border: 0.7px solid black;
     padding-left: 1vw;
-   
+   font-size: 1vw;
 }
 
 .textBox{
@@ -160,7 +165,7 @@
 
 .BTn{
     
-        margin-top: 2vh;
+        margin-top: 1vh;
         margin-left: 3vw;
         height: 3vh;
         width: 5vw;
@@ -175,7 +180,7 @@
 }
 
 
-.BTN:hover{
+.BTn:hover{
     cursor: pointer;
     background-color: rgb(75, 134, 140);
     color: white;
@@ -250,50 +255,61 @@
     
     .eDit{
         height: 100vh;
-        width: 70vw;
+        width: 100vw;
         /* background-color:rgb(6, 6, 6); */
         background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     
     }
     
     .OthersidE{
         height: 100vh;
-        width: 30vw;
+        width: 0vw;
       
         /* background-color: aqua; */
     }
     
     .HeAdingg{
-        width: 70vw;
+        width: 100vw;
         height: 5vh;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         /* margin-bottom: 2vh; */
         margin-top: 0vh;
         font-size: 2vw;
         /* padding-top: 1vh; */
+    }
+    .HeAdingg h1{
+        margin-left: 35vw;
+        font-size: 4.5vw;
     }
     
     
     .emAil{
         /* margin-top: 8vh; */
         height: 8vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left:6vw;
+       
         
     
     }
     
     .emAil h4{
-        margin-left: 16vw;
+        /* margin-left: 16vw; */
+        /* margin-right: 40vw; */
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     .emAil input{
-        width: 35vw;
-        height: 4.2vh;
-        margin-left: 16vw;
+        width: 50vw;
+        height: 4.4vh;
+        /* margin-left: 16vw; */
         border-radius: 8px;
         border: 0.7px solid black;
         margin-bottom: 1vh;
@@ -303,52 +319,56 @@
     
     .paSsword{
         height: 8vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left: 5vw;
+       
        
     
     }
     
     .paSsword h4{
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
+        /* margin-right: 40vw; */
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
-        margin-left: 16vw;
+        font-size: 2.5vw;
+        /* margin-left: 16vw; */
     }
     
     .paSsword input{
-        width: 35vw;
+        width: 50vw;
         height: 4.4vh;
        
         border-radius: 8px;
         border: 0.7px solid black;
         padding-left: 1vw;
-        margin-left: 16vw;
+        /* margin-left: 16vw; */
         font-size: 2vw;
        
     }
     
     .textBox{
         height: 11.5vh;
-        width: 70vw;
+        width: 60vw;
         margin-bottom: 1.5vh;
+        margin-left: 5vw;
     
     }
     
     
     .textBox h4{
-        margin-left: 16vw;
+        /* margin-left: 16vw; */
         margin-bottom: 1vh;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
     
     
     .textBox input{
-        width: 35vw;
+        width: 50vw;
         height: 8vh;
-        margin-left: 16vw;
+        /* margin-left: 16vw; */
         border-radius: 8px;
         border: 0.7px solid black;
         padding-left: 1vw;
@@ -358,16 +378,17 @@
     
     .BTn{
         
-            margin-top: 2vh;
-            margin-left: 16vw;
-            height: 3vh;
-            width: 12vw;
+            margin-top: 1vh;
+            /* margin-left: 16vw; */
+            height: 3.2vh;
+            width: 15vw;
             background-color: white;
             border: 0.7px solid black;
             border-radius: 8px;
-            font-size: 2vw;
+            font-size: 2.5vw;
             font-weight: 520;
             border: 0.5px solid black;
+            margin-right: 37vw;
     
         
     }

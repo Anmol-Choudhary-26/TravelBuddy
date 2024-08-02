@@ -1,6 +1,6 @@
 import '../styles/profile.css'
 import "../styles/profile.css";
-import React, { useEffect, useState } from 'react';
+
 import profilepic from '../images/Pc.jpeg';
 import contact from '../images/Phone.png';
 import birth from '../images/Birth.png';
@@ -9,33 +9,25 @@ import address from '../images/Home.svg';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../component/supabase.js';
 import BackgroundSlider from '../component/backgroundslider.js';
-import { getUser } from '../hooks/useUser.js';
+
 
 import Sidebar from '../component/sidebar.js';
 
 
 function Profile() {
    const navigate = useNavigate()
-   const [user, setUser] = useState({})
+   const user = JSON.parse(localStorage.getItem('userData'));
+   
 
-   console.log(localStorage.getItem("userData"))
-   useEffect(() => {
-      async function fetchData() {
-         if (localStorage.getItem("userData") === null) {
-            const data = await getUser("6687b8052be27e93d9938d4e");
-            console.log(data);
-         }
-         else setUser(JSON.parse(localStorage.getItem("userData")))
-      };
-      fetchData();
-
-   }, [])
-
+   
    console.log(user)
 
    async function signout() {
       console.log('Sign out')
       await supabase.auth.signOut()
+      localStorage.removeItem("userId")
+      localStorage.removeItem("email")
+      localStorage.removeItem("userData")
    }
    return (
    
@@ -53,6 +45,14 @@ function Profile() {
 
             <div className="name">
                <h3>{user.FullName}</h3>
+            </div>
+
+            <div className="Boxx">
+               <img src={birth} className="immage" alt='username'></img>
+               <div>
+                  <p>Username</p>
+                  <p><b>akash13</b></p>
+               </div>
             </div>
 
             <div className="Boxx">
@@ -81,8 +81,8 @@ function Profile() {
             <div className="Boxx">
                <img src={contact} className="immage" alt='contact'></img>
                <div>
-                  <p>Emergency Contacts</p>
-                  <p><b>8894946575</b></p>
+                  <p>Bio</p>
+                  <p><b>Hii , everyone</b></p>
                </div>
             </div>
 
@@ -95,7 +95,7 @@ function Profile() {
             </div>
             <div className='lgoutbtn'>
                <button onClick={() => navigate('/edit')}>Edit Profile</button>
-               <button onClick={() => navigate("/userprofile")}>Create User</button>
+             
                <button onClick={() => {
                   signout()
                   navigate('/')
