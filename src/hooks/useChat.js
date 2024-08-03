@@ -2,9 +2,12 @@ import axios from "axios"
 
 export async function createChat(values) {
     const user = JSON.parse(localStorage.getItem('userId'))
+    const userdata = JSON.parse(localStorage.getItem('userData'))
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/chat', {
       firstId : user,
-      secondId : values
+      user1Name: userdata.UserName,
+      secondId : values.id,
+      user2Name : values.username
     });
     console.log(data)
     return data.data
@@ -12,6 +15,7 @@ export async function createChat(values) {
 
 export async function getChats(){
  const user = JSON.parse(localStorage.getItem('userId'))
+ console.log(user)
  const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/chat/getchats`, {
             userId : user,
  })
