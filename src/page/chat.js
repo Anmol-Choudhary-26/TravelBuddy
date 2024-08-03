@@ -5,7 +5,7 @@ import Sidebar from "../component/sidebar";
 import ChatBar from "../component/chatBar";
 import { getChats } from "../hooks/useChat";
 function Chat() {
-  const [chat, setChat] = useState([]);
+  const [chat, setChat] = useState([{}]);
   const renderChat = chat.map((items, index) => {
     return <ChatBar chat={items} key={index} />;
   });
@@ -23,8 +23,8 @@ function Chat() {
         <div className="chatHead">
           <Sidebar />
           <h3>Chats</h3>
-        {renderChat}
         </div>
+        {renderChat}
       </div>
 
       <div className="chatright">
