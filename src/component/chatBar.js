@@ -5,6 +5,8 @@ import React from'react';
 const chatbar = ({chat}) => {
     const user = JSON.parse(localStorage.getItem('userId'))
     const username = user === chat.user1 ? chat.user2Name : chat.user1Name;
+
+    return (
     <div className='Message'>
 
                 <div className='imageprofile'>
@@ -24,7 +26,7 @@ const chatbar = ({chat}) => {
                 </div>
 
             </div>
-
+     );
 }
 
 export default chatbar;
