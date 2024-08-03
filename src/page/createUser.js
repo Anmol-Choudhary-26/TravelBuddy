@@ -43,7 +43,6 @@ function Edit() {
     const finalUserData = {
       email: email,
       phoneNumber: userData.phoneNumber,
-      userName: userData.userName,
       FullName: userData.FullName,
       emergencyContact: userData.emergencyContact,
       userName: userData.username,

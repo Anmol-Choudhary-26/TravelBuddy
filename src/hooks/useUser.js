@@ -1,5 +1,6 @@
 import axios from "axios"
 export async function createUser(values) {
+
     console.log(values)
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/user', 
      {
@@ -12,25 +13,31 @@ export async function createUser(values) {
         shortBio: values.shortBio,
         Address: values.Address,
         profilePic: values.profilePic
+
     }, 
     {headers: {
         "X-Requested-With": "XMLHttpRequest"
       },} 
 )
     console.log(data)
+
     localStorage.setItem("userId", JSON.stringify(data.data.id))
     localStorage.setItem("userData", JSON.stringify(data.data))
+
     return data
 }
 
 export async function updateUser(values) {
+
     const user = JSON.parse(localStorage.getItem("userId"))
     const data = await axios.put(`https://travelbuddy-backend-gxl9.onrender.com/user/${user}`, values,
+
         {headers: {
             "X-Requested-With": "XMLHttpRequest"
           }, }
     )
     console.log(data)
+
     localStorage.setItem("userData", JSON.stringify(data.data))
     return data
 }
@@ -61,3 +68,4 @@ export async function findUserByEmail(email){
     }
     return false
 }
+

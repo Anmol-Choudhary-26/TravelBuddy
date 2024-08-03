@@ -1,11 +1,14 @@
 import axios from "axios"
 export async function getAllPost(values) {
+
     const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/post/allpost`)
+
     console.log(data)
     return data.data
 }
 
 export async function createPost(values) {
+
     const data = await axios.post(`https://travelbuddy-backend-gxl9.onrender.com/post`, values,
          
     )
@@ -62,4 +65,5 @@ export async function createBookmark(postId){
         }
     )
     return data.data
+
 }

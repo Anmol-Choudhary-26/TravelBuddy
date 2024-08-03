@@ -21,9 +21,10 @@ function Home (){
         return (
             <TripPost trip={items} key={index} />
         )
+    })
 
         
-    })
+    
     
     return(
     <React.Fragment>
