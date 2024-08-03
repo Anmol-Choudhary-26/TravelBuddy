@@ -6,14 +6,14 @@ import ChatBar from "../component/chatBar";
 import { getChats } from "../hooks/useChat";
 function Chat() {
   const [chat, setChat] = useState([]);
-  const renderChat = chat.map((chat) => {
-    return <ChatBar key={chat.id} chat={chat} />;
+  const renderChat = chat.map((items, index) => {
+    return <ChatBar chat={items} key={index} />;
   });
   useEffect(() => {
     // fetch chat data from server
     async function functionGetChat() {
       const data = await getChats();
-      setChat(data);
+      setChat(data.data);
     }
     functionGetChat();
   }, []);
@@ -23,8 +23,8 @@ function Chat() {
         <div className="chatHead">
           <Sidebar />
           <h3>Chats</h3>
-        </div>
         {renderChat}
+        </div>
       </div>
 
       <div className="chatright">
