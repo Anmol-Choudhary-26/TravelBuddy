@@ -97,8 +97,8 @@
 
 
 
-.headingp{
-    font-size: 1.02vw;
+.headingp p{
+    /* font-size: 1.02vw; */
     margin:0 2.5vw 0 2.5vw;
     word-spacing: 0.3vw;
 }
@@ -112,7 +112,7 @@
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.473);
-   
+    
 
 }
 
@@ -154,6 +154,10 @@ background-color: rgba(0, 0, 0, 0.473);
     text-decoration: none;
 } 
 
+/* .pdestinations{
+  
+} */
+
 
 /* Default styles */
 /* ... (same as the original CSS code) ... */
@@ -164,6 +168,7 @@ background-color: rgba(0, 0, 0, 0.473);
 @media only screen and (max-width: 600px) {
     .headingg {
       font-size: 2.5vw;
+     
     }
 
     .logoimg {
@@ -174,12 +179,15 @@ background-color: rgba(0, 0, 0, 0.473);
   
     .logoo {
       margin-left: 3vw;
+      width: 25vw;
     }
-  
+    .btns{
+      width: 25vw;
+    }
 
-    .Btn {
-      height: 3vh;
-      width: 12vw;
+    .btns button {
+      height: 4vh;
+      width: 15vw;
       font-size: 1.7vw;
       margin-right: 1vw;
     }
@@ -187,11 +195,20 @@ background-color: rgba(0, 0, 0, 0.473);
   
     .headingdesc {
       font-size: 1.5vw;
-    }
-  
+     
 
-    .headingp {
-      font-size:2.5vw;
+     
+    }
+
+    .description{
+      width: 70vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .headingp p{
+      font-size:1.7vw;
       margin: 0 3vw 0 3vw;
     }
 

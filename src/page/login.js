@@ -1,76 +1,113 @@
 import '../styles/login.css';
 import image from '../images/temperature.png';
 import googlelogo from '../images/googlelogo.webp';
-import { createClient } from '@supabase/supabase-js'
-import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import React, { useState } from'react';
+import supabase from '../component/supabase.js';
+import { findUserByEmail } from '../hooks/useUser.js';
+// import Sidebar from '../component/sidebar.js';
 
-const supabase = createClient(
-    "https://tpkszvmuasfiyaloquii.supabase.co",
- "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
-)
-function Login() {
+function Login(){
+     const [signup , setSignupData] = useState({
+        email: '',
+        password: '',
+     });
+ 
+     const handleChange = (e) => {
+         const {name , value} = e.target;
+         setSignupData({...signup , [name] : value});
+         console.log(signup);
+     };
+
+     async function signInWithEmail() {
+        const { data } = await supabase.auth.signInWithPassword({
+            email: signup.email,
+          password: signup.password,
+        })
+    
+        if(data){
+            const user = await findUserByEmail(signup.email)
+            localStorage.setItem('email', signup.email)
+            if(user){
+            navigate('/main')
+            }
+            else {
+                navigate('/createuser')
+            }
+        }
+      }
+
     const navigate = useNavigate()
 
     const handleSignup = async () =>{
-        supabase.auth.signInWithOAuth({
+     supabase.auth.signInWithOAuth({
             provider: 'google',
           })
-          
     }
 
     supabase.auth.onAuthStateChange(async (event) => {
         console.log(event)
-        if (event !== "SIGNED_OUT") {
+        if (event === "SIGNED_IN") {
             navigate("/main")
         }
-        
     })
-    return (
-        <div className='loginfullpage'>
 
-            <div className='login'>
-
+   return(
+    <div className='loginfullpage'>
+       
+    <div className='login'>
+    
+       {/* <Sidebar /> */}
                 <div className='firsthead'>
-                    <img src={image} alt="logo" className='immage' />
+                    <img src={image} alt="logo" className='Immage' />
                     <h2>TravelBuddy</h2>
+        
+       
                 </div>
 
                 <div className='secondhead'>
                     <h2>Log in to your account</h2>
                 </div>
 
-                <div className='thirdhead'>
-                    <h2>Don't have an account?</h2>
-                    <a href='/signup'>Sign Up</a>
-                </div>
+        <div className='thirdhead'>
+            <h2>Don't have an account?</h2>
+           
+            <div  onClick={()=> navigate('/signup')} className='logbtn'>
+              Sign Up
+             </div>
+        </div>  
 
-                <div onClick = {() => handleSignup()} className='buttons'>
+        <div onClick = {() => handleSignup()} className='buttons'>
 
-                    <button className='btn1'><img src={googlelogo} alt="logo" className='glogo' />Google</button>
-                </div>
+       
+            <button className='btn1'><img src={googlelogo} alt="google logo"  className='glogo'/>Google</button>
+        </div>
 
                 <div className='fourthhead'>
                     <p >---Or with email and password---</p>
                 </div>
 
 
-                <div className='email'>
+                <div className='EMail'>
 
                     <h4>Email Address</h4>
-                    <input type='email' className='emailinput' />
+                    <input type='email' name="email" placeholder="enter email address..."
+                        value={signup.email}
+                        onChange={handleChange}   className='emailinput' />
                 </div>
 
-                <div className='password'>
+                <div className='PAssword'>
 
                     <h4>Password</h4>
-                    <input type='password' className='password' />
+                    <input type='password' name="password" placeholder="enter password..."
+                        value={signup.password}
+                        onChange={handleChange}  className='password' />
 
 
                 </div>
 
 
-                <button className='Btn2'>Next</button>
+                <button onClick={() => signInWithEmail()} className='BTn2'>Next</button>
 
             </div>
 

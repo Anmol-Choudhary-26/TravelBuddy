@@ -1,8 +1,30 @@
 import React from 'react';
 import "../styles/postsCard.css";
+import bookmark from "../images/background.png"
+import like from '../images/heart.png';
+import {createChat} from "../hooks/useChat.js";
+import { likePost } from '../hooks/usePost.js';
+import {createBookmark} from "../hooks/usePost.js";
 const TripPost = ({ trip }) => {
-  const { authorName, location, date, imageUrl } = trip;
-  const formattedDate = date.slice(0, 10);
+ 
+  
+  const { authorName, likesCount, id, location, date, imageUrl } = trip;
+ const formattedDate = date.slice(0,10);
+
+ const handleLike = async () => {
+  console.log("like clicked")
+  const data = await likePost(id)
+  console.log(data)
+ }
+ const handleBookmark = async () => {
+    console.log("bookmarked clicked")
+    await createBookmark(id);
+ }
+
+ const handleSend = async () => {
+  const data = await createChat(id)
+  console.log(data)
+ }
   return (
     <div className='Main'>
         
@@ -22,12 +44,18 @@ const TripPost = ({ trip }) => {
 
         <div className='likes'>
 
-            <img src='' alt ='like'/>
-            <img src='' alt='bookmark'/>
+          <div onClick={handleLike} className='likediv'>
+          <p>{likesCount}</p>
+          <img
+           src={like} alt ='like'/>
+          </div>
+          <div onClick={handleBookmark} className='likediv'>
+            <img src={bookmark} alt='bookmark'/>
+        </div>
         </div>
       <div className='Reply-box'>
           <input className='Text' type='text' placeholder='Write a reply...' />
-          <button type='submit'>Send</button>
+          <button onClick={handleSend} type='submit'>Send</button>
         </div>     
       </div>
     </div>

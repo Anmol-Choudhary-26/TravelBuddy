@@ -9,6 +9,10 @@
 
 }
 
+.logbtn:hover{
+    cursor: pointer;
+}
+
 .sidesignup{
     height: 100vh;
     width: 28vw;
@@ -151,6 +155,9 @@
     border-radius: 8px;
     border: 0.7px solid black;
     margin-bottom: 1vh;
+    padding-left: 1vw;
+    font-size: 1vw;
+
 }
 
 .Password{
@@ -172,10 +179,12 @@
     margin-left: 3vw;
     border-radius: 8px;
     border: 0.7px solid black;
+    padding-left: 1vw;
+    font-size: 1vw;
 }
 
 
-.btn2{
+.bTn2{
     margin-top: 5vh;
     margin-left: 3.3vw;
     height: 4vh;
@@ -188,6 +197,15 @@
 
 }
 
+.bTn2:hover{
+    cursor: pointer;
+        background-color: rgb(75, 134, 140);
+        color: white;
+    
+}
+
+
+
 
 
 .checkbox{
@@ -196,11 +214,14 @@
     flex-direction: row;
     
     color: rgb(68, 72, 72);
+    font-size: 1.1vw;
+    margin-top: 3vh;
 }
 
 .checkbox input{
     margin-right:1vh;
     margin-bottom: 4vh;
+   
 
    
 }
@@ -209,4 +230,260 @@
     margin-bottom: 1vh;
     width: 25vh;
     height: 4.4vh;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .signup{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    
+    .logbtn:hover{
+        cursor: pointer;
+    }
+    
+    .sidesignup{
+        height: 100vh;
+        width: 28vw;
+        background-image: url("../images/sidesignup.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    
+    .signuppage{
+        height: 100vh;
+        width:72vw;
+        background-color:whitesmoke;
+    }
+    
+    .Firsthead{
+        height: 4vh;
+        width: 72vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 4vh;
+        display: flex;
+        justify-content: center;
+        /* margin-left: 2vw; */
+    }
+    
+    .IImage{
+        height: 4vh;
+        width: 6vw;
+    }
+    
+    .Firsthead h2{
+        margin-left: 0.3vw;
+        font-weight: 800;
+        font-size: 3.8vw;
+    }
+    
+    .Secondhead{
+    
+        height: 4vh;
+        width: 72vw;
+        margin-top: 4vh;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .Secondhead h2{
+        margin-left: 2.5vw;
+        font-size: 2.5vw;
+        font-weight: 500;
+    }
+    
+    .Thirdhead{
+    
+        height: 4vh;
+        width: 72vw;
+        margin-top: 1vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+    
+    }
+    
+    .Thirdhead h2{
+        margin-left: 2.5vw;
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+    
+    .logbtn{
+        font-size: 2.5vw;
+        text-decoration: none;
+        margin-left: 0.5vw;
+        font-weight: 800;
+        color: rgb(72, 72, 227);
+    
+    }
+    
+    .Buttons{
+        height: 6vh;
+        width: 72vw;
+         display: flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+    .Btn1{
+        height: 5vh;
+        width: 37vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        font-size: 2.5vw;
+        font-weight: 700vw;
+        background-color: rgb(255, 255, 255);
+        margin-left: 6vw;
+        
+    }
+    
+    .Btn1:hover{
+        cursor: pointer;
+    }
+    .Glogo{
+        height: 4vh;
+        width: 5vw;
+        margin-right: 0.1vw;
+    }
+    
+    .Fourthhead{
+        
+        margin-top: 2.5vh;
+        margin-bottom: 4vh;
+        margin-left: 6vw;
+        display: flex;
+        justify-content: center;
+        /* margin-right: 5vw; */
+    }
+    
+    .Fourthhead p{
+       
+        font-size: 2vw;
+        font-weight: 100;
+        color: rgb(68, 72, 72);
+    }
+    
+    .Email{
+        height: 8vh;
+        width: 72vw;
+        margin-bottom: 1.5vh;
+    
+    }
+    
+    .Email h4{
+        margin-left: 21vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    .Email input{
+        width: 35vw;
+        height: 4vh;
+        margin-left: 21vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        margin-bottom: 1vh;
+        padding-left: 1vw;
+        font-size: 2.1vw;
+    
+    }
+    
+    .Password{
+        height: 8vh;
+        width: 27vw;
+        margin-bottom: 1.5vh;
+    }
+    
+    .Password h4{
+        margin-left: 21vw;
+        margin-bottom: 1vh;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+    
+    .Password input{
+        width: 35vw;
+        height: 4.4vh;
+        margin-left: 21vw;
+        border-radius: 8px;
+        border: 0.7px solid black;
+        padding-left: 1vw;
+        font-size: 2.1vw;
+    }
+    
+    
+    .bTn2{
+        /* margin-top: 1vh; */
+        margin-left: 21vw;
+        height: 3vh;
+        width: 15vw;
+        background-color: white;
+        border: 0.7px solid black;
+        border-radius: 8px;
+        font-size: 1.9vw;
+        font-weight: 520;
+    
+    }
+    
+  .bTn2:hover{
+        cursor: pointer;
+            background-color: rgb(75, 134, 140);
+            color: white;
+        
+    }
+    
+    
+    .checkbox{
+        margin-left: 21vw;
+        display: flex;
+        flex-direction: row;
+        
+        color: rgb(68, 72, 72);
+        font-size: 1.9vw;
+        margin-top: 2vh;
+    }
+    
+    .checkbox input{
+        margin-right:1vh;
+        /* margin-bottom: 4vh; */
+       
+    
+       
+    }
+    
+    .policybox{
+        margin-bottom: 1vh;
+        width: 25vh;
+        height: 4.4vh;
+    }
+    
+    
+
+
+
+
+
+
+
+
 }

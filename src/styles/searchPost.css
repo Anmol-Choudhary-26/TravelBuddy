@@ -1,0 +1,162 @@
+.MAIN{
+    background-color: #fff;
+    /* border: none; */
+    border-radius: 15px;
+    margin-bottom: 1vh;
+    color: white;
+    height: 35.5vh;
+      width:25vw;
+      border: 1px solid black;
+      /* height: 20vh;
+      width: 20vw; */
+      /* margin-top: 1vh; */
+      background-image: linear-gradient(to right,rgba(0, 0, 0, 0.679),rgb(55, 43, 43));
+}
+
+.Helper1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HEading{
+    display: flex;
+    align-items: center;
+    padding: 0.5vw;
+    font-size: 0.8vw ;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    height: 6vh;
+    width: 23vw;
+}
+
+.LOcDate{
+    display: flex ;
+    flex-direction: column;
+    font-size: 0.8vw;
+    
+}
+
+.AuthorImg{
+    width: 2vw;
+  height: 3.2vh;
+  margin-top: .8vh ;
+  border-radius: 90%;
+  margin-right: 10px;
+}
+
+.IMg {
+    width: 20vw;
+     border-radius: 10px;
+    height: 20vh;
+    /* margin-bottom: 2vh; */
+    /* margin-top: 1vh; */
+    /* padding: 0 1vw; */
+}
+
+.BOdy{
+    
+    width: 25vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.FOoter{
+ 
+  padding: 0.5vw;
+  font-size: 0.5vw;
+  color: #0b0000;
+  height: 7vh;
+  width: 18vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.REply-box {
+    
+    display: flex;
+     /* padding: .2vh; */
+     padding-left: .1vw;
+     padding-right: .1vw;
+    background-color: thistle;
+    border: 1px solid black;
+    width: 23.5vw; 
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1vw; */
+     border-radius: 30px; 
+   
+  }
+
+  
+.REply-box input {
+    flex-grow: 1;
+    width: 8vw;
+    height: 2vh;
+    padding: 0.1vw;
+    border-radius: 999px;
+   border: none;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    font-size: 0.8vw;
+  }
+  
+  .REply-box button{
+    width: 4vw;
+    height: 3vh;
+    font-size: 0.7vw;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .REply-box button:hover {
+    background-color: #4c925f;
+  }
+  
+  .REply-box button:active {
+    background-color: #c2d218;
+    transform: scale(0.95);
+  }
+
+  .TEXT{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .LIKES{
+    height: 3vh;
+    width: 23vw;
+    /* background-color: black; */
+     display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding-bottom: 0.2vw;
+  }
+
+  .LIKES img{
+    height: 2vh;
+    width: 1.2vw;
+  }
+
+  .like{
+    height: 3vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+  }
+
+  .like p{
+    font-size: 0.8vw;
+    margin-right: 0.5vw;
+    margin-bottom: 0.5vh;
+    font-family:'Times New Roman', Times, serif;
+  }
+

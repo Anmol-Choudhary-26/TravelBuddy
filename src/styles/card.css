@@ -10,6 +10,7 @@
       flex-direction: column;
       justify-content: center;
       margin-top: 5vh;
+      color: white;
       
 }
 
@@ -118,11 +119,11 @@
   @media only screen and (max-width: 600px) {
     .main {
        height: 30vh;
-       width: 50vw;
+       width: 30vw;
 
     }
 
-    footer{
+    .footer{
       /* display: flex;
     align-items: center;
     justify-content: right; */
@@ -146,18 +147,19 @@
   }
   .reply-box input {
     flex-grow: 1;
-    width: 12vw;
+    width: 11vw;
     height: 2vh;
     /* padding: 0.5vw; */
     border-radius: 999px;
    border: none;
     background-color: #fff;
     border: 1px solid #e6e6e6;
+    font-size: 1.3vw;
   }
 
   .reply-box button{
-    width: 5vw;
-    font-size: 0.9vw;
+    width: 6vw;
+    font-size: 1.2vw;
     margin-left: 0.3vw;
     padding: 1.2vh 1.2vw;
     background-color: #000000;

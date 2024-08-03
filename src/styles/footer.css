@@ -92,7 +92,7 @@
 
 @media only screen and (max-width: 600px){
 
-    foot{
+    .foot{
         height: 55vh;
         width:100vw;
         background-color: #061621;

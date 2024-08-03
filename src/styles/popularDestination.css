@@ -2,10 +2,14 @@
 
     height: 50vh;
     width: 100vw;
-    background-color:beige;
+    /* background-color:beige; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; 
+    background-image: url("../images/pexels-belle-co-99483-1000445-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
     
     
 }
@@ -14,6 +18,7 @@
     margin-left: 35vw;
     margin-right: 35vw;
     margin-top: 1vh;
+    color: white;
 }
 
 .Box{
@@ -40,7 +45,9 @@
 
     height: 25vh;
     width: 100vw;
-    background-color:beige;
+    /* background-color:beige; */
+    background-image: url("../images/pexels-belle-co-99483-1000445-3.jpg");
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; 

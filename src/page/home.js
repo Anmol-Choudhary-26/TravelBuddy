@@ -5,29 +5,27 @@ import TripPost from '../component/card';
 import PopularDestination from '../component/popularDestination';
 import Footer from '../component/footer';
 import data from '../utils/data';
-import { Link } from "react-router-dom";
-import { createClient } from '@supabase/supabase-js'
-import { useNavigate } from 'react-router-dom'
-const supabase = createClient(
-    "https://tpkszvmuasfiyaloquii.supabase.co",
- "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwa3N6dm11YXNmaXlhbG9xdWlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk1NzY5NTIsImV4cCI6MjAzNTE1Mjk1Mn0.2IrSRNr1j2q-3tXMwqHkpyfg5PMG8Wjyyb_1-cOcV4s"
-)
+import { useNavigate } from 'react-router-dom';
+import supabase from '../component/supabase';
+
 function Home (){
   const navigate = useNavigate()
+  supabase.auth.onAuthStateChange(async (event) => {
+    console.log(event)
+    if (event === "SIGNED_IN") {
+        navigate("/main")
+    }
+
+})
     const renderedItems = data.map((items, index) => {
         return (
             <TripPost trip={items} key={index} />
         )
     })
 
-    supabase.auth.onAuthStateChange(async (event) => {
-      console.log(event)
-      if (event !== "SIGNED_OUT") {
-          navigate("/main")
-      }
-      
-  })
-
+        
+    })
+    
     return(
     <React.Fragment>
     <div className="first">
@@ -38,9 +36,8 @@ function Home (){
         <p className='headingg'>TravelBuddy :)</p>
         </div>
         <div className='btns'>
-          <Link to= "/login" className="Btn">   <button  className="Btn">Login</button></Link>
-      
-          <Link to= "/signup" className="Btn"><button  className='Btn'>Create Account</button></Link>
+        <button onClick={() => navigate('/login')} className="Btn">Login</button>
+        <button onClick={() => navigate('/signup')} className='Btn'>Create Account</button>
         </div>
 
         </div>
@@ -60,7 +57,7 @@ function Home (){
      <div className='seconddown'>
 
         <div className='headings'>
-        <h2><a href='abc'>Click here for All Upcoming Journeys</a></h2>
+        <h2><a href="/login">Click here for All Upcoming Journeys</a></h2>
       </div>
         <div className='containers'> 
           
@@ -70,7 +67,7 @@ function Home (){
 
      </div>
 
-    <div>
+    <div >
       <PopularDestination />
     </div>
 
