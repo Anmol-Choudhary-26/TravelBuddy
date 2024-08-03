@@ -5,7 +5,7 @@ import React from'react';
 const chatbar = ({chat}) => {
     const user = JSON.parse(localStorage.getItem('userId'))
     const username = user === chat.user1 ? chat.user2Name : chat.user1Name;
-
+    console.log(username)
     return (
     <div className='Message'>
 
