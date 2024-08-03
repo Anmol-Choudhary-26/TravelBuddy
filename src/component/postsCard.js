@@ -8,6 +8,7 @@ import { createBookmark } from "../hooks/usePost.js";
 const TripPost = ({ trip }) => {
   const { authorName, likesCount, authorId, id, location, date, imageUrl } =
     trip;
+    console.log(trip);
   const formattedDate = date.slice(0, 10);
 
   const handleLike = async () => {

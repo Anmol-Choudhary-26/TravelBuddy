@@ -3,6 +3,7 @@ import axios from "axios"
 export async function createChat(values) {
     const user = JSON.parse(localStorage.getItem('userId'))
     const userdata = JSON.parse(localStorage.getItem('userData'))
+    console.log(userdata, values)
     const data = await axios.post('https://travelbuddy-backend-gxl9.onrender.com/chat', {
       firstId : user,
       user1Name: userdata.UserName,
