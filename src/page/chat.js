@@ -11,7 +11,7 @@ function Chat() {
     // fetch chat data from server
     async function functionGetChat() {
       const data = await getChats();
-      setChat(data.data);
+      setChat(data);
     }
     functionGetChat();
   }, []);
