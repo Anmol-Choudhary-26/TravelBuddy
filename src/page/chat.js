@@ -12,6 +12,7 @@ function Chat() {
     async function functionGetChat() {
       const data = await getChats();
       setChat(data);
+      console.log(chat); // print chat data in console for debugging purpose. Remove this line when you're ready to use the data.
     }
     functionGetChat();
   }, []);
