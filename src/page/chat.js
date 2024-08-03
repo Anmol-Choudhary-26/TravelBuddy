@@ -5,10 +5,8 @@ import Sidebar from "../component/sidebar";
 import ChatBar from "../component/chatBar";
 import { getChats } from "../hooks/useChat";
 function Chat() {
-  const [chat, setChat] = useState([{}]);
-  const renderChat = chat.map((items, index) => {
-    return <ChatBar chat={items} key={index} />;
-  });
+  const [chat, setChat] = useState([]);
+  
   useEffect(() => {
     // fetch chat data from server
     async function functionGetChat() {
@@ -17,6 +15,10 @@ function Chat() {
     }
     functionGetChat();
   }, []);
+
+  const renderChat = chat.map((items, index) => {
+    return <ChatBar chat={items} key={index} />;
+  });
   return (
     <div className="chatfull">
       <div className="chats">
