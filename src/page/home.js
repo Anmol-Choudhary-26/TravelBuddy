@@ -24,7 +24,7 @@ function Home (){
     })
 
         
-    })
+    
     
     return(
     <React.Fragment>

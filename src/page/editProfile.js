@@ -5,7 +5,21 @@ import {updateUser} from '../hooks/useUser';
 import BackgroundSlider from '../component/backgroundslider';
 import Sidebar from '../component/sidebar.js';
 function Edit() {
+    const [userData , setUserData] = useState({
+        profilePic: ""
+    });
 
+    const handleChange = (e) => {
+        const {name , value} = e.target;
+        setUserData({...userData , [name] : value});
+    };
+
+    async function handleSubmit(){
+        console.log('clicked')
+        const data = await updateUser(userData);
+        console.log(data);
+        alert("Profile Updated successfully")
+    }
     return (
         <div className='editfullpage'>
         <div className="eDit">
