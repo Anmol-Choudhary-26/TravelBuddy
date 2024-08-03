@@ -1,9 +1,23 @@
 import '../styles/chat.css';
 import profile from '../images/Pc.jpeg';
-import React from'react';
+import React, {useState, useEffect} from'react';
 import Sidebar from '../component/sidebar';
-
+import ChatBar from "../component/chatBar"
+import { getChats } from '../hooks/useChat';
 function Chat() {
+    const [chat, setChat] = useState([])
+    const renderChat = chat.map((chat) =>{
+        return <ChatBar key ={chat.id} chat={chat} />
+    })
+    useEffect( () => {
+        // fetch chat data from server
+        const functionGetChat = async () =>{
+            const data = await getChats() 
+            setChat(data)
+        }
+        functionGetChat()
+        
+    }, [])
     return (
 
         <div className='chatfull'>
@@ -16,110 +30,7 @@ function Chat() {
                     Chats
                 </h3>
             </div>
-
-
-            <div className='Message'>
-
-                <div className='imageprofile'>
-                    <img src={profile} alt="profile" />
-                </div>
-
-                <div className='content'>
-
-                    <div className='namee'>
-                        <h4>Akash Dhiman</h4>
-                    </div>
-
-                    <div className='notificationss'>
-                        <p>Met those who have become.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div className='Message'>
-
-                <div className='imageprofile'>
-                    <img src={profile} alt='profile' />
-                </div>
-
-                <div className='content'>
-
-                    <div className='namee'>
-                        <h4>Akash Dhiman</h4>
-                    </div>
-
-                    <div className='notificationss'>
-                        <p>Met those who have become.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div className='Message'>
-
-                <div className='imageprofile'>
-                    <img src={profile} alt='profile' />
-                </div>
-
-                <div className='content'>
-
-                    <div className='namee'>
-                        <h4>Akash Dhiman</h4>
-                    </div>
-
-                    <div className='notificationss'>
-                        <p>Met those who have become.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div className='Message'>
-
-                <div className='imageprofile'>
-                    <img src={profile} alt='profile' />
-                </div>
-
-                <div className='content'>
-
-                    <div className='namee'>
-                        <h4>Akash Dhiman</h4>
-                    </div>
-
-                    <div className='notificationss'>
-                        <p>Met those who have become.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div className='Message'>
-
-                <div className='imageprofile'>
-                    <img src={profile} alt='profile' />
-                </div>
-
-                <div className='content'>
-
-                    <div className='namee'>
-                        <h4>Akash Dhiman</h4>
-                    </div>
-
-                    <div className='notificationss'>
-                        <p>Met those who have become.</p>
-                    </div>
-
-                </div>
-
-            </div>
+            {renderChat}
 
         </div>
 
