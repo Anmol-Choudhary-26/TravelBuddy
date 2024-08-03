@@ -17,7 +17,7 @@ export async function getChats(){
  const user = JSON.parse(localStorage.getItem('userId'))
  console.log(user)
  const data = await axios.get(`https://travelbuddy-backend-gxl9.onrender.com/chat/getchats/${user}`)
- console.log(data)
+ console.log(data.data)
  return data.data
 }
 
