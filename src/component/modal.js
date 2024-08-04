@@ -32,8 +32,8 @@ export default function Modal() {
 setTimeout(()=>{}, 3000)
 const postBody = {
   imageUrl: imageUrl.secure_url,
-  authorName: "Akash",
-  authorId: "6687b8052be27e93d9938d4e",
+  authorName: JSON.parse(localStorage.getItem("userData")).UserName,
+  authorId: JSON.parse(localStorage.getItem("userId")),
   caption: post.caption,
   date : `${post.date}T00:00:00z`,
   location: post.location,

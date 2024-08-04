@@ -24,7 +24,7 @@ const TripPost = ({ trip }) => {
   const handleSend = async () => {
     const recieverData = {
       id: authorId,
-      username: authorName,
+      username: trip.authorName,
     };
     const data = await createChat(recieverData);
     console.log(data);
