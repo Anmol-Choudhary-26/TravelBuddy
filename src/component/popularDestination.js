@@ -1,5 +1,5 @@
 import '../styles/popularDestination.css';
-
+import React from 'react';
 function popularDestination(){
 
     return(

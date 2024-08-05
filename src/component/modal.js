@@ -1,6 +1,7 @@
 import '../styles/modal.css';
 import React, { useState} from "react";
 import { createPost } from '../hooks/usePost';
+import axios from 'axios';
 
 export default function Modal() {
   const [image, setImage] = useState("")
@@ -19,9 +20,8 @@ export default function Modal() {
     data.append("file", image)
     data.append("upload_preset", "travelbuddy")
     data.append("cloud_name", "duxuhubym")
- await fetch("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
-        method:"POST",
-        body:data
+ await axios.post("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
+       data
 }).then(res=>res.json()).then(async data=>{
    setData(data)
    

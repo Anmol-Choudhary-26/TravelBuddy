@@ -1,5 +1,6 @@
 import '../styles/footer.css';
 import Logo from '../images/temperature.png';
+import React from 'react';
 
 function footer(){
   
