@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default function Modal() {
   const [image, setImage] = useState("")
-  const [imageUrl, setData] = useState()
+  const [imageUrl, setImageUrl] = useState("")
   const [post, setPost] = useState({
   })
 
@@ -23,13 +23,14 @@ export default function Modal() {
  await axios.post("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
        data
 }).then(res=>res.json()).then(async data=>{
-   setData(data)
+  console.log(data);
+   setImageUrl(data.secure_url);
    
 }).catch(err=>{
     console.log(err)
     alert(err)
 })
-setTimeout(()=>{}, 3000)
+
 const postBody = {
   imageUrl: imageUrl.secure_url,
   authorName: JSON.parse(localStorage.getItem("userData")).UserName,
