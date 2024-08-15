@@ -16,6 +16,7 @@ export default function Modal() {
   };
 
   const submitPost = async (e)=>{
+    console.log(image)
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", "travelbuddy")
