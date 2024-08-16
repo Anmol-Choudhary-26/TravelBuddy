@@ -6,9 +6,9 @@ import axios from 'axios';
 
 export default function Modal() {
   const [image, setImage] = useState("")
-  const [imageUrl, setImageUrl] = useState("")
-  const [post, setPost] = useState({
-  })
+  // const [imageUrl, setImageUrl] = useState("")
+  const [post, setPost] = useState({})
+   let imageUrl = ""
 
   
   const handleChange = (e) => {
@@ -17,26 +17,33 @@ export default function Modal() {
   };
 
   const submitPost = async (e)=>{
+    console.log(e)
     e.preventDefault();
     
-    const data = new FormData()
-    data.append("file", image)
-    data.append("upload_preset", "travelbuddy")
-    data.append("cloud_name", "duxuhubym")
-    console.log(data)
- await axios.post("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
-       data
-}).then(res=>res.json()).then(async data=>{
-  console.log(data);
-   setImageUrl(data.secure_url);
-   
-}).catch(err=>{
-    console.log(err)
-    alert(err)
-})
+    const data = new FormData();
+    data.append("file", image);
+    data.append("upload_preset", "travelbuddy");
+    data.append("cloud_name", "duxuhubym");
+    await fetch("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
+      method: "POST",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((securedata) => {
+        console.log(securedata);
+        imageUrl = securedata.secure_url;
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
+
+    setTimeout(() => {
+      console.log(JSON.stringify(imageUrl));
+    }, 2000);
 
 const postBody = {
-  imageUrl: imageUrl.secure_url,
+  imageUrl: imageUrl,
   authorName: JSON.parse(localStorage.getItem("userData")).UserName,
   authorId: JSON.parse(localStorage.getItem("userId")),
   caption: post.caption,
@@ -123,7 +130,7 @@ const postBody = {
 
 
             <div className='uploadbtn'>
-              <button onClick={() =>submitPost()} type='submit'>Upload</button>
+              <button onClick={(e) =>submitPost(e)} type='submit'>Upload</button>
             </div>
 
 
