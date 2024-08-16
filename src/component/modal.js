@@ -17,6 +17,7 @@ export default function Modal() {
   };
 
   const submitPost = async (e)=>{
+    e.preventDefault();
     
     const data = new FormData()
     data.append("file", image)
