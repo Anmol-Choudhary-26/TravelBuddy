@@ -2,6 +2,7 @@ import '../styles/modal.css';
 import React, { useState} from "react";
 import { createPost } from '../hooks/usePost';
 import axios from 'axios';
+// import { v2 as cloudinary } from 'cloudinary';
 
 export default function Modal() {
   const [image, setImage] = useState("")
@@ -16,11 +17,12 @@ export default function Modal() {
   };
 
   const submitPost = async (e)=>{
-    console.log(image)
+    
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", "travelbuddy")
     data.append("cloud_name", "duxuhubym")
+    console.log(data)
  await axios.post("https://api.cloudinary.com/v1_1/duxuhubym/image/upload", {
        data
 }).then(res=>res.json()).then(async data=>{
