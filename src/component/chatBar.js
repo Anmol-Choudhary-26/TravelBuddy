@@ -19,9 +19,9 @@ const chatbar = ({chat}) => {
                         <h4>{username}</h4>
                     </div>
 
-                    <div className='notificationss'>
+                    {/* <div className='notificationss'>
                         <p>Met those who have become.</p>
-                    </div>
+                    </div> */}
 
                 </div>
 

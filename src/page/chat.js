@@ -1,6 +1,6 @@
 import "../styles/chat.css";
-import profile from "../images/Pc.jpeg";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import  UserContext  from "../context/context";
 import Sidebar from "../component/sidebar";
 import ChatBar from "../component/chatBar";
 import { getChats } from "../hooks/useChat";
@@ -11,7 +11,8 @@ function Chat() {
   const [socket, setSocket] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [message, setMessage] = useState([]);
-
+  const [selectedChat, setSelectedChat] = useState()
+  const{setCurrentChat} = useContext(UserContext);
   useEffect(() => {
     const socket = io("https://travelbuddy-backend-gxl9.onrender.com");
     setSocket(socket);
@@ -51,7 +52,7 @@ function Chat() {
   }, []);
 
   const renderChat = chat.map((items, index) => {
-    return <ChatBar chat={items} key={index} />;
+    return <ChatBar onClick = {() => {setCurrentChat(items.id)} } chat={items} key={index} />;
   });
   return (
     <div className="chatfull">
@@ -63,21 +64,7 @@ function Chat() {
         {renderChat}
       </div>
 
-      <div className="chatright">
-        <div className="mssgup">
-          <img src={profile} alt="profile" className="profileimg" />
-          <h4>Akash Dhiman</h4>
-        </div>
-
-        <div className="mssgmid"></div>
-
-        <div className="mssgdown">
-          <input type="text" placeholder="write a message" className="Input" />
-          <button type="submit" className="send">
-            Send
-          </button>
-        </div>
-      </div>
+     
     </div>
   );
 }
